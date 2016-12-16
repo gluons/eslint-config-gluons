@@ -1,5 +1,5 @@
 # eslint-config-gluons
-@gluons' personal ESLint shareable config
+[gluons](https://github.com/gluons)' personal ESLint shareable config
 
 A set of my favorite ❤️😆❤️ rules.
 
