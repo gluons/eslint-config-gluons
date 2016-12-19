@@ -124,11 +124,6 @@ module.exports = {
 		],
 		// func-name-matching: http://eslint.org/docs/rules/func-name-matching
 		'func-name-matching': 'warn',
-		// wrap-iife: http://eslint.org/docs/rules/wrap-iife
-		'wrap-iife': [
-			'warn',
-			'inside'
-		],
 
 
 		/*

@@ -82,10 +82,6 @@
 			}
 		],
 		"func-name-matching": "warn",
-		"wrap-iife": [
-			"warn",
-			"inside"
-		],
 		"no-var": "warn",
 		"arrow-body-style": [
 			"warn",
