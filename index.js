@@ -104,7 +104,13 @@ module.exports = {
 		 */
 
 		// keyword-spacing: http://eslint.org/docs/rules/keyword-spacing
-		'keyword-spacing': 'error',
+		'keyword-spacing': [
+			'error',
+			{
+				before: true,
+				after: true
+			}
+		],
 		// operator-assignment: http://eslint.org/docs/rules/operator-assignment
 		'operator-assignment': [
 			'warn',
@@ -113,7 +119,11 @@ module.exports = {
 		// space-before-function-paren: http://eslint.org/docs/rules/space-before-function-paren
 		'space-before-function-paren': [
 			'warn',
-			'always'
+			{
+				anonymous: 'always',
+				named: 'never',
+				asyncArrow: 'always'
+			}
 		],
 		// space-infix-ops: http://eslint.org/docs/rules/space-infix-ops
 		'space-infix-ops': [
