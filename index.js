@@ -145,10 +145,7 @@ module.exports = {
 		// arrow-body-style: http://eslint.org/docs/rules/arrow-body-style
 		'arrow-body-style': [
 			'warn',
-			'as-needed',
-			{
-				requireReturnForObjectLiteral: true
-			}
+			'as-needed'
 		],
 		// arrow-parens: http://eslint.org/docs/rules/arrow-parens
 		'arrow-parens': [
