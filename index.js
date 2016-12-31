@@ -142,11 +142,6 @@ module.exports = {
 
 		// no-var: http://eslint.org/docs/rules/no-var
 		'no-var': 'warn',
-		// arrow-body-style: http://eslint.org/docs/rules/arrow-body-style
-		'arrow-body-style': [
-			'warn',
-			'as-needed'
-		],
 		// arrow-parens: http://eslint.org/docs/rules/arrow-parens
 		'arrow-parens': [
 			'warn',
