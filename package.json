@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config-gluons",
+  "version": "2.0.0",
+  "description": "Gluons' personal ESLint shareable config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/eslint-config-gluons.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">=3.8.0"
+  },
+  "bugs": {
+    "url": "https://github.com/gluons/eslint-config-gluons/issues"
+  },
+  "homepage": "https://github.com/gluons/eslint-config-gluons",
+  "dependencies": {
+    "eslint-plugin-vue": "*"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  }
+}
