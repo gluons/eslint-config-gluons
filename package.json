@@ -14,16 +14,16 @@
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "eslint": ">=3.8.0"
+    "eslint": ">=3.8.0",
+    "eslint-plugin-vue": "^2.0.1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-vue": "^2.0.1"
   },
   "bugs": {
     "url": "https://github.com/gluons/eslint-config-gluons/issues"
   },
-  "homepage": "https://github.com/gluons/eslint-config-gluons",
-  "dependencies": {
-    "eslint-plugin-vue": "*"
-  },
-  "devDependencies": {
-    "eslint": "^3.19.0"
-  }
+  "homepage": "https://github.com/gluons/eslint-config-gluons"
 }
