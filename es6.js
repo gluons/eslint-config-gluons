@@ -10,7 +10,13 @@ module.exports = {
 		}
 	},
 	rules: {
-		'arrow-body-style': ['error', 'as-needed'],
+		'arrow-body-style': [
+			'error',
+			'as-needed',
+			{
+				'requireReturnForObjectLiteral': true
+			}
+		],
 		'arrow-parens': ['error', 'as-needed'],
 		'arrow-spacing': [
 			'error',
