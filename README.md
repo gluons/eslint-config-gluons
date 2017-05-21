@@ -75,3 +75,11 @@ yarn add -D eslint-plugin-vue
 	"extends": "gluons/vue"
 }
 ```
+
+## Badge
+
+[![ESLint Gluons](https://img.shields.io/badge/code%20style-gluons-9C27B0.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons)
+
+```markdown
+[![ESLint Gluons](https://img.shields.io/badge/code%20style-gluons-9C27B0.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons)
+```
