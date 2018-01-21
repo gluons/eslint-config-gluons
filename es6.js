@@ -1,3 +1,7 @@
+'use strict';
+
+const path = require('path');
+
 /*
  * ECMAScript 6
  */
@@ -47,5 +51,5 @@ module.exports = {
 	env: {
 		es6: true
 	},
-	extends: 'gluons'
+	extends: path.resolve(__dirname, './index.js')
 };

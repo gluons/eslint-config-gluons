@@ -1,4 +1,6 @@
-const isProd = require('./utils/is-prod');
+'use strict';
+
+const isProd = process.env.NODE_ENV === 'production';
 
 /*
  * Main config
