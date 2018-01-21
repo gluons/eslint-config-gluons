@@ -1,62 +1,7 @@
 {
-	"parserOptions": {
-		"ecmaVersion": 6
-	},
+	"root": true,
+	"extends": "xo",
 	"rules": {
-		"indent": [
-			"warn",
-			"tab",
-			{
-				"SwitchCase": 1
-			}
-		],
-		"semi": [
-			"error",
-			"always"
-		],
-		"quotes": [
-			"error",
-			"single",
-			{
-				"avoidEscape": true,
-				"allowTemplateLiterals": true
-			}
-		],
-		"brace-style": [
-			"error",
-			"1tbs"
-		],
-		"curly": [
-			"error",
-			"all"
-		],
-		"yoda": [
-			"error",
-			"never"
-		],
-		"comma-style": [
-			"error",
-			"last"
-		],
-		"comma-spacing": [
-			"error",
-			{
-				"before": false,
-				"after": true
-			}
-		],
-		"comma-dangle": [
-			"error",
-			"never"
-		],
-		"dot-location": [
-			"error",
-			"property"
-		]
-	},
-	"env": {
-		"node": true,
-		"es6": true
-	},
-	"extends": "eslint:recommended"
+		"linebreak-style": "off"
+	}
 }
