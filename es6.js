@@ -14,22 +14,22 @@ module.exports = {
 			'error',
 			'as-needed',
 			{
-				'requireReturnForObjectLiteral': true
+				requireReturnForObjectLiteral: true
 			}
 		],
 		'arrow-parens': ['error', 'as-needed'],
 		'arrow-spacing': [
 			'error',
 			{
-				'before': true,
-				'after': true
+				before: true,
+				after: true
 			}
 		],
 		'generator-star-spacing': ['error', 'after'],
 		'no-confusing-arrow': [
 			'warn',
 			{
-				'allowParens': true
+				allowParens: true
 			}
 		],
 		'no-duplicate-imports': 'error',
@@ -38,7 +38,7 @@ module.exports = {
 			'error',
 			'always',
 			{
-				'avoidQuotes': true
+				avoidQuotes: true
 			}
 		],
 		'prefer-spread': 'warn',

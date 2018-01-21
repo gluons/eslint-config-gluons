@@ -10,33 +10,33 @@ module.exports = {
 		'comma-spacing': [
 			'error',
 			{
-				'before': false,
-				'after': true
+				before: false,
+				after: true
 			}
 		],
 		'comma-style': ['error', 'last'],
-		'curly': ['error', 'all'],
+		curly: ['error', 'all'],
 		'dot-location': ['warn', 'property'],
 		'func-name-matching': 'warn',
-		'indent': [
+		indent: [
 			'error',
 			'tab',
 			{
-				'SwitchCase': 1
+				SwitchCase: 1
 			}
 		],
 		'key-spacing': [
 			'error',
 			{
-				'beforeColon': false,
-				'afterColon': true
+				beforeColon: false,
+				afterColon: true
 			}
 		],
 		'keyword-spacing': [
 			'error',
 			{
-				'before': true,
-				'after': true
+				before: true,
+				after: true
 			}
 		],
 		'no-array-constructor': 'error',
@@ -46,43 +46,43 @@ module.exports = {
 		'no-trailing-spaces': 'warn',
 		'no-useless-concat': 'warn',
 		'no-useless-escape': 'warn',
-		'quotes': [
+		quotes: [
 			'error',
 			'single',
 			{
-				'avoidEscape': true,
-				'allowTemplateLiterals': true
+				avoidEscape: true,
+				allowTemplateLiterals: true
 			}
 		],
-		'semi': ['error', 'always'],
+		semi: ['error', 'always'],
 		'semi-spacing': [
 			'error',
 			{
-				'before': false,
-				'after': true
+				before: false,
+				after: true
 			}
 		],
 		'space-before-blocks': 'error',
 		'space-before-function-paren': [
 			'error',
 			{
-				'anonymous': 'always',
-				'named': 'never',
-				'asyncArrow': 'always'
+				anonymous: 'always',
+				named: 'never',
+				asyncArrow: 'always'
 			}
 		],
 		'space-infix-ops': [
 			'error',
 			{
-				'int32Hint': false
+				int32Hint: false
 			}
 		],
 		'wrap-iife': ['error', 'any'],
-		'yoda': [
+		yoda: [
 			'error',
 			'never',
 			{
-				'exceptRange': true
+				exceptRange: true
 			}
 		]
 	},
