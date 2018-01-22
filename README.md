@@ -1,6 +1,7 @@
 # eslint-config-gluons
 [![license](https://img.shields.io/github/license/gluons/eslint-config-gluons.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/eslint-config-gluons.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-gluons)
+[![node](https://img.shields.io/node/v/eslint-config-gluons.svg?style=flat-square)](https://nodejs.org/)
 [![ESLint](https://img.shields.io/badge/ESLint%20Config-gluons-463FD4.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons)
 
 [gluons](https://github.com/gluons)' personal [ESLint](http://eslint.org/) shareable config
@@ -48,6 +49,22 @@ npm install --save-dev eslint-plugin-vue
 yarn add -D eslint-plugin-vue
 ```
 
+### Using [`babel-eslint`](https://github.com/babel/babel-eslint) as parser
+
+Install [`babel-eslint`](https://github.com/babel/babel-eslint).
+
+**Via [NPM](https://www.npmjs.com):**
+
+```
+npm install --save-dev babel-eslint
+```
+
+**Via [Yarn](https://yarnpkg.com):**
+
+```
+yarn add -D babel-eslint
+```
+
 ## Usage
 
 **Normal:**
@@ -58,21 +75,45 @@ yarn add -D eslint-plugin-vue
 }
 ```
 
-**[ECMAScript 6](https://babeljs.io/learn-es2015/):**
+**ECMAScript 2015+:**
 
 ```json
 {
-	"extends": "gluons/es6"
+	"extends": "gluons/esnext"
 }
 ```
 
 **[Vue](https://vuejs.org):**
 
-> Need [`eslint-plugin-vue`](https://github.com/vuejs/eslint-plugin-vue).
-
 ```json
 {
 	"extends": "gluons/vue"
+}
+```
+
+### Using [`babel-eslint`](https://github.com/babel/babel-eslint) as parser
+
+**Normal:**
+
+```json
+{
+	"extends": "gluons/babel"
+}
+```
+
+**ECMAScript 2015+:**
+
+```json
+{
+	"extends": "gluons/esnext-babel"
+}
+```
+
+**[Vue](https://vuejs.org):**
+
+```json
+{
+	"extends": "gluons/vue-babel"
 }
 ```
 
