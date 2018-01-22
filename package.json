@@ -11,8 +11,10 @@
     "url": "git+https://github.com/gluons/eslint-config-gluons.git"
   },
   "keywords": [
+    "❤️",
     "eslint",
-    "eslintconfig"
+    "eslintconfig",
+    "gluons"
   ],
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "MIT",
