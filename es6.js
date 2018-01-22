@@ -6,12 +6,16 @@ const path = require('path');
  * ECMAScript 6
  */
 module.exports = {
+	extends: path.resolve(__dirname, './index.js'),
 	parserOptions: {
 		ecmaVersion: 6,
 		sourceType: 'module',
 		ecmaFeatures: {
 			experimentalObjectRestSpread: true
 		}
+	},
+	env: {
+		es6: true
 	},
 	rules: {
 		'arrow-body-style': [
@@ -47,9 +51,5 @@ module.exports = {
 		],
 		'prefer-spread': 'warn',
 		'prefer-template': 'error'
-	},
-	env: {
-		es6: true
-	},
-	extends: path.resolve(__dirname, './index.js')
+	}
 };
