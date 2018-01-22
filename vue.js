@@ -8,7 +8,7 @@ const path = require('path');
 module.exports = {
 	plugins: ['vue'],
 	extends: [
-		path.resolve(__dirname, './es6.js'),
+		path.resolve(__dirname, './esnext.js'),
 		'plugin:vue/recommended'
 	],
 	rules: {
