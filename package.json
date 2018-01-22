@@ -1,0 +1,35 @@
+{
+  "name": "eslint-config-gluons-docs",
+  "version": "1.0.0",
+  "description": "A documentation for `eslint-config-gluons`.",
+  "private": true,
+  "scripts": {
+    "build": "poi build",
+    "dev": "poi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/eslint-config-gluons.git"
+  },
+  "keywords": [
+    "eslint-config-gluons",
+    "documentation",
+    "docs"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/eslint-config-gluons/issues"
+  },
+  "homepage": "https://github.com/gluons/eslint-config-gluons",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-gluons": "^2.1.0",
+    "eslint-plugin-vue": "2",
+    "poi": "^9.6.13"
+  },
+  "dependencies": {
+    "milligram": "^1.3.0",
+    "vue": "^2.5.13"
+  }
+}
