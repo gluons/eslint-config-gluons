@@ -3,12 +3,12 @@
 const path = require('path');
 
 /*
- * ECMAScript 6
+ * ECMAScript 6+
  */
 module.exports = {
 	extends: path.resolve(__dirname, './index.js'),
 	parserOptions: {
-		ecmaVersion: 6,
+		ecmaVersion: 2017,
 		sourceType: 'module',
 		ecmaFeatures: {
 			experimentalObjectRestSpread: true
