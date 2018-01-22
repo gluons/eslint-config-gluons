@@ -6,6 +6,11 @@ const isProd = process.env.NODE_ENV === 'production';
  * Main config
  */
 module.exports = {
+	extends: 'eslint:recommended',
+	env: {
+		browser: true,
+		node: true
+	},
 	rules: {
 		'brace-style': ['error', '1tbs'],
 		'comma-dangle': 'error',
@@ -87,10 +92,5 @@ module.exports = {
 				exceptRange: true
 			}
 		]
-	},
-	env: {
-		browser: true,
-		node: true
-	},
-	extends: 'eslint:recommended'
+	}
 };
