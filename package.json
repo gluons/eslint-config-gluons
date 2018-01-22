@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "poi build",
-    "dev": "poi"
+    "dev": "poi",
+    "deploy": "./bin/deploy"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "eslint": "^4.16.0",
     "eslint-config-gluons": "^2.1.0",
     "eslint-plugin-vue": "2",
+    "gh-pages": "^1.1.0",
     "poi": "^9.6.13"
   },
   "dependencies": {
