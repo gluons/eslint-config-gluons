@@ -29,7 +29,8 @@
     "eslint-config-gluons": "^3.0.0",
     "eslint-plugin-vue": "^4.2.0",
     "gh-pages": "^1.1.0",
-    "poi": "^9.6.13"
+    "poi": "^9.6.13",
+    "pug": "^2.0.0-rc.4"
   },
   "dependencies": {
     "buefy": "^0.6.2",
