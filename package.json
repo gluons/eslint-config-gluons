@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/gluons/eslint-config-gluons",
   "devDependencies": {
+    "babel-eslint": "^8.2.1",
     "eslint": "^4.16.0",
     "eslint-config-gluons": "^3.0.0",
     "eslint-plugin-vue": "^4.2.0",
