@@ -1,15 +1,15 @@
 <template lang="pug">
 #home
-	section.hero.is-primary
+	section.hero.is-primary.has-text-centered
 		.hero-body
 			.container
 				h1.title ESLint Config Gluons
 				h2.subtitle.
-					#[blank-link(url='https://github.com/gluons') gluons]' personal
-					#[blank-link(url='https://eslint.org/') ESLint] shareable config.
+					#[blank-link.has-text-warning(url='https://github.com/gluons') gluons]' personal
+					#[blank-link.has-text-warning(url='https://eslint.org/') ESLint] shareable config.
 	section.section
 		.container
-			h2.title Installation
+			h2.title ⚙️ Installation
 			.content
 				.box
 					p: b Via #[blank-link(:url='npmUrl') npm]:
@@ -45,7 +45,7 @@
 						yarn add --dev babel-eslint
 	section.section
 		.container
-			h2.title Usage
+			h2.title 🛂 Usage
 			.content
 				.box
 					p: b Normal:
@@ -65,6 +65,38 @@
 						{
 							"extends": "gluons/vue"
 						}
+			h3.title.is-4 Using #[highlight-code(inline) babel-eslint] as parser
+			.content
+				.box
+					p: b Normal:
+					highlight-code(lang='json').
+						{
+							"extends": "gluons/babel"
+						}
+				.box
+					p: b ECMAScript 2015+:
+					highlight-code(lang='json').
+						{
+							"extends": "gluons/esnext-babel"
+						}
+				.box
+					p: b: blank-link(:url='vueUrl') Vue:
+					highlight-code(lang='json').
+						{
+							"extends": "gluons/vue-babel"
+						}
+	section.section
+		.container
+			h2.title 📛 Badge
+			.content
+				p
+					blank-link(url='https://github.com/gluons/eslint-config-gluons')
+						img(
+							src='https://img.shields.io/badge/code%20style-gluons-9C27B0.svg?style=flat-square'
+							alt='ESLint Gluons'
+						)
+				highlight-code.wrap(lang='markdown').
+					[![ESLint Gluons](https://img.shields.io/badge/code%20style-gluons-9C27B0.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons)
 </template>
 
 
@@ -86,5 +118,8 @@ pre {
 	tab-size: 4;
 	background-color: transparent;
 	padding: 0;
+}
+pre.wrap {
+	white-space: pre-wrap;
 }
 </style>
