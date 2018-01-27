@@ -15,12 +15,23 @@
 	footer.footer
 		.container
 			.content.has-text-centered
-				p: blank-link(url='https://bulma.io')
-					img(
-						src='https://bulma.io/images/made-with-bulma--dark.png'
-						width='128'
-						height='24'
-						alt='Made with Bulma'
+				p
+					img.badge(
+						src='http://forthebadge.com/images/badges/built-with-love.svg'
+						alt='Built with Love'
+					)
+					|
+					|
+					blank-link(url='https://github.com/gluons')
+						img.badge(
+							src='https://img.shields.io/badge/By-Gluons-9C27B0.svg?style=for-the-badge'
+							height='35'
+							alt='By Gluons'
+						)
+				p: blank-link(url='https://buefy.github.io/')
+					img.badge(
+						src='https://img.shields.io/badge/Made%20with-Buefy-7957d5.svg?style=for-the-badge'
+						alt='Made with Buefy'
 					)
 </template>
 
@@ -51,6 +62,9 @@ export default {
 }
 footer a {
 	outline: none;
+}
+footer img.badge {
+	height: 35px;
 }
 
 .fade-enter-active, .fade-leave-active {
