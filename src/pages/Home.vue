@@ -7,6 +7,10 @@
 				h2.subtitle.
 					#[blank-link.has-text-warning(url='https://github.com/gluons') gluons]' personal
 					#[blank-link.has-text-warning(url='https://eslint.org/') ESLint] shareable config.
+				p
+					blank-link.button.is-medium(url='https://github.com/gluons/eslint-config-gluons')
+						span.icon.is-medium: i.fa.fa-github.fa-lg
+						span View on GitHub
 	section.section
 		.container
 			h2.title ⚙️ Installation
