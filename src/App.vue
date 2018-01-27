@@ -3,15 +3,15 @@
 	nav.navbar.is-light(role='navigation')
 		.container
 			.navbar-brand
-				a.navbar-item.has-text-weight-bold(
-					href='./'
-				) #[b-icon#brand-icon(icon='heart', size='is-medium')]ESLint Config Gluons
+				router-link.navbar-item.has-text-weight-bold(to='/')
+					| #[b-icon#brand-icon(icon='heart', size='is-medium')] ESLint Config Gluons
 				div.navbar-burger(@click='burgerClick')
 					span(v-for='i in 3')
 			.navbar-menu.is-light(ref='navmenu')
 				.navbar-start
-					a.navbar-item(href='./') Home
-	home
+					router-link.navbar-item(to='/') Home
+					router-link.navbar-item(to='/rules') Rules
+	transition(name='fade', mode='out-in'): router-view
 	footer.footer
 		.container
 			.content.has-text-centered
@@ -25,13 +25,8 @@
 </template>
 
 <script>
-import Home from './pages/Home';
-
 export default {
 	name: 'App',
-	components: {
-		Home
-	},
 	methods: {
 		burgerClick(e) {
 			let burger = e.target;
@@ -56,5 +51,12 @@ export default {
 }
 footer a {
 	outline: none;
+}
+
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .3s linear;
+}
+.fade-enter, .fade-leave-to {
+	opacity: 0;
 }
 </style>
