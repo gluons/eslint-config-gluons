@@ -30,6 +30,7 @@
     "eslint-plugin-vue": "^4.2.0",
     "gh-pages": "^1.1.0",
     "node-sass": "^4.7.2",
+    "open-color": "^1.6.2",
     "poi": "^9.6.13",
     "pug": "^2.0.0-rc.4",
     "sass-loader": "^6.0.6"
