@@ -13,7 +13,7 @@
 						span View on GitHub
 	section.section
 		.container
-			h2.title ⚙️ Installation
+			h2.title #[b-icon(icon='cog')] Installation
 			.content
 				.box
 					p: b Via #[blank-link(:url='npmUrl') npm]:
@@ -49,7 +49,7 @@
 						yarn add --dev babel-eslint
 	section.section
 		.container
-			h2.title 🛂 Usage
+			h2.title #[b-icon(icon='book')] Usage
 			.content
 				.box
 					p: b Normal:
@@ -91,7 +91,7 @@
 						}
 	section.section
 		.container
-			h2.title 📛 Badge
+			h2.title #[b-icon(icon='certificate')] Badge
 			.content
 				p
 					blank-link(url='https://github.com/gluons/eslint-config-gluons')
@@ -118,6 +118,9 @@ export default {
 </script>
 
 <style scoped>
+section .icon {
+	margin-right: .5rem;
+}
 pre {
 	tab-size: 4;
 	background-color: transparent;
