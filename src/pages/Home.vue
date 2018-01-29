@@ -117,7 +117,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 section .icon {
 	margin-right: .5rem;
 }
@@ -125,8 +125,5 @@ pre {
 	tab-size: 4;
 	background-color: transparent;
 	padding: 0;
-}
-pre.wrap {
-	white-space: pre-wrap;
 }
 </style>

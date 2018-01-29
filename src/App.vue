@@ -55,16 +55,18 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #brand-icon {
 	color: red;
 	margin-right: .5em;
 }
-footer a {
-	outline: none;
-}
-footer img.badge {
-	height: 35px;
+footer {
+	a {
+		outline: none;
+	}
+	img.badge {
+		height: 35px;
+	}
 }
 
 .fade-enter-active, .fade-leave-active {

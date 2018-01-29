@@ -1,6 +1,7 @@
 import 'font-awesome/css/font-awesome.css';
 import 'buefy/lib/buefy.css';
 import 'highlight.js/styles/monokai-sublime.css';
+import './scss/main.scss';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';

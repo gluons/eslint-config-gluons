@@ -13,12 +13,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #wip-box {
 	padding: 15%;
-}
-@media all and (max-width: 768px) {
-	#wip-box {
+
+	@media all and (max-width: 768px) {
 		padding: 10%;
 	}
 }
