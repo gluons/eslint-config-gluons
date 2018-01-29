@@ -17,7 +17,7 @@
 			.content.has-text-centered
 				p
 					img.badge(
-						src='http://forthebadge.com/images/badges/built-with-love.svg'
+						src='https://forthebadge.com/images/badges/built-with-love.svg'
 						alt='Built with Love'
 					)
 					|
