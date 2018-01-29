@@ -3,5 +3,8 @@
 	"extends": "xo",
 	"rules": {
 		"linebreak-style": "off"
+	},
+	"env": {
+		"jest": true
 	}
 }
