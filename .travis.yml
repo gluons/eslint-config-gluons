@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "node"
+script:
+  - yarn lint
+  - yarn build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: docs

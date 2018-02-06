@@ -6,7 +6,7 @@
   "scripts": {
     "build": "poi build",
     "dev": "poi",
-    "deploy": "./bin/deploy"
+    "lint": "eslint --ext .js,.vue src/"
   },
   "repository": {
     "type": "git",
