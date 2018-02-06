@@ -33,7 +33,8 @@
     "open-color": "^1.6.2",
     "poi": "^9.6.13",
     "pug": "^2.0.0-rc.4",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.10.0"
   },
   "dependencies": {
     "buefy": "^0.6.2",
