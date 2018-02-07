@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/eslint-config-gluons.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-gluons)
 [![node](https://img.shields.io/node/v/eslint-config-gluons.svg?style=flat-square)](https://nodejs.org/)
 [![ESLint](https://img.shields.io/badge/ESLint%20Config-gluons-463FD4.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons)
+[![Travis branch](https://img.shields.io/travis/gluons/eslint-config-gluons/master.svg?style=flat-square)](https://travis-ci.org/gluons/eslint-config-gluons)
 
 [gluons](https://github.com/gluons)' personal [ESLint](https://eslint.org/) shareable config
 
