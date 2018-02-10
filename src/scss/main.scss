@@ -1,5 +1,8 @@
-pre.wrap {
-	&, code {
+pre {
+	tab-size: 4;
+	padding: 0 !important;
+
+	&.wrap, &.wrap code {
 		white-space: pre-wrap;
 	}
 }

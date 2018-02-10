@@ -1,38 +1,45 @@
 <template lang="pug">
 #app
-	nav.navbar.is-light(role='navigation')
-		.container
-			.navbar-brand
-				router-link.navbar-item.has-text-weight-bold(to='/')
-					| #[b-icon#brand-icon(icon='heart', size='is-medium')] ESLint Config Gluons
-				div.navbar-burger(@click='burgerClick')
-					span(v-for='i in 3')
-			.navbar-menu.is-light(ref='navmenu')
-				.navbar-start
-					router-link.navbar-item(to='/') Home
-					router-link.navbar-item(to='/rules') Rules
+	nav.navbar.is-light(role='navigation'): .container
+		.navbar-brand
+			router-link.navbar-item.has-text-weight-bold(to='/')
+				| #[b-icon#brand-icon(icon='heart', size='is-medium')] ESLint Config Gluons
+			div.navbar-burger(@click='burgerClick')
+				span(v-for='i in 3')
+		.navbar-menu.is-light(ref='navmenu')
+			.navbar-start
+				router-link.navbar-item(to='/') Home
+				.navbar-item.has-dropdown.is-hoverable
+					a.navbar-link Rules
+					.navbar-dropdown
+						router-link.navbar-item(to='/rules/main') Main
+						router-link.navbar-item(to='/rules/esnext') ESNext
+						router-link.navbar-item(to='/rules/vue') Vue
+			.navbar-end
+				blank-link(url='https://github.com/gluons/eslint-config-gluons').navbar-item
+					b-icon(icon='github', size='is-medium')
+				blank-link(url='https://google.com/+SaranTanpituckpong').navbar-item
+					b-icon(icon='google-plus', size='is-medium')
 	transition(name='fade', mode='out-in'): router-view
-	footer.footer
-		.container
-			.content.has-text-centered
-				p
-					img.badge(
-						src='https://forthebadge.com/images/badges/built-with-love.svg'
-						alt='Built with Love'
-					)
-					|
-					|
-					blank-link(url='https://github.com/gluons')
-						img.badge(
-							src='https://img.shields.io/badge/By-Gluons-9C27B0.svg?style=for-the-badge'
-							height='35'
-							alt='By Gluons'
-						)
-				p: blank-link(url='https://buefy.github.io/')
-					img.badge(
-						src='https://img.shields.io/badge/Made%20with-Buefy-7957d5.svg?style=for-the-badge'
-						alt='Made with Buefy'
-					)
+	footer.footer: .container: .content.has-text-centered
+		p
+			img.badge(
+				src='https://forthebadge.com/images/badges/built-with-love.svg'
+				alt='Built with Love'
+			)
+			|
+			|
+			blank-link(url='https://github.com/gluons')
+				img.badge(
+					src='https://img.shields.io/badge/By-Gluons-9C27B0.svg?style=for-the-badge'
+					height='35'
+					alt='By Gluons'
+				)
+		p: blank-link(url='https://buefy.github.io/')
+			img.badge(
+				src='https://img.shields.io/badge/Made%20with-Buefy-7957d5.svg?style=for-the-badge'
+				alt='Made with Buefy'
+			)
 </template>
 
 <script>

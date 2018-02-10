@@ -135,9 +135,4 @@ section {
 		}
 	}
 }
-pre {
-	tab-size: 4;
-	background-color: transparent;
-	padding: 0;
-}
 </style>
