@@ -8,11 +8,8 @@ const path = require('path');
 module.exports = {
 	extends: path.resolve(__dirname, './index.js'),
 	parserOptions: {
-		ecmaVersion: 2017,
-		sourceType: 'module',
-		ecmaFeatures: {
-			experimentalObjectRestSpread: true
-		}
+		ecmaVersion: 2018,
+		sourceType: 'module'
 	},
 	env: {
 		es6: true
