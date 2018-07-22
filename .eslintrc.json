@@ -3,5 +3,8 @@
 	"extends": "xo",
 	"env": {
 		"jest": true
+	},
+	"rules": {
+		"object-curly-spacing": ["error", "always"]
 	}
 }

@@ -1,12 +1,12 @@
 'use strict';
 
-const path = require('path');
+const { resolve } = require('path');
 
 /*
  * ECMAScript 6+
  */
 module.exports = {
-	extends: path.resolve(__dirname, './index.js'),
+	extends: resolve(__dirname, './index.js'),
 	parserOptions: {
 		ecmaVersion: 2018,
 		sourceType: 'module'

@@ -1,6 +1,6 @@
 'use strict';
 
-const path = require('path');
+const { resolve } = require('path');
 
 /*
  * Vue
@@ -8,7 +8,7 @@ const path = require('path');
 module.exports = {
 	plugins: ['vue'],
 	extends: [
-		path.resolve(__dirname, './esnext.js'),
+		resolve(__dirname, './esnext.js'),
 		'plugin:vue/recommended'
 	],
 	rules: {
