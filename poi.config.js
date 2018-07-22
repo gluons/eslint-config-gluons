@@ -4,5 +4,5 @@ module.exports = {
 		title: 'ESLint Config Gluons',
 		description: "Gluons' personal ESLint shareable config."
 	},
-	homepage: './'
+	publicPath: './'
 };
