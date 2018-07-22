@@ -19,6 +19,8 @@ section.rule.section: .container
 </template>
 
 <script>
+const BASE_ESLINT_RULE_URL = 'https://eslint.org/docs/rules';
+
 export default {
 	name: 'Rule',
 	filters: {
@@ -27,7 +29,15 @@ export default {
 		}
 	},
 	props: {
+		baseRuleUrl: {
+			type: String,
+			default: BASE_ESLINT_RULE_URL
+		},
 		name: {
+			type: String,
+			required: true
+		},
+		realName: { // Use for rule's URL
 			type: String,
 			required: true
 		},
@@ -42,7 +52,7 @@ export default {
 	},
 	computed: {
 		ruleUrl() {
-			return `https://eslint.org/docs/rules/${this.name}`;
+			return `${this.baseRuleUrl}/${this.realName}`;
 		}
 	},
 	methods: {

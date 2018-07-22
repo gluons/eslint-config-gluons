@@ -13,7 +13,9 @@
 	rule(
 		v-for='rule in rules'
 		:key='rule.name'
+		:baseRuleUrl='baseVueRuleUrl'
 		:name='rule.name'
+		:realName='rule.realName | md'
 		:value='rule.value'
 		:options='rule.options'
 	)
@@ -23,14 +25,22 @@
 import transformRules from '@/utils/transformRules';
 const vueRules = require('eslint-config-gluons/vue');
 
-let transformedRules = transformRules(vueRules.rules);
+let transformedRules = transformRules(vueRules.rules, 'vue');
+
+const BASE_VUE_RULE_URL = 'https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules';
 
 export default {
 	name: 'Vue',
+	filters: {
+		md(value) {
+			return `${value}.md`; // Append .md extension
+		}
+	},
 	data() {
 		return {
 			vueUrl: 'https://vuejs.org/',
 			eslintPluginVueUrl: 'https://github.com/vuejs/eslint-plugin-vue',
+			baseVueRuleUrl: BASE_VUE_RULE_URL,
 			rules: transformedRules
 		};
 	}

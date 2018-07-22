@@ -7,6 +7,7 @@
 		v-for='rule in rules'
 		:key='rule.name'
 		:name='rule.name'
+		:realName='rule.realName'
 		:value='rule.value'
 		:options='rule.options'
 	)
