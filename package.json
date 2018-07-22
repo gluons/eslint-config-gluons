@@ -28,7 +28,6 @@
     "eslint": "^4.16.0",
     "eslint-config-gluons": "^3.0.0",
     "eslint-plugin-vue": "^4.7.0",
-    "gh-pages": "^1.1.0",
     "node-sass": "^4.9.2",
     "open-color": "^1.6.3",
     "poi": "^9.6.13",
