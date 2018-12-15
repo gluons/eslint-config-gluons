@@ -1,5 +1,5 @@
 import 'font-awesome/css/font-awesome.css';
-import 'buefy/lib/buefy.css';
+import 'buefy/dist/buefy.css';
 import 'highlight.js/styles/monokai-sublime.css';
 import './scss/main.scss';
 
