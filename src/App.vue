@@ -18,8 +18,6 @@
 			.navbar-end
 				blank-link(url='https://github.com/gluons/eslint-config-gluons').navbar-item
 					b-icon(icon='github', size='is-medium')
-				blank-link(url='https://google.com/+SaranTanpituckpong').navbar-item
-					b-icon(icon='google-plus', size='is-medium')
 	transition(name='fade', mode='out-in'): router-view
 	footer.footer: .container: .content.has-text-centered
 		p
