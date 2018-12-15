@@ -25,8 +25,7 @@
 				src='https://forthebadge.com/images/badges/built-with-love.svg'
 				alt='Built with Love'
 			)
-			|
-			|
+			| &nbsp;
 			blank-link(url='https://github.com/gluons')
 				img.badge(
 					src='https://img.shields.io/badge/By-Gluons-9C27B0.svg?style=for-the-badge'
