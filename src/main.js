@@ -8,6 +8,10 @@ import VueRouter from 'vue-router';
 import Buefy from 'buefy';
 import VueHighlightJS from 'vue-highlight.js';
 
+import bash from 'highlight.js/lib/languages/bash';
+import javascript from 'highlight.js/lib/languages/javascript';
+import json from 'highlight.js/lib/languages/json';
+import markdown from 'highlight.js/lib/languages/markdown';
 
 import components from './components';
 import router from './router';
@@ -20,7 +24,14 @@ Object.keys(components).forEach(name => {
 
 // Plugins
 Vue.use(VueRouter);
-Vue.use(VueHighlightJS);
+Vue.use(VueHighlightJS, {
+	languages: {
+		bash,
+		javascript,
+		json,
+		markdown
+	}
+});
 Vue.use(Buefy, {
 	defaultIconPack: 'fa'
 });
