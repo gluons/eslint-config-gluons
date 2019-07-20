@@ -1,5 +1,5 @@
 module.exports = {
-	baseUrl: './',
+	publicPath: './',
 	css: {
 		sourceMap: true
 	}
