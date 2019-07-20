@@ -1,7 +1,5 @@
+const { CLIEngine } = require('eslint');
 const path = require('path');
-
-const eslint = require('eslint');
-const CLIEngine = eslint.CLIEngine;
 
 const mainConfig = require('../index');
 
