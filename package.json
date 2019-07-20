@@ -31,7 +31,7 @@
     "lodash.merge": "^4.6.1"
   },
   "peerDependencies": {
-    "eslint": "^3.8.0 || 4 || 5"
+    "eslint": "5 || 6"
   },
   "optionalDependencies": {
     "babel-eslint": "^10.0.2",
