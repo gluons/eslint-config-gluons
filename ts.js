@@ -19,6 +19,7 @@ module.exports = {
 	plugins: ['@typescript-eslint'],
 	rules: {
 		'@typescript-eslint/brace-style': ['error', '1tbs'],
+		'@typescript-eslint/explicit-function-return-type': 'off',
 		'@typescript-eslint/indent': [
 			'error',
 			'tab',
