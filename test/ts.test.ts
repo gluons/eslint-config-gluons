@@ -1,10 +1,10 @@
-const { CLIEngine } = require('eslint');
-const { resolve } = require('path');
+import { CLIEngine } from 'eslint';
+import { resolve } from 'path';
+import tsConfig from '../ts';
 
-const tsConfig = require('../ts');
 const tsFixurePath = resolve(__dirname, '../fixtures/ts.ts');
 
-tsConfig.parserOptions.project = resolve(__dirname, '../tsconfig.json');
+tsConfig.parserOptions.project = resolve(__dirname, '../fixtures/tsconfig.json');
 
 const cli = new CLIEngine({
 	baseConfig: tsConfig,

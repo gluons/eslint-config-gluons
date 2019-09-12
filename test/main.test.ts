@@ -1,9 +1,8 @@
-const { CLIEngine } = require('eslint');
-const path = require('path');
+import { CLIEngine } from 'eslint';
+import { resolve } from 'path';
+import mainConfig from '../index';
 
-const mainConfig = require('../index');
-
-const mainFixturePath = path.resolve(__dirname, '../fixtures/main.js');
+const mainFixturePath = resolve(__dirname, '../fixtures/main.js');
 
 const cli = new CLIEngine({
 	baseConfig: mainConfig,

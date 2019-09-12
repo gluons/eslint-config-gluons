@@ -1,9 +1,8 @@
-const { CLIEngine } = require('eslint');
-const path = require('path');
+import { CLIEngine } from 'eslint';
+import { resolve } from 'path';
+import esNextConfig from '../esnext';
 
-const esNextConfig = require('../esnext');
-
-const esNextFixturePath = path.resolve(__dirname, '../fixtures/esnext.js');
+const esNextFixturePath = resolve(__dirname, '../fixtures/esnext.js');
 
 const cli = new CLIEngine({
 	baseConfig: esNextConfig,
