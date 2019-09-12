@@ -1,11 +1,13 @@
-'use strict';
+import { Linter } from 'eslint';
+
+type Config = Linter.Config;
 
 const isProd = process.env.NODE_ENV === 'production';
 
-/*
+/**
  * Main config
  */
-module.exports = {
+const config: Config = {
 	extends: 'eslint:recommended',
 	env: {
 		browser: true,
@@ -94,3 +96,5 @@ module.exports = {
 		]
 	}
 };
+
+export = config;

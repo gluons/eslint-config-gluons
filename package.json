@@ -3,12 +3,20 @@
   "version": "5.0.0",
   "description": "Gluons' personal ESLint shareable config",
   "main": "index.js",
+  "files": [
+    "./*.js"
+  ],
   "engines": {
     "node": ">=8"
   },
   "scripts": {
+    "clean": "rimraf ./*.js",
+    "prebuild": "npm run clean",
+    "build": "tsc",
     "lint": "eslint .",
-    "test": "jest"
+    "pretest": "npm run build",
+    "test": "jest",
+    "posttest": "npm run clean"
   },
   "repository": {
     "type": "git",
@@ -23,12 +31,18 @@
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/eslint": "^6.1.1",
     "@types/jest": "^24.0.18",
     "@types/node": "10",
+    "babel-jest": "^24.9.0",
     "eslint": "^6.3.0",
     "eslint-config-xo": "^0.26.0",
     "jest": "^24.9.0",
     "lodash.merge": "^4.6.1",
+    "rimraf": "^3.0.0",
     "typescript": "~3.5"
   },
   "peerDependencies": {

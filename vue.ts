@@ -1,16 +1,14 @@
-'use strict';
+import { Linter } from 'eslint';
+import { resolve } from 'path';
 
-const { resolve } = require('path');
+type Config = Linter.Config;
 
-/*
- * Vue
+/**
+ *  Vue
  */
-module.exports = {
+const config: Config = {
 	plugins: ['vue'],
-	extends: [
-		resolve(__dirname, './esnext.js'),
-		'plugin:vue/recommended'
-	],
+	extends: [resolve(__dirname, './esnext.js'), 'plugin:vue/recommended'],
 	rules: {
 		'vue/html-indent': ['error', 'tab'],
 		'vue/script-indent': [
@@ -28,3 +26,5 @@ module.exports = {
 		]
 	}
 };
+
+export = config;

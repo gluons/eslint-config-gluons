@@ -1,11 +1,12 @@
-'use strict';
+import { Linter } from 'eslint';
+import { resolve } from 'path';
 
-const { resolve } = require('path');
+type Config = Linter.Config;
 
-/*
- * TypeScript config
+/**
+ * TypeScript
  */
-module.exports = {
+const config: Config = {
 	extends: [
 		resolve(__dirname, './index.js'),
 		'plugin:@typescript-eslint/eslint-recommended',
@@ -56,3 +57,5 @@ module.exports = {
 		'@typescript-eslint/semi': ['error', 'always']
 	}
 };
+
+export = config;

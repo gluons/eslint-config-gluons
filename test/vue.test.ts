@@ -1,9 +1,8 @@
-const { CLIEngine } = require('eslint');
-const path = require('path');
+import { CLIEngine } from 'eslint';
+import { resolve } from 'path';
+import vueConfig from '../vue';
 
-const vueConfig = require('../vue');
-
-const vueFixturePath = path.resolve(__dirname, '../fixtures/app.vue');
+const vueFixturePath = resolve(__dirname, '../fixtures/app.vue');
 
 const cli = new CLIEngine({
 	baseConfig: vueConfig,
