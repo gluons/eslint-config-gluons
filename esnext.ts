@@ -1,11 +1,12 @@
-'use strict';
+import { Linter } from 'eslint';
+import { resolve } from 'path';
 
-const { resolve } = require('path');
+type Config = Linter.Config;
 
-/*
+/**
  * ECMAScript 6+
  */
-module.exports = {
+const config: Config = {
 	extends: resolve(__dirname, './index.js'),
 	parserOptions: {
 		ecmaVersion: 2018,
@@ -50,3 +51,5 @@ module.exports = {
 		'prefer-template': 'error'
 	}
 };
+
+export = config;

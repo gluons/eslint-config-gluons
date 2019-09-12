@@ -1,11 +1,12 @@
-'use strict';
+import { Linter } from 'eslint';
+import { resolve } from 'path';
 
-const { resolve } = require('path');
+type Config = Linter.Config;
 
-/*
+/**
  * Vue with `babel-eslint` parser
  */
-module.exports = {
+const config: Config = {
 	extends: resolve(__dirname, './vue.js'),
 	parserOptions: {
 		parser: 'babel-eslint',
@@ -13,3 +14,5 @@ module.exports = {
 		sourceType: 'module'
 	}
 };
+
+export = config;
