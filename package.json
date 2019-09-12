@@ -3,6 +3,9 @@
   "version": "5.0.0",
   "description": "Gluons' personal ESLint shareable config",
   "main": "index.js",
+  "files": [
+    "./*.js"
+  ],
   "engines": {
     "node": ">=8"
   },
