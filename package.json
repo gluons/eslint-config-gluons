@@ -52,7 +52,7 @@
     "@typescript-eslint/eslint-plugin": "^2.1.0",
     "@typescript-eslint/parser": "^2.1.0",
     "babel-eslint": "^10.0.3",
-    "eslint-plugin-vue": "^5.2.3"
+    "eslint-plugin-vue": "^6.0.0"
   },
   "bugs": {
     "url": "https://github.com/gluons/eslint-config-gluons/issues"
