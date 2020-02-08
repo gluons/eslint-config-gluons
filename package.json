@@ -10,6 +10,7 @@
     "node": ">=8"
   },
   "scripts": {
+    "prepublishOnly": "npm run build",
     "clean": "rimraf ./*.js",
     "prebuild": "npm run clean",
     "build": "tsc",
