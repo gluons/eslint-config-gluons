@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gluons",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Gluons' personal ESLint shareable config",
   "main": "index.js",
   "files": [
