@@ -813,6 +813,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@gluons/prettier-config@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/@gluons/prettier-config/-/prettier-config-2.0.3.tgz#e541541d869009bc6f9ee5c7761ba166ef3b0462"
+  integrity sha512-+/9hI4h8mqeuLEUnjFTIT2cI3bJflQ+OPUE0Ym3vgPzJzS7mjFcsuuqdm8TlaxQcC9UVO96Lqqzv56CCmCkU0A==
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@istanbuljs/load-nyc-config/-/load-nyc-config-1.0.0.tgz#10602de5570baea82f8afbfa2630b24e7a8cfe5b"
@@ -3658,6 +3663,11 @@ prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
+
+prettier@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-2.0.4.tgz#2d1bae173e355996ee355ec9830a7a1ee05457ef"
+  integrity sha512-SVJIQ51spzFDvh4fIbCLvciiDMCrRhlN3mbZvv/+ycjvmF5E73bKdGfU8QDLNmjYJf+lsGnDBC4UUnvTe5OO0w==
 
 pretty-format@^25.2.1, pretty-format@^25.3.0:
   version "25.3.0"
