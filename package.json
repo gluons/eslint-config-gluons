@@ -15,7 +15,7 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "lint": "eslint .",
-    "format": "prettier --write \"**/*/*.ts\"",
+    "format": "prettier --write \"**/*.{ts,js,vue}\"",
     "pretest": "npm run build",
     "test": "jest",
     "posttest": "npm run clean"
