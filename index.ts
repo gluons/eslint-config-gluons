@@ -8,7 +8,7 @@ const isProd = process.env.NODE_ENV === 'production';
  * Main config
  */
 const config: Config = {
-	extends: 'eslint:recommended',
+	extends: ['eslint:recommended', 'plugin:prettier/recommended'],
 	env: {
 		browser: true,
 		node: true

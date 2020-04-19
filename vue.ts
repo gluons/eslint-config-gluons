@@ -8,7 +8,11 @@ type Config = Linter.Config;
  */
 const config: Config = {
 	plugins: ['vue'],
-	extends: [resolve(__dirname, './esnext.js'), 'plugin:vue/recommended'],
+	extends: [
+		resolve(__dirname, './esnext.js'),
+		'plugin:vue/recommended',
+		'prettier/vue'
+	],
 	rules: {
 		'vue/html-indent': ['error', 'tab'],
 		'vue/script-indent': [
