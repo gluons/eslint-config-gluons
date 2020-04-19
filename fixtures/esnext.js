@@ -5,4 +5,4 @@ import { readFile } from 'fs';
 		let content = data.toString();
 		console.log(content);
 	});
-}());
+})();
