@@ -8,6 +8,7 @@ type Config = Linter.Config;
  */
 const config: Config = {
 	extends: resolve(__dirname, './vue.js'),
+	parser: 'vue-eslint-parser',
 	parserOptions: {
 		parser: 'babel-eslint',
 		ecmaVersion: 2018,
