@@ -1,1 +1,2 @@
 fixtures/ linguist-detectable=false
+prettier.config.js linguist-detectable=false

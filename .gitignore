@@ -103,3 +103,4 @@ $RECYCLE.BIN/
 
 # Dist files
 /*.js
+!prettier.config.js
