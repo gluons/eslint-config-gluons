@@ -55,7 +55,11 @@ const config: Config = {
 				]
 			}
 		],
-		'@typescript-eslint/semi': ['error', 'always']
+		'@typescript-eslint/semi': ['error', 'always'],
+		'@typescript-eslint/no-floating-promises': [
+			'error',
+			{ ignoreIIFE: true }
+		]
 	}
 };
 
