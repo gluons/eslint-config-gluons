@@ -1,6 +1,6 @@
 import { CLIEngine } from 'eslint';
 import { resolve } from 'path';
-import esNextConfig from '../esnext';
+import esNextConfig from '../lib/esnext';
 
 const esNextFixturePath = resolve(__dirname, '../fixtures/esnext.js');
 

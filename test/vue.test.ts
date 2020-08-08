@@ -1,6 +1,6 @@
 import { CLIEngine } from 'eslint';
 import { resolve } from 'path';
-import vueConfig from '../vue';
+import vueConfig from '../lib/vue';
 
 const vueFixturePath = resolve(__dirname, '../fixtures/app.vue');
 

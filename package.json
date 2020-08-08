@@ -2,16 +2,16 @@
   "name": "eslint-config-gluons",
   "version": "5.0.4",
   "description": "Gluons' personal ESLint shareable config",
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
-    "./*.js"
+    "lib"
   ],
   "engines": {
     "node": ">=8"
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "clean": "del-cli ./*.js !prettier.config.js",
+    "clean": "del-cli lib/",
     "prebuild": "npm run clean",
     "build": "tsc",
     "lint": "eslint .",
@@ -36,6 +36,7 @@
     "url": "https://github.com/gluons/eslint-config-gluons/issues"
   },
   "homepage": "https://gluons.github.io/eslint-config-gluons/",
+  "prettier": "@gluons/prettier-config",
   "dependencies": {
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4"
@@ -48,13 +49,13 @@
     "@types/eslint": "^7.0.0",
     "@types/jest": "^26.0.7",
     "@types/node": "12",
-    "babel-jest": "^26.1.0",
     "del-cli": "^3.0.1",
     "eslint": "^7.5.0",
     "eslint-config-xo": "^0.32.1",
+    "eslint-config-xo-typescript": "^0.31.0",
     "jest": "^26.1.0",
-    "lodash.merge": "^4.6.1",
     "prettier": "^2.0.5",
+    "tsconfig-gluons": "^1.1.0",
     "typescript": "^3.9.7"
   },
   "peerDependencies": {
@@ -62,9 +63,8 @@
     "prettier": "2"
   },
   "optionalDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.7.0",
-    "@typescript-eslint/parser": "^3.7.0",
-    "babel-eslint": "^10.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
     "eslint-plugin-vue": "^6.2.2"
   }
 }

@@ -1,6 +1,6 @@
 import { CLIEngine } from 'eslint';
 import { resolve } from 'path';
-import mainConfig from '../index';
+import mainConfig from '../lib/index';
 
 const mainFixturePath = resolve(__dirname, '../fixtures/main.js');
 

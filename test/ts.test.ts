@@ -1,6 +1,6 @@
 import { CLIEngine } from 'eslint';
 import { resolve } from 'path';
-import tsConfig from '../ts';
+import tsConfig from '../lib/ts';
 
 const tsFixurePath = resolve(__dirname, '../fixtures/ts.ts');
 
