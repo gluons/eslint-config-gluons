@@ -21,50 +21,72 @@ A set of my ❤️ favorite rules.
 
 ## Installation
 
-**Via [NPM](https://www.npmjs.com):**
+**Via [npm](https://www.npmjs.com):**
 
 [![NPM](https://nodei.co/npm/eslint-config-gluons.png?compact=true)](https://www.npmjs.com/package/eslint-config-gluons)
 
+```bash
+npm install -D eslint-config-gluons
 ```
-npm install --save-dev eslint-config-gluons
+
+**Via [pnpm](https://pnpm.js.org/):**
+
+```bash
+pnpm install -D eslint-config-gluons
 ```
 
 **Via [Yarn](https://yarnpkg.com):**
 
-```
+```bash
 yarn add -D eslint-config-gluons
 ```
+
+---
+
+### Using with [TypeScript](https://www.typescriptlang.org)
+
+Install [**TypeScript ESLint**](https://typescript-eslint.io).
+
+**Via [npm](https://www.npmjs.com):**
+
+```bash
+npm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+**Via [pnpm](https://pnpm.js.org/):**
+
+```bash
+pnpm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+**Via [Yarn](https://yarnpkg.com):**
+
+```bash
+yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+---
 
 ### Using with [Vue](https://vuejs.org)
 
 Install [`eslint-plugin-vue`](https://github.com/vuejs/eslint-plugin-vue).
 
-**Via [NPM](https://www.npmjs.com):**
+**Via [npm](https://www.npmjs.com):**
 
+```bash
+npm install -D eslint-plugin-vue
 ```
-npm install --save-dev eslint-plugin-vue
+
+**Via [pnpm](https://pnpm.js.org/):**
+
+```bash
+pnpm install -D eslint-plugin-vue
 ```
 
 **Via [Yarn](https://yarnpkg.com):**
 
-```
+```bash
 yarn add -D eslint-plugin-vue
-```
-
-### Using [`babel-eslint`](https://github.com/babel/babel-eslint) as parser
-
-Install [`babel-eslint`](https://github.com/babel/babel-eslint).
-
-**Via [NPM](https://www.npmjs.com):**
-
-```
-npm install --save-dev babel-eslint
-```
-
-**Via [Yarn](https://yarnpkg.com):**
-
-```
-yarn add -D babel-eslint
 ```
 
 ## Usage
@@ -85,7 +107,23 @@ yarn add -D babel-eslint
 }
 ```
 
-**[Vue](https://vuejs.org):**
+**TypeScript:**
+
+```json
+{
+	"extends": "gluons/ts"
+}
+```
+
+**TypeScript + JavaScript:**
+
+```json
+{
+	"extends": "gluons/mixed"
+}
+```
+
+**Vue:**
 
 ```json
 {
@@ -93,29 +131,11 @@ yarn add -D babel-eslint
 }
 ```
 
-### Using [`babel-eslint`](https://github.com/babel/babel-eslint) as parser
-
-**Normal:**
+**Vue + TypeScript:**
 
 ```json
 {
-	"extends": "gluons/babel"
-}
-```
-
-**ECMAScript 2015+:**
-
-```json
-{
-	"extends": "gluons/esnext-babel"
-}
-```
-
-**[Vue](https://vuejs.org):**
-
-```json
-{
-	"extends": "gluons/vue-babel"
+	"extends": "gluons/vue-ts"
 }
 ```
 
