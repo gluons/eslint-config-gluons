@@ -1,12 +1,9 @@
 {
+	"extends": "tsconfig-gluons",
 	"compilerOptions": {
-		"module": "commonjs",
-		"moduleResolution": "node",
-		"target": "es2015",
-		"esModuleInterop": true,
-		"lib": ["esnext"]
+		"sourceMap": false,
+		"outDir": "."
 	},
-	"include": [
-		"./*.ts"
-	]
+	"include": ["src"],
+	"exclude": []
 }

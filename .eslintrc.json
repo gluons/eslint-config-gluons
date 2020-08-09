@@ -1,6 +1,12 @@
 {
 	"root": true,
-	"extends": "xo",
+	"extends": [
+		"xo/esnext",
+		"xo-typescript"
+	],
+	"parserOptions": {
+		"project": "./tsconfig-eslint.json"
+	},
 	"env": {
 		"jest": true
 	},

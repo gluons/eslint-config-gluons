@@ -4,11 +4,16 @@ import { resolve } from 'path';
 type Config = Linter.Config;
 
 /**
- * ECMAScript 6+ with `babel-eslint` parser
+ * Mixed JavaScript + TypeScript
  */
 const config: Config = {
 	extends: resolve(__dirname, './esnext.js'),
-	parser: 'babel-eslint'
+	overrides: [
+		{
+			files: ['*.ts'],
+			extends: [resolve(__dirname, './ts.js')]
+		}
+	]
 };
 
 export = config;

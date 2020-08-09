@@ -9,11 +9,11 @@ type Config = Linter.Config;
 const config: Config = {
 	extends: resolve(__dirname, './index.js'),
 	parserOptions: {
-		ecmaVersion: 2018,
+		ecmaVersion: 2020,
 		sourceType: 'module'
 	},
 	env: {
-		es6: true
+		es2020: true
 	},
 	rules: {
 		'arrow-body-style': [
