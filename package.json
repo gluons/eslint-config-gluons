@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gluons",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "description": "Gluons' personal ESLint shareable config.",
   "main": "index.js",
   "typings": "index.d.ts",
