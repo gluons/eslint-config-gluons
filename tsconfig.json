@@ -2,9 +2,8 @@
 	"extends": "tsconfig-gluons",
 	"compilerOptions": {
 		"sourceMap": false,
-		"outDir": "lib"
+		"outDir": "."
 	},
-	"include": [
-		"src"
-	]
+	"include": ["src"],
+	"exclude": []
 }

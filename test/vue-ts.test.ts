@@ -1,6 +1,6 @@
 import { CLIEngine } from 'eslint';
 import { resolve } from 'path';
-import vueTSConfig from '../lib/vue-ts';
+import vueTSConfig from '../vue-ts';
 
 const vueFixturePath = resolve(__dirname, '../fixtures/app-ts.vue');
 const tsConfigPath = resolve(__dirname, '../fixtures/tsconfig.json');

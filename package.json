@@ -1,23 +1,26 @@
 {
   "name": "eslint-config-gluons",
   "version": "5.0.4",
-  "description": "Gluons' personal ESLint shareable config",
-  "main": "lib/index.js",
+  "description": "Gluons' personal ESLint shareable config.",
+  "main": "index.js",
+  "typings": "index.d.ts",
   "files": [
-    "lib"
+    "./*.js",
+    "./*.d.ts"
   ],
   "engines": {
     "node": ">=8"
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "clean": "del-cli lib/",
+    "clean": "del-cli ./*.{js,d.ts}",
     "prebuild": "npm run clean",
     "build": "tsc",
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.{ts,js,vue}\"",
+    "format": "prettier --write \"**/*.{json,ts,js,vue}\"",
     "pretest": "npm run build",
-    "test": "jest"
+    "test": "jest",
+    "posttest": "npm run clean"
   },
   "repository": {
     "type": "git",
