@@ -5,8 +5,18 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "files": [
-    "./*.js",
-    "./*.d.ts"
+    "esnext.js",
+    "esnext.d.ts",
+    "index.js",
+    "index.d.ts",
+    "mixed.js",
+    "mixed.d.ts",
+    "ts.js",
+    "ts.d.ts",
+    "vue.js",
+    "vue.d.ts",
+    "vue-ts.js",
+    "vue-ts.d.ts"
   ],
   "engines": {
     "node": ">=10"
