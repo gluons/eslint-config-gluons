@@ -1,20 +1,21 @@
 import { CLIEngine } from 'eslint';
 import { resolve } from 'path';
-import tsConfig from '../lib/ts';
+import vueTSConfig from '../lib/vue-ts';
 
-const tsFixurePath = resolve(__dirname, '../fixtures/ts.ts');
+const vueFixturePath = resolve(__dirname, '../fixtures/app-ts.vue');
 const tsConfigPath = resolve(__dirname, '../fixtures/tsconfig.json');
 
-tsConfig.parserOptions.project = tsConfigPath;
+vueTSConfig.parserOptions.project = tsConfigPath;
 
 const cli = new CLIEngine({
-	baseConfig: tsConfig,
+	baseConfig: vueTSConfig,
 	useEslintrc: false,
 	ignore: false
 });
-const report = cli.executeOnFiles([tsFixurePath]);
 
-test('TypeScript rules', () => {
+const report = cli.executeOnFiles([vueFixturePath]);
+
+test('Vue + TypeScript rules', () => {
 	expect(report.errorCount).toBe(0);
 	expect(report.warningCount).toBe(0);
 });

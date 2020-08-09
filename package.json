@@ -55,7 +55,8 @@
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "tsconfig-gluons": "^1.1.0",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "vue": "^2.6.11"
   },
   "peerDependencies": {
     "eslint": "7",

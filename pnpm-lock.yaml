@@ -17,6 +17,7 @@ devDependencies:
   prettier: 2.0.5
   tsconfig-gluons: 1.1.0_typescript@3.9.7
   typescript: 3.9.7
+  vue: 2.6.11
 lockfileVersion: 5.1
 optionalDependencies:
   '@typescript-eslint/eslint-plugin': 3.8.0_9195d7e59c976ef8295ee5e80b40ac89
@@ -5479,6 +5480,10 @@ packages:
       eslint: '>=5.0.0'
     resolution:
       integrity: sha512-Kr21uPfthDc63nDl27AGQEhtt9VrZ9nkYk/NTftJ2ws9XiJwzJJCnCr3AITQ2jpRMA0XPGDECxYH8E027qMK9Q==
+  /vue/2.6.11:
+    dev: true
+    resolution:
+      integrity: sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
   /w3c-hr-time/1.0.2:
     dependencies:
       browser-process-hrtime: 1.0.0
@@ -5661,3 +5666,4 @@ specifiers:
   prettier: ^2.0.5
   tsconfig-gluons: ^1.1.0
   typescript: ^3.9.7
+  vue: ^2.6.11
