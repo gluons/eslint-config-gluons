@@ -97,7 +97,8 @@ const config: Config = {
 			}
 		],
 		semi: 'off',
-		'@typescript-eslint/semi': ['error', 'always']
+		'@typescript-eslint/semi': ['error', 'always'],
+		'@typescript-eslint/triple-slash-reference': 'off'
 	}
 };
 
