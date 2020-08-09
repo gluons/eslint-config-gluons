@@ -9,7 +9,7 @@
     "./*.d.ts"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "scripts": {
     "prepublishOnly": "npm run build",
