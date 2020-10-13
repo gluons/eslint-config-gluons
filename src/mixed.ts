@@ -7,11 +7,11 @@ type Config = Linter.Config;
  * Mixed JavaScript + TypeScript
  */
 const config: Config = {
-	extends: resolve(__dirname, './esnext.js'),
+	extends: resolve(__dirname, './esnext'),
 	overrides: [
 		{
 			files: ['*.ts'],
-			extends: [resolve(__dirname, './ts.js')]
+			extends: [resolve(__dirname, './ts')]
 		}
 	]
 };

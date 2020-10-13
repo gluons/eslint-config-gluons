@@ -1,3 +1,4 @@
 fixtures/
+/rules/
 /*.js
 /*.d.ts

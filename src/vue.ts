@@ -7,28 +7,7 @@ type Config = Linter.Config;
  *  Vue
  */
 const config: Config = {
-	plugins: ['vue'],
-	extends: [
-		resolve(__dirname, './esnext.js'),
-		'plugin:vue/recommended',
-		'prettier/vue'
-	],
-	rules: {
-		'vue/html-indent': ['error', 'tab'],
-		'vue/script-indent': [
-			'error',
-			'tab',
-			{
-				switchCase: 1
-			}
-		],
-		'vue/html-closing-bracket-newline': [
-			'error',
-			{
-				multiline: 'always'
-			}
-		]
-	}
+	extends: [resolve(__dirname, './rules/vue'), 'prettier/vue']
 };
 
 export = config;

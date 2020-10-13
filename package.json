@@ -5,6 +5,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "files": [
+    "rules",
     "esnext.js",
     "esnext.d.ts",
     "index.js",

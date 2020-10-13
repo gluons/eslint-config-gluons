@@ -5,7 +5,9 @@ import tsConfig from '../ts';
 const tsFixurePath = resolve(__dirname, '../fixtures/ts.ts');
 const tsConfigPath = resolve(__dirname, '../fixtures/tsconfig.json');
 
-tsConfig.parserOptions.project = tsConfigPath;
+tsConfig.parserOptions = {
+	project: tsConfigPath
+};
 
 const cli = new ESLint({
 	baseConfig: tsConfig,
