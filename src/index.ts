@@ -51,6 +51,12 @@ const config: Config = {
 		'no-array-constructor': 'error',
 		'no-console': isProd ? 'error' : 'off',
 		'no-debugger': isProd ? 'error' : 'off',
+		'no-empty': [
+			'error',
+			{
+				allowEmptyCatch: true
+			}
+		],
 		'no-new-object': 'error',
 		'no-trailing-spaces': 'warn',
 		'no-useless-concat': 'warn',
