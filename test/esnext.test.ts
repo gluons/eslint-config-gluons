@@ -1,18 +1,18 @@
-import { CLIEngine } from 'eslint';
+import { ESLint } from 'eslint';
 import { resolve } from 'path';
 import esNextConfig from '../esnext';
 
 const esNextFixturePath = resolve(__dirname, '../fixtures/esnext.js');
 
-const cli = new CLIEngine({
+const cli = new ESLint({
 	baseConfig: esNextConfig,
 	useEslintrc: false,
 	ignore: false
 });
 
-const report = cli.executeOnFiles([esNextFixturePath]);
+test('ESNext rules', async () => {
+	const results = await cli.lintFiles([esNextFixturePath]);
 
-test('ESNext rules', () => {
-	expect(report.errorCount).toBe(0);
-	expect(report.warningCount).toBe(0);
+	expect(results[0].errorCount).toBe(0);
+	expect(results[0].warningCount).toBe(0);
 });

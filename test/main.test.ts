@@ -1,18 +1,18 @@
-import { CLIEngine } from 'eslint';
+import { ESLint } from 'eslint';
 import { resolve } from 'path';
 import mainConfig from '../';
 
 const mainFixturePath = resolve(__dirname, '../fixtures/main.js');
 
-const cli = new CLIEngine({
+const cli = new ESLint({
 	baseConfig: mainConfig,
 	useEslintrc: false,
 	ignore: false
 });
 
-const report = cli.executeOnFiles([mainFixturePath]);
+test('Main rules', async () => {
+	const results = await cli.lintFiles([mainFixturePath]);
 
-test('Main rules', () => {
-	expect(report.errorCount).toBe(0);
-	expect(report.warningCount).toBe(0);
+	expect(results[0].errorCount).toBe(0);
+	expect(results[0].warningCount).toBe(0);
 });
