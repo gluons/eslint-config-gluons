@@ -11,7 +11,7 @@ devDependencies:
   '@types/node': 12.12.67
   del-cli: 3.0.1
   eslint: 7.11.0
-  eslint-config-xo: 0.32.1_eslint@7.11.0
+  eslint-config-xo: 0.33.1_eslint@7.11.0
   eslint-config-xo-typescript: 0.33.0_8319e4028a2fef3fe9f00acb3ea298af
   jest: 26.5.3
   prettier: 2.1.2
@@ -2432,7 +2432,7 @@ packages:
       typescript: '>=3.6.0'
     resolution:
       integrity: sha512-MCAP26EX+o+hoNPPmi/GHUznQHBUaN5taKUQznMy7RjqjPPJMlOzsiZLGNEQeDfuoYZE0O4x0vZWRduggyVQMg==
-  /eslint-config-xo/0.32.1_eslint@7.11.0:
+  /eslint-config-xo/0.33.1_eslint@7.11.0:
     dependencies:
       confusing-browser-globals: 1.0.9
       eslint: 7.11.0
@@ -2440,9 +2440,9 @@ packages:
     engines:
       node: '>=10'
     peerDependencies:
-      eslint: '>=7.3.1'
+      eslint: '>=7.11.0'
     resolution:
-      integrity: sha512-achnYLilUTtljR1CGRikVj9HRAf5GplJeGgeyQMvph7mKo+AqTkNuig4EO/IrNOChcjoazgw9YT4cW/3+69i3Q==
+      integrity: sha512-ZdnT4Q/m3CLCX0o3nKKW3Q8CfNiRy/ojkeffLtz8f0EQJMHP/9fJyncIvI0mik1wE61EI6PHrXdLeAbeb62cZw==
   /eslint-plugin-prettier/3.1.4_eslint@7.11.0+prettier@2.1.2:
     dependencies:
       eslint: 7.11.0
@@ -5809,7 +5809,7 @@ specifiers:
   del-cli: ^3.0.1
   eslint: ^7.11.0
   eslint-config-prettier: ^6.12.0
-  eslint-config-xo: ^0.32.1
+  eslint-config-xo: ^0.33.0
   eslint-config-xo-typescript: ^0.33.0
   eslint-plugin-prettier: ^3.1.4
   eslint-plugin-vue: ^7.0.1
