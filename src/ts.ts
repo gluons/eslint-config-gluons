@@ -9,6 +9,7 @@ type Config = Linter.Config;
 const config: Config = {
 	extends: [
 		resolve(__dirname, './rules/ts'),
+		'plugin:prettier/recommended',
 		'prettier/@typescript-eslint'
 	]
 };

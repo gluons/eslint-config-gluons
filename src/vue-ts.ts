@@ -7,7 +7,13 @@ type Config = Linter.Config;
  * Vue + TypeScript
  */
 const config: Config = {
-	extends: [resolve(__dirname, './ts'), resolve(__dirname, './vue')],
+	extends: [
+		resolve(__dirname, './rules/ts'),
+		resolve(__dirname, './rules/vue'),
+		'plugin:prettier/recommended',
+		'prettier/@typescript-eslint',
+		'prettier/vue'
+	],
 	parser: 'vue-eslint-parser',
 	parserOptions: {
 		parser: '@typescript-eslint/parser',

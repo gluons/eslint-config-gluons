@@ -7,7 +7,11 @@ type Config = Linter.Config;
  *  Vue
  */
 const config: Config = {
-	extends: [resolve(__dirname, './rules/vue'), 'prettier/vue']
+	extends: [
+		resolve(__dirname, './rules/vue'),
+		'plugin:prettier/recommended',
+		'prettier/vue'
+	]
 };
 
 export = config;
