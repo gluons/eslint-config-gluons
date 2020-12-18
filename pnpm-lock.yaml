@@ -1,5 +1,5 @@
 dependencies:
-  eslint-config-prettier: 6.12.0_eslint@7.11.0
+  eslint-config-prettier: 7.0.0_eslint@7.11.0
   eslint-plugin-prettier: 3.1.4_eslint@7.11.0+prettier@2.1.2
 devDependencies:
   '@babel/core': 7.11.6
@@ -2408,16 +2408,15 @@ packages:
       source-map: 0.6.1
     resolution:
       integrity: sha512-qFcX0XJkdg+PB3xjZZG/wKSuT1PnQWx57+TVSjIMmILd2yC/6ByYElPwJnslDsuWuSAp4AwJGumarAAmJch5Kw==
-  /eslint-config-prettier/6.12.0_eslint@7.11.0:
+  /eslint-config-prettier/7.0.0_eslint@7.11.0:
     dependencies:
       eslint: 7.11.0
-      get-stdin: 6.0.0
     dev: false
     hasBin: true
     peerDependencies:
-      eslint: '>=3.14.1'
+      eslint: '>=7.0.0'
     resolution:
-      integrity: sha512-9jWPlFlgNwRUYVoujvWTQ1aMO8o6648r+K7qU7K5Jmkbyqav1fuEZC0COYpGBxyiAJb65Ra9hrmFx19xRGwXWw==
+      integrity: sha512-8Y8lGLVPPZdaNA7JXqnvETVC7IiVRgAP6afQu9gOQRn90YY3otMNh+x7Vr2vMePQntF+5erdSUBqSzCmU/AxaQ==
   /eslint-config-xo-typescript/0.37.0_8319e4028a2fef3fe9f00acb3ea298af:
     dependencies:
       '@typescript-eslint/eslint-plugin': 4.4.1_08be5cdc80d109b060448e8ad59a1c67
@@ -2862,12 +2861,6 @@ packages:
       node: '>=8.0.0'
     resolution:
       integrity: sha512-pjzuKtY64GYfWizNAJ0fr9VqttZkNiK2iS430LtIHzjBEr6bX8Am2zm4sW4Ro5wjWW5cAlRL1qAMTcXbjNAO2Q==
-  /get-stdin/6.0.0:
-    dev: false
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
   /get-stream/4.1.0:
     dependencies:
       pump: 3.0.0
@@ -5806,7 +5799,7 @@ specifiers:
   '@typescript-eslint/parser': ^4.4.1
   del-cli: ^3.0.1
   eslint: ^7.11.0
-  eslint-config-prettier: ^6.12.0
+  eslint-config-prettier: ^7.0.0
   eslint-config-xo: ^0.33.0
   eslint-config-xo-typescript: ^0.37.0
   eslint-plugin-prettier: ^3.1.4
