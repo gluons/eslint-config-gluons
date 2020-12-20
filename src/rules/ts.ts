@@ -83,6 +83,12 @@ const config: Config = {
 			'error',
 			{ ignoreIIFE: true }
 		],
+		'@typescript-eslint/no-unused-vars': [
+			'error',
+			{
+				argsIgnorePattern: '^_'
+			}
+		],
 		'space-before-function-paren': 'off',
 		'@typescript-eslint/space-before-function-paren': [
 			'error',

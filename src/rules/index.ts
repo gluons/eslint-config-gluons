@@ -56,6 +56,12 @@ const config: Config = {
 		],
 		'no-new-object': 'error',
 		'no-trailing-spaces': 'warn',
+		'no-unused-vars': [
+			'error',
+			{
+				argsIgnorePattern: '^_'
+			}
+		],
 		'no-useless-concat': 'warn',
 		'no-useless-escape': 'warn',
 		quotes: [
