@@ -12,7 +12,7 @@ devDependencies:
   del-cli: 3.0.1
   eslint: 7.16.0
   eslint-config-xo: 0.35.0_eslint@7.16.0
-  eslint-config-xo-typescript: 0.37.0_f0bfd445c4e30fc9175a66726a372452
+  eslint-config-xo-typescript: 0.38.0_f0bfd445c4e30fc9175a66726a372452
   jest: 26.6.3
   prettier: 2.2.1
   tsconfig-gluons: 1.1.0_typescript@4.1.3
@@ -2331,7 +2331,7 @@ packages:
       eslint: '>=7.0.0'
     resolution:
       integrity: sha512-9sm5/PxaFG7qNJvJzTROMM1Bk1ozXVTKI0buKOyb0Bsr1hrwi0H/TzxF/COtf1uxikIK8SwhX7K6zg78jAzbeA==
-  /eslint-config-xo-typescript/0.37.0_f0bfd445c4e30fc9175a66726a372452:
+  /eslint-config-xo-typescript/0.38.0_f0bfd445c4e30fc9175a66726a372452:
     dependencies:
       '@typescript-eslint/eslint-plugin': 4.10.0_6b61a0c92e8c4cfbede913a9a92460e2
       eslint: 7.16.0
@@ -2340,11 +2340,11 @@ packages:
     engines:
       node: '>=10'
     peerDependencies:
-      '@typescript-eslint/eslint-plugin': '>=4.10.0'
+      '@typescript-eslint/eslint-plugin': '>=4.14.0'
       eslint: '>=7.8.0'
       typescript: '>=3.6.0'
     resolution:
-      integrity: sha512-eFRj4xMhiMExCb+H/wyXC1OwTKJiOQ+Qd9myoZLWdyR0X8PAjtzPRfxSOyh2fkBnZvFCDY0DuqcLkPSDSe4Ybg==
+      integrity: sha512-f5z0gN1r9X84PK1qav6T6YT1zW6KcAqtsMPtmqoKBLt4ACRr6tbAddtFwqkluAEH9JvHjWxuB8vu4KJFcjuzdQ==
   /eslint-config-xo/0.35.0_eslint@7.16.0:
     dependencies:
       confusing-browser-globals: 1.0.10
@@ -5606,7 +5606,7 @@ specifiers:
   eslint: ^7.16.0
   eslint-config-prettier: ^7.1.0
   eslint-config-xo: ^0.35.0
-  eslint-config-xo-typescript: ^0.37.0
+  eslint-config-xo-typescript: ^0.38.0
   eslint-plugin-prettier: ^3.3.0
   eslint-plugin-vue: ^7.3.0
   jest: ^26.6.3
