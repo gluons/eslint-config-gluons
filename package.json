@@ -51,7 +51,7 @@
   "homepage": "https://gluons.github.io/eslint-config-gluons/",
   "prettier": "@gluons/prettier-config",
   "dependencies": {
-    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^3.3.0"
   },
   "devDependencies": {
