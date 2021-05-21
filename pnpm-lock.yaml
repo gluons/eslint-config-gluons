@@ -7,7 +7,7 @@ specifiers:
   '@gluons/prettier-config': ^2.0.3
   '@types/eslint': ^7.2.6
   '@types/jest': ^26.0.19
-  '@types/node': ^12.19.9
+  '@types/node': ^14.0.0
   '@typescript-eslint/eslint-plugin': ^4.10.0
   '@typescript-eslint/parser': ^4.10.0
   del-cli: ^3.0.1
@@ -39,7 +39,7 @@ devDependencies:
   '@gluons/prettier-config': 2.0.6_prettier@2.2.1
   '@types/eslint': 7.2.6
   '@types/jest': 26.0.19
-  '@types/node': 12.19.9
+  '@types/node': 14.17.0
   del-cli: 3.0.1
   eslint: 7.16.0
   eslint-config-xo: 0.36.0_eslint@7.16.0
@@ -1413,6 +1413,10 @@ packages:
 
   /@types/node/12.19.9:
     resolution: {integrity: sha512-yj0DOaQeUrk3nJ0bd3Y5PeDRJ6W0r+kilosLA+dzF3dola/o9hxhMSg2sFvVcA2UHS5JSOsZp4S0c1OEXc4m1Q==}
+    dev: true
+
+  /@types/node/14.17.0:
+    resolution: {integrity: sha512-w8VZUN/f7SSbvVReb9SWp6cJFevxb4/nkG65yLAya//98WgocKm5PLDAtSs5CtJJJM+kHmJjO/6mmYW4MHShZA==}
     dev: true
 
   /@types/normalize-package-data/2.4.0:
