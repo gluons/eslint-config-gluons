@@ -61,7 +61,7 @@
     "@gluons/prettier-config": "^2.0.3",
     "@types/eslint": "^7.2.6",
     "@types/jest": "^26.0.19",
-    "@types/node": "^12.19.9",
+    "@types/node": "^18.0.0",
     "del-cli": "^3.0.1",
     "eslint": "^7.16.0",
     "eslint-config-xo": "^0.36.0",
