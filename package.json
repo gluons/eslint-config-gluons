@@ -79,6 +79,6 @@
   "optionalDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.10.0",
     "@typescript-eslint/parser": "^4.10.0",
-    "eslint-plugin-vue": "^7.3.0"
+    "eslint-plugin-vue": "^9.0.0"
   }
 }
