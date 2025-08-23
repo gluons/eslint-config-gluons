@@ -1,19 +1,7 @@
-import { Linter } from 'eslint';
-import { resolve } from 'path';
+import type { Linter } from 'eslint';
+import esnextConfig from './esnext.js';
+import tsConfig from './ts.js';
 
-type Config = Linter.Config;
+const config: Linter.FlatConfig[] = [...esnextConfig, ...tsConfig];
 
-/**
- * Mixed JavaScript + TypeScript
- */
-const config: Config = {
-	extends: resolve(__dirname, './esnext'),
-	overrides: [
-		{
-			files: ['*.ts'],
-			extends: [resolve(__dirname, './ts')]
-		}
-	]
-};
-
-export = config;
+export default config;

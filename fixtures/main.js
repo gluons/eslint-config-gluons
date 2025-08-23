@@ -1,6 +1,6 @@
-var fs = require('fs');
+const fs = require('fs');
 
 (function () {
-	var someContent = fs.readFileSync('./someFile.txt');
+	const someContent = fs.readFileSync('./someFile.txt');
 	console.log(someContent.toString());
 })();

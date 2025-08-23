@@ -1,16 +1,16 @@
-import { Linter } from 'eslint';
-import { resolve } from 'path';
+import type { Linter } from 'eslint';
+import esnextRules from './rules/esnext.js';
 
-type Config = Linter.Config;
+const config: Linter.FlatConfig[] = [
+	...esnextRules,
+	{
+		plugins: {
+			prettier: require('eslint-plugin-prettier')
+		},
+		rules: {
+			'prettier/prettier': 'error'
+		}
+	}
+];
 
-/**
- * ECMAScript 6+
- */
-const config: Config = {
-	extends: [
-		resolve(__dirname, './rules/esnext'),
-		'plugin:prettier/recommended'
-	]
-};
-
-export = config;
+export default config;

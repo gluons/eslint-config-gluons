@@ -5,16 +5,41 @@ import vueTSConfig from '../vue-ts';
 const vueFixturePath = resolve(__dirname, '../fixtures/app-ts.vue');
 const tsConfigPath = resolve(__dirname, '../fixtures/tsconfig.json');
 
-vueTSConfig.parserOptions.project = tsConfigPath;
+// Update the config to use the correct path
+const updatedConfig = [...vueTSConfig];
+const tsConfigIndex = updatedConfig.findIndex(
+	config =>
+		config.languageOptions &&
+		config.languageOptions.parserOptions &&
+		config.languageOptions.parserOptions.parser
+);
+
+if (
+	tsConfigIndex !== -1 &&
+	updatedConfig[tsConfigIndex].languageOptions?.parserOptions
+) {
+	updatedConfig[tsConfigIndex].languageOptions.parserOptions.project =
+		tsConfigPath;
+}
 
 const cli = new ESLint({
-	baseConfig: vueTSConfig,
-	useEslintrc: false,
+	overrideConfigFile: true,
+	overrideConfig: updatedConfig,
 	ignore: false
 });
 
 test('Vue + TypeScript rules', async () => {
 	const results = await cli.lintFiles([vueFixturePath]);
+
+	// Print the errors for debugging
+	if (results[0].messages.length > 0) {
+		console.log('Errors found:');
+		results[0].messages.forEach((message, index) => {
+			console.log(
+				`${index + 1}. ${message.ruleId || 'null'}: ${message.message} (${message.line}:${message.column})`
+			);
+		});
+	}
 
 	expect(results[0].errorCount).toBe(0);
 	expect(results[0].warningCount).toBe(0);

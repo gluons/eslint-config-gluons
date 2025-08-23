@@ -5,8 +5,8 @@ import esNextConfig from '../esnext';
 const esNextFixturePath = resolve(__dirname, '../fixtures/esnext.js');
 
 const cli = new ESLint({
-	baseConfig: esNextConfig,
-	useEslintrc: false,
+	overrideConfigFile: true,
+	overrideConfig: esNextConfig,
 	ignore: false
 });
 

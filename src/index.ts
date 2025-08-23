@@ -1,17 +1,16 @@
-import { Linter } from 'eslint';
-import { resolve } from 'path';
+import type { Linter } from 'eslint';
+import baseRules from './rules/index.js';
 
-type Config = Linter.Config;
+const config: Linter.FlatConfig[] = [
+	...baseRules,
+	{
+		plugins: {
+			prettier: require('eslint-plugin-prettier')
+		},
+		rules: {
+			'prettier/prettier': 'error'
+		}
+	}
+];
 
-/**
- * Main config
- */
-const config: Config = {
-	plugins: ['prettier'],
-	extends: [
-		resolve(__dirname, './rules/index'),
-		'plugin:prettier/recommended'
-	]
-};
-
-export = config;
+export default config;

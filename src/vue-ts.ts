@@ -1,26 +1,29 @@
-import { Linter } from 'eslint';
-import { resolve } from 'path';
+import type { Linter } from 'eslint';
+import tsRules from './rules/ts.js';
+import vueRules from './rules/vue.js';
+import baseRules from './rules/index.js';
 
-type Config = Linter.Config;
-
-/**
- * Vue + TypeScript
- */
-const config: Config = {
-	extends: [
-		resolve(__dirname, './rules/ts'),
-		resolve(__dirname, './rules/vue'),
-		'plugin:prettier/recommended',
-		'prettier/@typescript-eslint',
-		'prettier/vue'
-	],
-	parser: 'vue-eslint-parser',
-	parserOptions: {
-		parser: '@typescript-eslint/parser',
-		project: 'tsconfig.json',
-		sourceType: 'module',
-		extraFileExtensions: ['.vue']
+const config: Linter.FlatConfig[] = [
+	...baseRules,
+	...tsRules,
+	...vueRules,
+	{
+		languageOptions: {
+			parser: require('vue-eslint-parser'),
+			parserOptions: {
+				parser: require('@typescript-eslint/parser'),
+				project: 'tsconfig.json',
+				sourceType: 'module',
+				extraFileExtensions: ['.vue']
+			}
+		},
+		plugins: {
+			prettier: require('eslint-plugin-prettier')
+		},
+		rules: {
+			'prettier/prettier': 'error'
+		}
 	}
-};
+];
 
-export = config;
+export default config;

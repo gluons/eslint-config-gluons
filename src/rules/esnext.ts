@@ -1,18 +1,20 @@
-import { Linter } from 'eslint';
-import { resolve } from 'path';
+import type { Linter } from 'eslint';
+import baseConfig from './index.js';
 
-type Config = Linter.Config;
-
-const config: Config = {
-	extends: resolve(__dirname, './index'),
-	parserOptions: {
-		ecmaVersion: 2020,
-		sourceType: 'module'
-	},
-	env: {
-		es2020: true
+const config: Linter.FlatConfig = {
+	files: ['**/*.js', '**/*.jsx'],
+	...baseConfig[0],
+	languageOptions: {
+		...baseConfig[0].languageOptions,
+		ecmaVersion: 2022,
+		sourceType: 'module',
+		globals: {
+			...(baseConfig[0].languageOptions?.globals || {}),
+			es2020: true
+		}
 	},
 	rules: {
+		...(baseConfig[0].rules || {}),
 		'arrow-body-style': [
 			'error',
 			'as-needed',
@@ -49,4 +51,4 @@ const config: Config = {
 	}
 };
 
-export = config;
+export default [config];

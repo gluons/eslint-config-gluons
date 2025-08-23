@@ -1,14 +1,16 @@
-import { Linter } from 'eslint';
-
-type Config = Linter.Config;
+import type { Linter } from 'eslint';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const config: Config = {
-	extends: 'eslint:recommended',
-	env: {
-		browser: true,
-		node: true
+const config: Linter.FlatConfig = {
+	files: ['**/*.js', '**/*.jsx'],
+	languageOptions: {
+		ecmaVersion: 2022,
+		sourceType: 'module',
+		globals: {
+			browser: true,
+			node: true
+		}
 	},
 	rules: {
 		'brace-style': ['error', '1tbs'],
@@ -24,13 +26,7 @@ const config: Config = {
 		curly: ['error', 'all'],
 		'dot-location': ['warn', 'property'],
 		'func-name-matching': 'warn',
-		indent: [
-			'error',
-			'tab',
-			{
-				SwitchCase: 1
-			}
-		],
+		indent: 'off', // Disable ESLint's indent rule when using prettier
 		'key-spacing': [
 			'error',
 			{
@@ -106,4 +102,4 @@ const config: Config = {
 	}
 };
 
-export = config;
+export default [config];

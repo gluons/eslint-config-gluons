@@ -1,11 +1,17 @@
-import { Linter } from 'eslint';
-import { resolve } from 'path';
+import type { Linter } from 'eslint';
 
-type Config = Linter.Config;
-
-const config: Config = {
-	plugins: ['vue'],
-	extends: [resolve(__dirname, './esnext'), 'plugin:vue/recommended'],
+const config: Linter.FlatConfig = {
+	files: ['**/*.vue'],
+	plugins: {
+		vue: require('eslint-plugin-vue')
+	},
+	languageOptions: {
+		parser: require('vue-eslint-parser'),
+		parserOptions: {
+			ecmaVersion: 2022,
+			sourceType: 'module'
+		}
+	},
 	rules: {
 		'vue/html-indent': ['error', 'tab'],
 		'vue/script-indent': [
@@ -24,4 +30,4 @@ const config: Config = {
 	}
 };
 
-export = config;
+export default [config];
