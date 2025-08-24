@@ -1482,12 +1482,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluons/prettier-config@npm:^2.0.3":
-  version: 2.0.6
-  resolution: "@gluons/prettier-config@npm:2.0.6"
+"@gluons/prettier-config@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@gluons/prettier-config@npm:3.0.0"
   peerDependencies:
-    prettier: 1 - 2
-  checksum: 10c0/30b7a79fcb8edd4bc6a4520eb53bac84b36db110b225713ca8ae808a3bc64be8debf06d317cc3d34e9a9823cd961f5e27b6a31395348a2e46ea873319a5d54ab
+    prettier: 3
+  checksum: 10c0/cbf5a69d9137d08167e7ea42d697b0430379b082d67e61d55d5b5d7363bea3b4ecb96292c979f988d0831bb5dcc5d1311f2a153dbb7598df9f67df97ab8f096a
   languageName: node
   linkType: hard
 
@@ -3182,7 +3182,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.26.1"
     "@babel/preset-typescript": "npm:^7.26.1"
     "@eslint/js": "npm:^9.34.0"
-    "@gluons/prettier-config": "npm:^2.0.3"
+    "@gluons/prettier-config": "npm:^3.0.0"
     "@types/eslint": "npm:^9.6.1"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^24.3.0"
@@ -3196,7 +3196,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.4"
     eslint-plugin-vue: "npm:^10.4.0"
     jest: "npm:^30.0.5"
-    prettier: "npm:^3.4.2"
+    prettier: "npm:^3.6.2"
     tsconfig-gluons: "npm:^1.1.0"
     typescript: "npm:^5.9.2"
     typescript-eslint: "npm:^8.40.0"
@@ -5192,7 +5192,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.4.2":
+"prettier@npm:^3.6.2":
   version: 3.6.2
   resolution: "prettier@npm:3.6.2"
   bin:
