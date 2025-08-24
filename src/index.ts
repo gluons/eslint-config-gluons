@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 import baseRules from './rules/index.js';
 
-const config: Linter.FlatConfig[] = [
+const config: Linter.Config[] = [
 	...baseRules,
 	{
 		plugins: {

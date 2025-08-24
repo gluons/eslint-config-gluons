@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 import esnextRules from './rules/esnext.js';
 
-const config: Linter.FlatConfig[] = [
+const config: Linter.Config[] = [
 	...esnextRules,
 	{
 		plugins: {

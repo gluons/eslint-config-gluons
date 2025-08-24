@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint';
 
-const config: Linter.FlatConfig = {
+const config: Linter.Config = {
 	files: ['**/*.vue'],
 	plugins: {
 		vue: require('eslint-plugin-vue')

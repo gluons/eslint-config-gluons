@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 import baseConfig from './index.js';
 
-const config: Linter.FlatConfig = {
+const config: Linter.Config = {
 	files: ['**/*.js', '**/*.jsx'],
 	...baseConfig[0],
 	languageOptions: {

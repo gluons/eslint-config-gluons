@@ -3,7 +3,7 @@ import tsRules from './rules/ts.js';
 import vueRules from './rules/vue.js';
 import baseRules from './rules/index.js';
 
-const config: Linter.FlatConfig[] = [
+const config: Linter.Config[] = [
 	...baseRules,
 	...tsRules,
 	...vueRules,

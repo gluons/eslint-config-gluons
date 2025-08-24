@@ -2,7 +2,7 @@ import type { Linter } from 'eslint';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const config: Linter.FlatConfig = {
+const config: Linter.Config = {
 	files: ['**/*.js', '**/*.jsx'],
 	languageOptions: {
 		ecmaVersion: 2022,

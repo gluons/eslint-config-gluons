@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint';
 
-const config: Linter.FlatConfig = {
+const config: Linter.Config = {
 	files: ['**/*.ts', '**/*.tsx'],
 	plugins: {
 		'@typescript-eslint': require('@typescript-eslint/eslint-plugin')
