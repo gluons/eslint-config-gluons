@@ -23,7 +23,11 @@ This project follows a specific code style.
 - Uses tabs for indentation.
 
 ## Commit Messages
-This project follows the [gitmoji](https://gitmoji.dev/) convention for commit messages. Each commit message should start with an appropriate gitmoji.
+This project follows the [gitmoji](https://gitmoji.dev/) convention for commit messages. Each commit message should start with an appropriate gitmoji.  
+Use actual emojis characters instead of shortcodes. For example, use "✨" instead of ":sparkles:".
+
+Use backticks around file names, package names, and code snippets in commit messages for clarity.
+For example, use `package.json`, `eslint`, `someFunction()`.
 
 ## Language
 The code is written in TypeScript.
