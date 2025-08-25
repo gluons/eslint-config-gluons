@@ -3183,6 +3183,7 @@ __metadata:
     "@babel/preset-typescript": "npm:^7.26.1"
     "@eslint/js": "npm:^9.34.0"
     "@gluons/prettier-config": "npm:^3.0.0"
+    "@stylistic/eslint-plugin": "npm:^5.2.3"
     "@types/eslint": "npm:^9.6.1"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^24.3.0"
