@@ -1,40 +1,41 @@
 import type { Linter } from 'eslint';
+import globals from 'globals';
 
 const isProd = process.env.NODE_ENV === 'production';
 
 const config: Linter.Config = {
 	files: ['**/*.js', '**/*.jsx'],
 	languageOptions: {
-		ecmaVersion: 2022,
+		ecmaVersion: 'latest',
 		sourceType: 'module',
 		globals: {
-			browser: true,
-			node: true
+			...globals.browser,
+			...globals.node
 		}
 	},
 	rules: {
-		'brace-style': ['error', '1tbs'],
-		'comma-dangle': 'error',
-		'comma-spacing': [
+		'@stylistic/brace-style': ['error', '1tbs'],
+		'@stylistic/comma-dangle': 'error',
+		'@stylistic/comma-spacing': [
 			'error',
 			{
 				before: false,
 				after: true
 			}
 		],
-		'comma-style': ['error', 'last'],
+		'@stylistic/comma-style': ['error', 'last'],
 		curly: ['error', 'all'],
-		'dot-location': ['warn', 'property'],
+		'@stylistic/dot-location': ['warn', 'property'],
 		'func-name-matching': 'warn',
-		indent: 'off', // Disable ESLint's indent rule when using prettier
-		'key-spacing': [
+		'@stylistic/indent': 'off', // Disable ESLint's indent rule when using prettier
+		'@stylistic/key-spacing': [
 			'error',
 			{
 				beforeColon: false,
 				afterColon: true
 			}
 		],
-		'keyword-spacing': [
+		'@stylistic/keyword-spacing': [
 			'error',
 			{
 				before: true,
@@ -51,7 +52,7 @@ const config: Linter.Config = {
 			}
 		],
 		'no-new-object': 'error',
-		'no-trailing-spaces': 'warn',
+		'@stylistic/no-trailing-spaces': 'warn',
 		'no-unused-vars': [
 			'error',
 			{
@@ -60,7 +61,7 @@ const config: Linter.Config = {
 		],
 		'no-useless-concat': 'warn',
 		'no-useless-escape': 'warn',
-		quotes: [
+		'@stylistic/quotes': [
 			'error',
 			'single',
 			{
@@ -68,16 +69,16 @@ const config: Linter.Config = {
 				allowTemplateLiterals: true
 			}
 		],
-		semi: ['error', 'always'],
-		'semi-spacing': [
+		'@stylistic/semi': ['error', 'always'],
+		'@stylistic/semi-spacing': [
 			'error',
 			{
 				before: false,
 				after: true
 			}
 		],
-		'space-before-blocks': 'error',
-		'space-before-function-paren': [
+		'@stylistic/space-before-blocks': 'error',
+		'@stylistic/space-before-function-paren': [
 			'error',
 			{
 				anonymous: 'always',
@@ -85,13 +86,13 @@ const config: Linter.Config = {
 				asyncArrow: 'always'
 			}
 		],
-		'space-infix-ops': [
+		'@stylistic/space-infix-ops': [
 			'error',
 			{
 				int32Hint: false
 			}
 		],
-		'wrap-iife': ['error', 'any'],
+		'@stylistic/wrap-iife': ['error', 'any'],
 		yoda: [
 			'error',
 			'never',
@@ -102,4 +103,4 @@ const config: Linter.Config = {
 	}
 };
 
-export default [config];
+export default config;
