@@ -1,14 +1,14 @@
+import stylistic from '@stylistic/eslint-plugin';
 import type { Linter } from 'eslint';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import baseRules from './rules/index.js';
 
 const config: Linter.Config[] = [
-	...baseRules,
+	baseRules,
+	eslintPluginPrettierRecommended,
 	{
 		plugins: {
-			prettier: require('eslint-plugin-prettier')
-		},
-		rules: {
-			'prettier/prettier': 'error'
+			'@stylistic': stylistic
 		}
 	}
 ];
