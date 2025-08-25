@@ -3198,7 +3198,6 @@ __metadata:
     eslint-plugin-vue: "npm:^10.4.0"
     jest: "npm:^30.0.5"
     prettier: "npm:^3.6.2"
-    tsconfig-gluons: "npm:^1.1.0"
     typescript: "npm:^5.9.2"
     typescript-eslint: "npm:^8.40.0"
     vue: "npm:^3.5.19"
@@ -5693,15 +5692,6 @@ __metadata:
   peerDependencies:
     typescript: ">=4.8.4"
   checksum: 10c0/9806a38adea2db0f6aa217ccc6bc9c391ddba338a9fe3080676d0d50ed806d305bb90e8cef0276e793d28c8a929f400abb184ddd7ff83a416959c0f4d2ce754f
-  languageName: node
-  linkType: hard
-
-"tsconfig-gluons@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "tsconfig-gluons@npm:1.1.0"
-  peerDependencies:
-    typescript: ">=3.2"
-  checksum: 10c0/2f3fbe1639bb8cd28784c1f8061c3948aa14ff377e29da45cabc5eae22437f93aeb26793055ba36868bffbe9b116bb7c2d1a3a3c46ccea952f29b54095e7020f
   languageName: node
   linkType: hard
 
