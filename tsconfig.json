@@ -2,7 +2,7 @@
 	"extends": "tsconfig-gluons",
 	"compilerOptions": {
 		"sourceMap": false,
-		"outDir": ".",
+		"outDir": "./dist",
 		"module": "ESNext",
 		"moduleResolution": "Bundler",
 		"target": "ES2022",

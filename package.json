@@ -3,22 +3,10 @@
   "version": "6.1.0",
   "description": "Gluons' personal ESLint shareable config.",
   "type": "module",
-  "main": "index.js",
-  "typings": "index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "rules",
-    "esnext.js",
-    "esnext.d.ts",
-    "index.js",
-    "index.d.ts",
-    "mixed.js",
-    "mixed.d.ts",
-    "ts.js",
-    "ts.d.ts",
-    "vue.js",
-    "vue.d.ts",
-    "vue-ts.js",
-    "vue-ts.d.ts"
+    "dist"
   ],
   "engines": {
     "node": ">=18.18.0"
