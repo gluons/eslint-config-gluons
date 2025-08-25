@@ -41,7 +41,8 @@
   "prettier": "@gluons/prettier-config",
   "dependencies": {
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4"
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.1",
