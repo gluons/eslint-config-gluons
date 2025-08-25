@@ -50,7 +50,6 @@
     "@eslint/js": "^9.34.0",
     "@gluons/prettier-config": "^3.0.0",
     "@stylistic/eslint-plugin": "^5.2.3",
-    "@types/eslint": "^9.6.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.3.0",
     "del-cli": "^6.0.0",
