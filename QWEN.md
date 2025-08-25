@@ -22,5 +22,8 @@ This project follows a specific code style.
 - Does not allow trailing commas.
 - Uses tabs for indentation.
 
+## Commit Messages
+This project follows the [gitmoji](https://gitmoji.dev/) convention for commit messages. Each commit message should start with an appropriate gitmoji.
+
 ## Language
 The code is written in TypeScript.
