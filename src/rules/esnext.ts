@@ -1,20 +1,18 @@
-import type { Linter } from 'eslint';
+import type { ConfigWithExtends } from '@eslint/config-helpers';
+import globals from 'globals';
 import baseConfig from './index.js';
 
-const config: Linter.Config = {
+const config: ConfigWithExtends = {
 	files: ['**/*.js', '**/*.jsx'],
-	...baseConfig[0],
+	extends: [baseConfig],
 	languageOptions: {
-		...baseConfig[0].languageOptions,
-		ecmaVersion: 2022,
+		ecmaVersion: 'latest',
 		sourceType: 'module',
 		globals: {
-			...(baseConfig[0].languageOptions?.globals || {}),
-			es2020: true
+			...globals.es2025
 		}
 	},
 	rules: {
-		...(baseConfig[0].rules || {}),
 		'arrow-body-style': [
 			'error',
 			'as-needed',
@@ -51,4 +49,4 @@ const config: Linter.Config = {
 	}
 };
 
-export default [config];
+export default config;
