@@ -27,7 +27,13 @@ const config: Linter.Config = {
 		curly: ['error', 'all'],
 		'@stylistic/dot-location': ['warn', 'property'],
 		'func-name-matching': 'warn',
-		'@stylistic/indent': 'off', // Disable ESLint's indent rule when using prettier
+		'@stylistic/indent': [
+			'error',
+			'tab',
+			{
+				SwitchCase: 1
+			}
+		],
 		'@stylistic/key-spacing': [
 			'error',
 			{
