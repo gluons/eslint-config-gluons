@@ -6,8 +6,6 @@ const config: ConfigWithExtends = {
 	files: ['**/*.js', '**/*.jsx'],
 	extends: [baseConfig],
 	languageOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module',
 		globals: {
 			...globals.es2025
 		}
