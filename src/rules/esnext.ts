@@ -18,16 +18,16 @@ const config: ConfigWithExtends = {
 				requireReturnForObjectLiteral: true
 			}
 		],
-		'arrow-parens': ['error', 'as-needed'],
-		'arrow-spacing': [
+		'@stylistic/arrow-parens': ['error', 'as-needed'],
+		'@stylistic/arrow-spacing': [
 			'error',
 			{
 				before: true,
 				after: true
 			}
 		],
-		'generator-star-spacing': ['error', 'after'],
-		'no-confusing-arrow': [
+		'@stylistic/generator-star-spacing': ['error', 'after'],
+		'@stylistic/no-confusing-arrow': [
 			'warn',
 			{
 				allowParens: true
