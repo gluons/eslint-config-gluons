@@ -1,6 +1,7 @@
 # eslint-config-gluons
 This project is a shareable [ESLint](https://eslint.org/) configuration for JavaScript, [TypeScript](https://www.typescriptlang.org/), and [Vue](https://vuejs.org/).  
-It uses [typescript-eslint](https://typescript-eslint.io/) for TypeScript support and [eslint-plugin-vue](https://eslint.vuejs.org/) for Vue support.
+It uses [typescript-eslint](https://typescript-eslint.io/) for TypeScript support and [eslint-plugin-vue](https://eslint.vuejs.org/) for Vue support.  
+For stylistic rules, it uses [ESLint Stylistic](https://eslint.style/).
 
 ## Project Structure
 - `src/`: Contains the source code for the ESLint configuration.
