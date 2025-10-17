@@ -4,7 +4,7 @@ import vueRules from './rules/vue.js';
 import baseRules from './rules/index.js';
 
 const config: Linter.Config[] = [
-	...baseRules,
+	baseRules,
 	...tsRules,
 	...vueRules,
 	{

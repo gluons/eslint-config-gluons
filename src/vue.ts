@@ -3,7 +3,7 @@ import vueRules from './rules/vue.js';
 import esnextRules from './rules/esnext.js';
 
 const config: Linter.Config[] = [
-	...esnextRules,
+	esnextRules,
 	...vueRules,
 	{
 		plugins: {

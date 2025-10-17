@@ -3,7 +3,7 @@ import tsRules from './rules/ts.js';
 import baseRules from './rules/index.js';
 
 const config: Linter.Config[] = [
-	...baseRules,
+	baseRules,
 	...tsRules,
 	{
 		plugins: {
