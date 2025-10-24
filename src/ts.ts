@@ -4,7 +4,7 @@ import baseRules from './rules/index.js';
 
 const config: Linter.Config[] = [
 	baseRules,
-	...tsRules,
+	tsRules,
 	{
 		plugins: {
 			prettier: require('eslint-plugin-prettier')
