@@ -1,16 +1,11 @@
-import type { Linter } from 'eslint';
+import { defineConfig } from 'eslint/config';
+import tseslint from 'typescript-eslint';
 
-const config: Linter.Config = {
-	files: ['**/*.ts', '**/*.tsx'],
-	plugins: {
-		'@typescript-eslint': require('@typescript-eslint/eslint-plugin')
-	},
+const config = defineConfig(tseslint.configs.recommended, {
 	languageOptions: {
-		parser: require('@typescript-eslint/parser'),
 		parserOptions: {
-			project: 'tsconfig.json',
-			sourceType: 'module',
-			extraFileExtensions: ['.vue']
+			extraFileExtensions: ['.vue'],
+			projectService: true
 		}
 	},
 	rules: {
@@ -57,6 +52,6 @@ const config: Linter.Config = {
 		],
 		'@typescript-eslint/triple-slash-reference': 'off'
 	}
-};
+});
 
 export default config;
