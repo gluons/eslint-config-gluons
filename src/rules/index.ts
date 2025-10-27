@@ -1,10 +1,11 @@
 import type { Linter } from 'eslint';
+import stylistic from '@stylistic/eslint-plugin';
 import globals from 'globals';
 
 const isProd = process.env.NODE_ENV === 'production';
 
 const config: Linter.Config = {
-	files: ['**/*.js', '**/*.jsx'],
+	files: ['**/*.js', '**/*.jsx', '**/*.mjs'],
 	languageOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
@@ -12,6 +13,9 @@ const config: Linter.Config = {
 			...globals.browser,
 			...globals.node
 		}
+	},
+	plugins: {
+		'@stylistic': stylistic
 	},
 	rules: {
 		'@stylistic/brace-style': ['error', '1tbs'],
@@ -57,7 +61,7 @@ const config: Linter.Config = {
 				allowEmptyCatch: true
 			}
 		],
-		'no-new-object': 'error',
+		'no-object-constructor': 'error',
 		'@stylistic/no-trailing-spaces': 'warn',
 		'no-unused-vars': [
 			'error',
