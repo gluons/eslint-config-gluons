@@ -18,6 +18,14 @@ const config: Linter.Config = {
 		'@stylistic': stylistic
 	},
 	rules: {
+		'@stylistic/arrow-parens': ['error', 'as-needed'],
+		'@stylistic/arrow-spacing': [
+			'error',
+			{
+				before: true,
+				after: true
+			}
+		],
 		'@stylistic/brace-style': ['error', '1tbs'],
 		'@stylistic/comma-dangle': 'error',
 		'@stylistic/comma-spacing': [
@@ -28,9 +36,8 @@ const config: Linter.Config = {
 			}
 		],
 		'@stylistic/comma-style': ['error', 'last'],
-		curly: ['error', 'all'],
 		'@stylistic/dot-location': ['warn', 'property'],
-		'func-name-matching': 'warn',
+		'@stylistic/generator-star-spacing': ['error', 'after'],
 		'@stylistic/indent': [
 			'error',
 			'tab',
@@ -52,25 +59,13 @@ const config: Linter.Config = {
 				after: true
 			}
 		],
-		'no-array-constructor': 'error',
-		'no-console': isProd ? 'error' : 'off',
-		'no-debugger': isProd ? 'error' : 'off',
-		'no-empty': [
-			'error',
+		'@stylistic/no-confusing-arrow': [
+			'warn',
 			{
-				allowEmptyCatch: true
+				allowParens: true
 			}
 		],
-		'no-object-constructor': 'error',
 		'@stylistic/no-trailing-spaces': 'warn',
-		'no-unused-vars': [
-			'error',
-			{
-				argsIgnorePattern: '^_'
-			}
-		],
-		'no-useless-concat': 'warn',
-		'no-useless-escape': 'warn',
 		'@stylistic/quotes': [
 			'error',
 			'single',
@@ -103,6 +98,44 @@ const config: Linter.Config = {
 			}
 		],
 		'@stylistic/wrap-iife': ['error', 'any'],
+		'arrow-body-style': [
+			'error',
+			'as-needed',
+			{
+				requireReturnForObjectLiteral: true
+			}
+		],
+		curly: ['error', 'all'],
+		'func-name-matching': 'warn',
+		'no-array-constructor': 'error',
+		'no-console': isProd ? 'error' : 'off',
+		'no-debugger': isProd ? 'error' : 'off',
+		'no-duplicate-imports': 'error',
+		'no-empty': [
+			'error',
+			{
+				allowEmptyCatch: true
+			}
+		],
+		'no-object-constructor': 'error',
+		'no-unused-vars': [
+			'error',
+			{
+				argsIgnorePattern: '^_'
+			}
+		],
+		'no-useless-concat': 'warn',
+		'no-useless-escape': 'warn',
+		'no-var': 'error',
+		'object-shorthand': [
+			'error',
+			'always',
+			{
+				avoidQuotes: true
+			}
+		],
+		'prefer-spread': 'warn',
+		'prefer-template': 'error',
 		yoda: [
 			'error',
 			'never',
