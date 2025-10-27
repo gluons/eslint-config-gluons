@@ -1,6 +1,11 @@
 {
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"github.copilot.chat.commitMessageGeneration.instructions": [
+		{
+			"file": ".github/copilot-commit-message-instructions.md"
+		}
+	],
 	"[markdown]": {
 		"files.trimTrailingWhitespace": false
 	}
