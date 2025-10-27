@@ -72,5 +72,5 @@
     "@typescript-eslint/parser": "^8.46.2",
     "eslint-plugin-vue": "^10.5.1"
   },
-  "packageManager": "yarn@4.9.3"
+  "packageManager": "yarn@4.10.3"
 }
