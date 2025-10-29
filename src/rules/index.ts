@@ -1,11 +1,11 @@
-import type { Linter } from 'eslint';
+import { defineConfig } from 'eslint/config';
 import stylistic from '@stylistic/eslint-plugin';
 import globals from 'globals';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const config: Linter.Config = {
-	files: ['**/*.js', '**/*.jsx', '**/*.mjs'],
+const configs = defineConfig({
+	files: ['**/*.js', '**/*.mjs'],
 	languageOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
@@ -144,6 +144,6 @@ const config: Linter.Config = {
 			}
 		]
 	}
-};
+});
 
-export default config;
+export default configs;
