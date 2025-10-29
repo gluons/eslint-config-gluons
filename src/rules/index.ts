@@ -1,149 +1,74 @@
+import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
-import stylistic from '@stylistic/eslint-plugin';
 import globals from 'globals';
+import stylistic from './stylistic';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const configs = defineConfig({
-	files: ['**/*.js', '**/*.mjs'],
-	languageOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module',
-		globals: {
-			...globals.browser,
-			...globals.node
+const configs = defineConfig([
+	{
+		files: ['**/*.js', '**/*.mjs'],
+		languageOptions: {
+			ecmaVersion: 'latest',
+			sourceType: 'module',
+			globals: {
+				...globals.browser,
+				...globals.node
+			}
+		},
+		plugins: {
+			js
+		},
+		extends: ['js/recommended'],
+		rules: {
+			'arrow-body-style': [
+				'error',
+				'as-needed',
+				{
+					requireReturnForObjectLiteral: true
+				}
+			],
+			curly: ['error', 'all'],
+			'func-name-matching': 'warn',
+			'no-array-constructor': 'error',
+			'no-console': isProd ? 'error' : 'off',
+			'no-debugger': isProd ? 'error' : 'off',
+			'no-duplicate-imports': 'error',
+			'no-empty': [
+				'error',
+				{
+					allowEmptyCatch: true
+				}
+			],
+			'no-object-constructor': 'error',
+			'no-unused-vars': [
+				'error',
+				{
+					argsIgnorePattern: '^_'
+				}
+			],
+			'no-useless-concat': 'warn',
+			'no-useless-escape': 'warn',
+			'no-var': 'error',
+			'object-shorthand': [
+				'error',
+				'always',
+				{
+					avoidQuotes: true
+				}
+			],
+			'prefer-spread': 'warn',
+			'prefer-template': 'error',
+			yoda: [
+				'error',
+				'never',
+				{
+					exceptRange: true
+				}
+			]
 		}
 	},
-	plugins: {
-		'@stylistic': stylistic
-	},
-	rules: {
-		'@stylistic/arrow-parens': ['error', 'as-needed'],
-		'@stylistic/arrow-spacing': [
-			'error',
-			{
-				before: true,
-				after: true
-			}
-		],
-		'@stylistic/brace-style': ['error', '1tbs'],
-		'@stylistic/comma-dangle': 'error',
-		'@stylistic/comma-spacing': [
-			'error',
-			{
-				before: false,
-				after: true
-			}
-		],
-		'@stylistic/comma-style': ['error', 'last'],
-		'@stylistic/dot-location': ['warn', 'property'],
-		'@stylistic/generator-star-spacing': ['error', 'after'],
-		'@stylistic/indent': [
-			'error',
-			'tab',
-			{
-				SwitchCase: 1
-			}
-		],
-		'@stylistic/key-spacing': [
-			'error',
-			{
-				beforeColon: false,
-				afterColon: true
-			}
-		],
-		'@stylistic/keyword-spacing': [
-			'error',
-			{
-				before: true,
-				after: true
-			}
-		],
-		'@stylistic/no-confusing-arrow': [
-			'warn',
-			{
-				allowParens: true
-			}
-		],
-		'@stylistic/no-trailing-spaces': 'warn',
-		'@stylistic/quotes': [
-			'error',
-			'single',
-			{
-				avoidEscape: true,
-				allowTemplateLiterals: true
-			}
-		],
-		'@stylistic/semi': ['error', 'always'],
-		'@stylistic/semi-spacing': [
-			'error',
-			{
-				before: false,
-				after: true
-			}
-		],
-		'@stylistic/space-before-blocks': 'error',
-		'@stylistic/space-before-function-paren': [
-			'error',
-			{
-				anonymous: 'always',
-				named: 'never',
-				asyncArrow: 'always'
-			}
-		],
-		'@stylistic/space-infix-ops': [
-			'error',
-			{
-				int32Hint: false
-			}
-		],
-		'@stylistic/wrap-iife': ['error', 'any'],
-		'arrow-body-style': [
-			'error',
-			'as-needed',
-			{
-				requireReturnForObjectLiteral: true
-			}
-		],
-		curly: ['error', 'all'],
-		'func-name-matching': 'warn',
-		'no-array-constructor': 'error',
-		'no-console': isProd ? 'error' : 'off',
-		'no-debugger': isProd ? 'error' : 'off',
-		'no-duplicate-imports': 'error',
-		'no-empty': [
-			'error',
-			{
-				allowEmptyCatch: true
-			}
-		],
-		'no-object-constructor': 'error',
-		'no-unused-vars': [
-			'error',
-			{
-				argsIgnorePattern: '^_'
-			}
-		],
-		'no-useless-concat': 'warn',
-		'no-useless-escape': 'warn',
-		'no-var': 'error',
-		'object-shorthand': [
-			'error',
-			'always',
-			{
-				avoidQuotes: true
-			}
-		],
-		'prefer-spread': 'warn',
-		'prefer-template': 'error',
-		yoda: [
-			'error',
-			'never',
-			{
-				exceptRange: true
-			}
-		]
-	}
-});
+	stylistic
+]);
 
 export default configs;
