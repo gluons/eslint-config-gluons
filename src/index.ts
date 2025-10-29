@@ -1,16 +1,10 @@
-import stylistic from '@stylistic/eslint-plugin';
-import type { Linter } from 'eslint';
+import { defineConfig } from 'eslint/config';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import baseRules from './rules/index.js';
+import mainRules from './rules/index.js';
 
-const config: Linter.Config[] = [
-	baseRules,
-	eslintPluginPrettierRecommended,
-	{
-		plugins: {
-			'@stylistic': stylistic
-		}
-	}
-];
+const config = defineConfig([
+	mainRules,
+	eslintPluginPrettierRecommended
+]);
 
 export default config;
