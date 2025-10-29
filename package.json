@@ -13,9 +13,8 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "clean": "del-cli ./*.{js,d.ts}",
-    "prebuild": "npm run clean",
-    "build": "tsc",
+    "clean": "del-cli dist/",
+    "build": "npm run clean && tsc",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{json,ts,js,vue}\"",
     "pretest": "npm run build",
