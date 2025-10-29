@@ -6,6 +6,7 @@ import stylistic from './stylistic';
 const isProd = process.env.NODE_ENV === 'production';
 
 const configs = defineConfig([
+	js.configs.recommended,
 	{
 		files: ['**/*.js', '**/*.mjs'],
 		languageOptions: {
@@ -16,10 +17,6 @@ const configs = defineConfig([
 				...globals.node
 			}
 		},
-		plugins: {
-			js
-		},
-		extends: ['js/recommended'],
 		rules: {
 			'arrow-body-style': [
 				'error',
