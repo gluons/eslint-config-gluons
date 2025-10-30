@@ -4,7 +4,7 @@ import { lintFixture } from './utils/flat-eslint';
 let vueConfig: Linter.Config[];
 
 beforeAll(async () => {
-	const module = await import('../dist/vue.js');
+	const module = await import('../dist/vue');
 
 	vueConfig = module.default;
 });

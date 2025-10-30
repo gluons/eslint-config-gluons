@@ -7,7 +7,7 @@ import {
 let vueTSConfig: Linter.Config[];
 
 beforeAll(async () => {
-	const module = await import('../dist/vue-ts.js');
+	const module = await import('../dist/vue-ts');
 
 	vueTSConfig = module.default;
 });
