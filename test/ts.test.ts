@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 import { lintFixture, withTypeScriptProject } from './utils/flat-eslint';
 
-let tsConfig: Linter.FlatConfig[];
+let tsConfig: Linter.Config[];
 
 beforeAll(async () => {
 	const module = await import('../dist/ts.js');

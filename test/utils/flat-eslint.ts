@@ -3,7 +3,7 @@ import type { Linter } from 'eslint';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
-type FlatConfigInput = Linter.FlatConfig | Linter.FlatConfig[];
+type FlatConfigInput = Linter.Config | Linter.Config[];
 
 const moduleDir =
 	typeof __dirname === 'string'
@@ -12,7 +12,7 @@ const moduleDir =
 
 const fixturesDir = resolve(moduleDir, '../fixtures');
 
-const toFlatConfigArray = (config: FlatConfigInput): Linter.FlatConfig[] => {
+const toFlatConfigArray = (config: FlatConfigInput): Linter.Config[] => {
 	return Array.isArray(config) ? [...config] : [config];
 };
 
@@ -34,7 +34,7 @@ export const lintFixture = async (
 export const withTypeScriptProject = (
 	configInput: FlatConfigInput,
 	tsconfigFile: string
-): Linter.FlatConfig[] => {
+): Linter.Config[] => {
 	const config = toFlatConfigArray(configInput);
 	const tsconfigPath = resolve(fixturesDir, tsconfigFile);
 	const tsconfigDir = dirname(tsconfigPath);

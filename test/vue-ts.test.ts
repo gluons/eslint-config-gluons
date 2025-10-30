@@ -4,7 +4,7 @@ import {
 	withTypeScriptProject
 } from './utils/flat-eslint';
 
-let vueTSConfig: Linter.FlatConfig[];
+let vueTSConfig: Linter.Config[];
 
 beforeAll(async () => {
 	const module = await import('../dist/vue-ts.js');
