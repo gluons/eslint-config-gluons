@@ -1,49 +1,34 @@
-import { ESLint } from 'eslint';
-import { resolve } from 'path';
-import tsConfig from '../ts';
+import type { Linter } from 'eslint';
+import { lintFixture, withTypeScriptProject } from './utils/flat-eslint';
 
-const tsFixurePath = resolve(__dirname, '../fixtures/ts.ts');
-const tsConfigPath = resolve(__dirname, '../fixtures/tsconfig.json');
+let tsConfig: Linter.FlatConfig[];
 
-// Update the config to use the correct path
-const updatedConfig = [...tsConfig];
-// Find the TypeScript config and update its parser options
-const tsConfigIndex = updatedConfig.findIndex(
-	config => config.languageOptions && config.languageOptions.parserOptions
-);
+beforeAll(async () => {
+	const module = await import('../dist/ts.js');
 
-if (tsConfigIndex !== -1) {
-	updatedConfig[tsConfigIndex] = {
-		...updatedConfig[tsConfigIndex],
-		languageOptions: {
-			...updatedConfig[tsConfigIndex].languageOptions,
-			parserOptions: {
-				...updatedConfig[tsConfigIndex].languageOptions?.parserOptions,
-				project: tsConfigPath
-			}
-		}
-	};
-}
-
-const cli = new ESLint({
-	overrideConfigFile: true,
-	overrideConfig: updatedConfig,
-	ignore: false
+	tsConfig = module.default;
 });
 
-test('TypeScript rules', async () => {
-	const results = await cli.lintFiles([tsFixurePath]);
+describe('TypeScript config', () => {
+	test('passes valid TypeScript fixture', async () => {
+		const [result] = await lintFixture(
+			withTypeScriptProject(tsConfig, 'tsconfig.json'),
+			'ts.ts'
+		);
 
-	// Print the errors for debugging
-	if (results[0].messages.length > 0) {
-		console.log('Errors found:');
-		results[0].messages.forEach((message, index) => {
-			console.log(
-				`${index + 1}. ${message.ruleId || 'null'}: ${message.message} (${message.line}:${message.column})`
-			);
-		});
-	}
+		expect(result.errorCount).toBe(0);
+		expect(result.warningCount).toBe(0);
+	});
 
-	expect(results[0].errorCount).toBe(0);
-	expect(results[0].warningCount).toBe(0);
+	test('reports rule violations for invalid TypeScript fixture', async () => {
+		const [result] = await lintFixture(
+			withTypeScriptProject(tsConfig, 'tsconfig.json'),
+			'ts-invalid.ts'
+		);
+
+		expect(result.errorCount).toBeGreaterThan(0);
+		expect(result.messages.map(message => message.ruleId)).toContain(
+			'@typescript-eslint/no-floating-promises'
+		);
+	});
 });

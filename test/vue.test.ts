@@ -1,28 +1,28 @@
-import { ESLint } from 'eslint';
-import { resolve } from 'path';
-import vueConfig from '../vue';
+import type { Linter } from 'eslint';
+import { lintFixture } from './utils/flat-eslint';
 
-const vueFixturePath = resolve(__dirname, '../fixtures/app.vue');
+let vueConfig: Linter.FlatConfig[];
 
-const cli = new ESLint({
-	overrideConfigFile: true,
-	overrideConfig: vueConfig,
-	ignore: false
+beforeAll(async () => {
+	const module = await import('../dist/vue.js');
+
+	vueConfig = module.default;
 });
 
-test('Vue rules', async () => {
-	const results = await cli.lintFiles([vueFixturePath]);
+describe('Vue config', () => {
+	test('passes valid Vue fixture', async () => {
+		const [result] = await lintFixture(vueConfig, 'app.vue');
 
-	// Print the errors for debugging
-	if (results[0].messages.length > 0) {
-		console.log('Errors found:');
-		results[0].messages.forEach((message, index) => {
-			console.log(
-				`${index + 1}. ${message.ruleId || 'null'}: ${message.message} (${message.line}:${message.column})`
-			);
-		});
-	}
+		expect(result.errorCount).toBe(0);
+		expect(result.warningCount).toBe(0);
+	});
 
-	expect(results[0].errorCount).toBe(0);
-	expect(results[0].warningCount).toBe(0);
+	test('reports rule violations for invalid Vue fixture', async () => {
+		const [result] = await lintFixture(vueConfig, 'app-invalid.vue');
+
+		expect(result.errorCount).toBeGreaterThan(0);
+		expect(result.messages.map(message => message.ruleId)).toContain(
+			'vue/html-indent'
+		);
+	});
 });

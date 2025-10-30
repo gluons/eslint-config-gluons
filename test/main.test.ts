@@ -1,28 +1,26 @@
-import { ESLint } from 'eslint';
-import { resolve } from 'path';
-import mainConfig from '../';
+import type { Linter } from 'eslint';
+import { lintFixture } from './utils/flat-eslint';
 
-const mainFixturePath = resolve(__dirname, '../fixtures/main.js');
+let mainConfig: Linter.FlatConfig[];
 
-const cli = new ESLint({
-	overrideConfigFile: true,
-	overrideConfig: mainConfig,
-	ignore: false
+beforeAll(async () => {
+	const module = await import('../dist/index.js');
+
+	mainConfig = module.default;
 });
 
-test('Main rules', async () => {
-	const results = await cli.lintFiles([mainFixturePath]);
+describe('Main config', () => {
+	test('passes valid JavaScript fixture', async () => {
+		const [result] = await lintFixture(mainConfig, 'main.js');
 
-	// Print the errors for debugging
-	if (results[0].messages.length > 0) {
-		console.log('Errors found:');
-		results[0].messages.forEach((message, index) => {
-			console.log(
-				`${index + 1}. ${message.ruleId || 'null'}: ${message.message} (${message.line}:${message.column})`
-			);
-		});
-	}
+		expect(result.errorCount).toBe(0);
+		expect(result.warningCount).toBe(0);
+	});
 
-	expect(results[0].errorCount).toBe(0);
-	expect(results[0].warningCount).toBe(0);
+	test('reports rule violations for invalid JavaScript fixture', async () => {
+		const [result] = await lintFixture(mainConfig, 'main-invalid.js');
+
+		expect(result.errorCount).toBeGreaterThan(0);
+		expect(result.messages.map(message => message.ruleId)).toContain('no-var');
+	});
 });

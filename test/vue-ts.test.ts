@@ -1,46 +1,37 @@
-import { ESLint } from 'eslint';
-import { resolve } from 'path';
-import vueTSConfig from '../vue-ts';
+import type { Linter } from 'eslint';
+import {
+	lintFixture,
+	withTypeScriptProject
+} from './utils/flat-eslint';
 
-const vueFixturePath = resolve(__dirname, '../fixtures/app-ts.vue');
-const tsConfigPath = resolve(__dirname, '../fixtures/tsconfig.json');
+let vueTSConfig: Linter.FlatConfig[];
 
-// Update the config to use the correct path
-const updatedConfig = [...vueTSConfig];
-const tsConfigIndex = updatedConfig.findIndex(
-	config =>
-		config.languageOptions &&
-		config.languageOptions.parserOptions &&
-		config.languageOptions.parserOptions.parser
-);
+beforeAll(async () => {
+	const module = await import('../dist/vue-ts.js');
 
-if (
-	tsConfigIndex !== -1 &&
-	updatedConfig[tsConfigIndex].languageOptions?.parserOptions
-) {
-	updatedConfig[tsConfigIndex].languageOptions.parserOptions.project =
-		tsConfigPath;
-}
-
-const cli = new ESLint({
-	overrideConfigFile: true,
-	overrideConfig: updatedConfig,
-	ignore: false
+	vueTSConfig = module.default;
 });
 
-test('Vue + TypeScript rules', async () => {
-	const results = await cli.lintFiles([vueFixturePath]);
+describe('Vue + TypeScript config', () => {
+	test('passes valid Vue TypeScript fixture', async () => {
+		const [result] = await lintFixture(
+			withTypeScriptProject(vueTSConfig, 'tsconfig.json'),
+			'app-ts.vue'
+		);
 
-	// Print the errors for debugging
-	if (results[0].messages.length > 0) {
-		console.log('Errors found:');
-		results[0].messages.forEach((message, index) => {
-			console.log(
-				`${index + 1}. ${message.ruleId || 'null'}: ${message.message} (${message.line}:${message.column})`
-			);
-		});
-	}
+		expect(result.errorCount).toBe(0);
+		expect(result.warningCount).toBe(0);
+	});
 
-	expect(results[0].errorCount).toBe(0);
-	expect(results[0].warningCount).toBe(0);
+	test('reports rule violations for invalid Vue TypeScript fixture', async () => {
+		const [result] = await lintFixture(
+			withTypeScriptProject(vueTSConfig, 'tsconfig.json'),
+			'app-ts-invalid.vue'
+		);
+
+		expect(result.errorCount).toBeGreaterThan(0);
+		expect(result.messages.map(message => message.ruleId)).toContain(
+			'@typescript-eslint/no-unused-vars'
+		);
+	});
 });

@@ -1,6 +1,14 @@
-const fs = require('fs');
+import { readFileSync } from 'node:fs';
 
-(function () {
-	const someContent = fs.readFileSync('./someFile.txt');
-	console.log(someContent.toString());
-})();
+const readText = (filePath) => {
+	const buffer = readFileSync(filePath);
+
+	return buffer.toString();
+};
+
+const logContent = () => {
+	const content = readText('./sample.txt');
+	console.info(content.trim());
+};
+
+logContent();
