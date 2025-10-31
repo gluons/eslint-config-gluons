@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
-		"module": "ESNext",
-		"moduleResolution": "Bundler",
-		"target": "ES2022",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"target": "es2022",
 		"sourceMap": false,
 		"declaration": true,
 		"noUnusedLocals": true,
