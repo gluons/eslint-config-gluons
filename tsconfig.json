@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"module": "nodenext",
-		"moduleResolution": "nodenext",
+		"module": "es2015",
+		"moduleResolution": "bundler",
 		"target": "es2022",
 		"sourceMap": false,
 		"declaration": true,
