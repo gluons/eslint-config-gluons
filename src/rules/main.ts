@@ -1,7 +1,7 @@
 import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
-import stylistic from './stylistic';
+import stylistic from './stylistic.js';
 
 const isProd = process.env.NODE_ENV === 'production';
 
