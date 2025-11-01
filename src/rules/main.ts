@@ -7,6 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const configs = defineConfig([
 	js.configs.recommended,
+	stylistic,
 	{
 		files: ['**/*.js', '**/*.mjs'],
 		languageOptions: {
@@ -64,8 +65,7 @@ const configs = defineConfig([
 				}
 			]
 		}
-	},
-	stylistic
+	}
 ]);
 
 export default configs;

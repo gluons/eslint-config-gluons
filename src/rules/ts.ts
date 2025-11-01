@@ -3,6 +3,7 @@ import tseslint from 'typescript-eslint';
 import stylistic from './stylistic.js';
 
 const config = defineConfig([
+	stylistic,
 	tseslint.configs.recommended,
 	{
 		languageOptions: {
@@ -55,8 +56,7 @@ const config = defineConfig([
 			],
 			'@typescript-eslint/triple-slash-reference': 'off'
 		}
-	},
-	stylistic
+	}
 ]);
 
 export default config;
