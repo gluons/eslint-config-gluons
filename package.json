@@ -17,9 +17,7 @@
     "build": "npm run clean && tsc",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{json,ts,js,vue}\"",
-    "pretest": "npm run build",
-    "test": "cross-env NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest",
-    "posttest": "npm run clean"
+    "test": "npm run build && cross-env NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest"
   },
   "repository": {
     "type": "git",
