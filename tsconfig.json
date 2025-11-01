@@ -4,7 +4,7 @@
 		"moduleResolution": "bundler",
 		"target": "es2022",
 		"sourceMap": false,
-		"declaration": true,
+		"declaration": false,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"strict": true,
