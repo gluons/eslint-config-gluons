@@ -3,8 +3,13 @@
   "version": "6.1.0",
   "description": "Gluons' personal ESLint shareable config.",
   "type": "module",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "./dist/main.js",
+  "exports": {
+    ".": "./dist/main.js",
+    "./ts": "./dist/ts.js",
+    "./vue": "./dist/vue.js",
+    "./vue-ts": "./dist/vue-ts.js"
+  },
   "files": [
     "dist"
   ],
