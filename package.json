@@ -17,7 +17,7 @@
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
   "scripts": {
-    "prepublishOnly": "npm run build",
+    "prepack": "npm run build",
     "clean": "del-cli dist/",
     "build": "npm run clean && tsc",
     "lint": "eslint .",
