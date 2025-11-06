@@ -3,9 +3,5 @@
 	"compilerOptions": {
 		"noEmit": true
 	},
-	"include": [
-		"*.ts",
-		"*.js",
-		"*.vue"
-	]
+	"include": ["*.ts", "*.js", "*.vue"]
 }
