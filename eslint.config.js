@@ -12,19 +12,20 @@ const xoTypeScriptWithoutJSON = xoTypeScript.filter(
 
 /*
  * Fix `Key "plugins": Cannot redefine plugin "@stylistic"` error
+ * Remove the '@stylistic' plugin from `eslint-config-xo-typescript` because it is already included in `eslint-config-xo`
  */
 xoTypeScriptWithoutJSON.forEach(config => {
 	if (
 		config.plugins?.['@typescript-eslint'] &&
 		config.plugins['@stylistic']
 	) {
-		config.languageOptions.parserOptions.projectService = {
-			allowDefaultProject: [
-				'test/*.ts',
-				'eslint.config.js',
-				'jest.config.ts'
-			]
+		config.languageOptions.parserOptions = {
+			...config.languageOptions.parserOptions,
+			projectService: {
+				allowDefaultProject: ['test/*.ts', 'jest.config.ts']
+			}
 		};
+		config.ignores = [...(config.ignores ?? []), 'eslint.config.js'];
 
 		delete config.plugins['@stylistic'];
 	}
