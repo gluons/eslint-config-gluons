@@ -21,12 +21,12 @@ xoTypeScriptWithoutJSON.forEach(config => {
 	) {
 		config.languageOptions.parserOptions = {
 			...config.languageOptions.parserOptions,
-			projectService: {
-				allowDefaultProject: ['test/*.ts', 'jest.config.ts']
-			}
+			project: './tsconfig.eslint.json',
+			tsconfigRootDir: import.meta.dirname
 		};
 		config.ignores = [...(config.ignores ?? []), 'eslint.config.js'];
 
+		delete config.languageOptions.parserOptions.projectService;
 		delete config.plugins['@stylistic'];
 	}
 });
