@@ -513,6 +513,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gluons/prettier-config@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@gluons/prettier-config@npm:3.1.0"
+  peerDependencies:
+    prettier: 3
+  checksum: 10c0/2e38c6d179b5fb36edf3c21573e6b1385ef5e0305f0f62c3417d29150b93ca79e06c10f2cc89b4e68be52044f4320264f66efdf5d9db1dddac42a677e2033443
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -2411,6 +2420,7 @@ __metadata:
   resolution: "eslint-config-gluons@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.39.2"
+    "@gluons/prettier-config": "npm:^3.1.0"
     "@stylistic/eslint-plugin": "npm:^5.7.0"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^24.10.8"
