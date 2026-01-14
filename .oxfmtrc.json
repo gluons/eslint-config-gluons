@@ -6,5 +6,5 @@
 	"singleQuote": true,
 	"trailingComma": "none",
 	"insertFinalNewline": true,
-	"ignorePatterns": ["*.md", "package.json"]
+	"ignorePatterns": ["*.md", "*.yaml", "*.yml", "package.json"]
 }
