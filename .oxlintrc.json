@@ -1,0 +1,23 @@
+{
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"categories": {
+		"correctness": "error",
+		"perf": "warn",
+		"restriction": "off",
+		"suspicious": "off",
+		"pedantic": "warn",
+		"style": "warn"
+	},
+	"env": {
+		"builtin": true
+	},
+	"rules": {
+		"eslint/sort-keys": "off",
+		"eslint/sort-imports": "off",
+		"eslint/no-ternary": "off",
+		"eslint/init-declarations": "off",
+		"eslint/no-magic-numbers": "off",
+		"eslint/max-lines-per-function": "off"
+	},
+	"ignorePatterns": ["dist/**", "test/fixtures/**"]
+}

@@ -1,6 +1,9 @@
 {
 	"typescript.tsdk": "node_modules/typescript/lib",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.defaultFormatter": "oxc.oxc-vscode",
+	"eslint.enable": false,
+	"prettier.enable": false,
+	"oxc.enable": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
 		{
 			"file": ".github/copilot-commit-message-instructions.md"

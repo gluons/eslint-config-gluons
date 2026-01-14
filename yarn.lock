@@ -513,15 +513,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluons/prettier-config@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@gluons/prettier-config@npm:3.1.0"
-  peerDependencies:
-    prettier: 3
-  checksum: 10c0/2e38c6d179b5fb36edf3c21573e6b1385ef5e0305f0f62c3417d29150b93ca79e06c10f2cc89b4e68be52044f4320264f66efdf5d9db1dddac42a677e2033443
-  languageName: node
-  linkType: hard
-
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -989,6 +980,160 @@ __metadata:
   dependencies:
     semver: "npm:^7.3.5"
   checksum: 10c0/26e376d780f60ff16e874a0ac9bc3399186846baae0b6e1352286385ac134d900cc5dafaded77f38d77f86898fc923ae1cee9d7399f0275b1aa24878915d722b
+  languageName: node
+  linkType: hard
+
+"@oxfmt/darwin-arm64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@oxfmt/darwin-arm64@npm:0.24.0"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@oxfmt/darwin-x64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@oxfmt/darwin-x64@npm:0.24.0"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@oxfmt/linux-arm64-gnu@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@oxfmt/linux-arm64-gnu@npm:0.24.0"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@oxfmt/linux-arm64-musl@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@oxfmt/linux-arm64-musl@npm:0.24.0"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@oxfmt/linux-x64-gnu@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@oxfmt/linux-x64-gnu@npm:0.24.0"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@oxfmt/linux-x64-musl@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@oxfmt/linux-x64-musl@npm:0.24.0"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@oxfmt/win32-arm64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@oxfmt/win32-arm64@npm:0.24.0"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@oxfmt/win32-x64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@oxfmt/win32-x64@npm:0.24.0"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@oxlint-tsgolint/darwin-arm64@npm:0.11.0":
+  version: 0.11.0
+  resolution: "@oxlint-tsgolint/darwin-arm64@npm:0.11.0"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@oxlint-tsgolint/darwin-x64@npm:0.11.0":
+  version: 0.11.0
+  resolution: "@oxlint-tsgolint/darwin-x64@npm:0.11.0"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@oxlint-tsgolint/linux-arm64@npm:0.11.0":
+  version: 0.11.0
+  resolution: "@oxlint-tsgolint/linux-arm64@npm:0.11.0"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@oxlint-tsgolint/linux-x64@npm:0.11.0":
+  version: 0.11.0
+  resolution: "@oxlint-tsgolint/linux-x64@npm:0.11.0"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@oxlint-tsgolint/win32-arm64@npm:0.11.0":
+  version: 0.11.0
+  resolution: "@oxlint-tsgolint/win32-arm64@npm:0.11.0"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@oxlint-tsgolint/win32-x64@npm:0.11.0":
+  version: 0.11.0
+  resolution: "@oxlint-tsgolint/win32-x64@npm:0.11.0"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@oxlint/darwin-arm64@npm:1.39.0":
+  version: 1.39.0
+  resolution: "@oxlint/darwin-arm64@npm:1.39.0"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@oxlint/darwin-x64@npm:1.39.0":
+  version: 1.39.0
+  resolution: "@oxlint/darwin-x64@npm:1.39.0"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@oxlint/linux-arm64-gnu@npm:1.39.0":
+  version: 1.39.0
+  resolution: "@oxlint/linux-arm64-gnu@npm:1.39.0"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@oxlint/linux-arm64-musl@npm:1.39.0":
+  version: 1.39.0
+  resolution: "@oxlint/linux-arm64-musl@npm:1.39.0"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@oxlint/linux-x64-gnu@npm:1.39.0":
+  version: 1.39.0
+  resolution: "@oxlint/linux-x64-gnu@npm:1.39.0"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@oxlint/linux-x64-musl@npm:1.39.0":
+  version: 1.39.0
+  resolution: "@oxlint/linux-x64-musl@npm:1.39.0"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@oxlint/win32-arm64@npm:1.39.0":
+  version: 1.39.0
+  resolution: "@oxlint/win32-arm64@npm:1.39.0"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@oxlint/win32-x64@npm:1.39.0":
+  version: 1.39.0
+  resolution: "@oxlint/win32-x64@npm:1.39.0"
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -2266,7 +2411,6 @@ __metadata:
   resolution: "eslint-config-gluons@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.39.2"
-    "@gluons/prettier-config": "npm:^3.1.0"
     "@stylistic/eslint-plugin": "npm:^5.7.0"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^24.10.8"
@@ -2278,6 +2422,9 @@ __metadata:
     eslint-plugin-vue: "npm:^10.6.2"
     globals: "npm:^17.0.0"
     jest: "npm:^30.2.0"
+    oxfmt: "npm:^0.24.0"
+    oxlint: "npm:^1.39.0"
+    oxlint-tsgolint: "npm:^0.11.0"
     prettier: "npm:^3.7.4"
     ts-jest: "npm:^29.4.6"
     ts-node: "npm:^10.9.2"
@@ -2287,7 +2434,6 @@ __metadata:
     vue-eslint-parser: "npm:^10.2.0"
   peerDependencies:
     "@eslint/js": ^9.0.0
-    "@stylistic/eslint-plugin": ^5.0.0
     eslint: ^9.0.0
     prettier: ^3.0.0
   dependenciesMeta:
@@ -4081,6 +4227,111 @@ __metadata:
   languageName: node
   linkType: hard
 
+"oxfmt@npm:^0.24.0":
+  version: 0.24.0
+  resolution: "oxfmt@npm:0.24.0"
+  dependencies:
+    "@oxfmt/darwin-arm64": "npm:0.24.0"
+    "@oxfmt/darwin-x64": "npm:0.24.0"
+    "@oxfmt/linux-arm64-gnu": "npm:0.24.0"
+    "@oxfmt/linux-arm64-musl": "npm:0.24.0"
+    "@oxfmt/linux-x64-gnu": "npm:0.24.0"
+    "@oxfmt/linux-x64-musl": "npm:0.24.0"
+    "@oxfmt/win32-arm64": "npm:0.24.0"
+    "@oxfmt/win32-x64": "npm:0.24.0"
+    tinypool: "npm:2.0.0"
+  dependenciesMeta:
+    "@oxfmt/darwin-arm64":
+      optional: true
+    "@oxfmt/darwin-x64":
+      optional: true
+    "@oxfmt/linux-arm64-gnu":
+      optional: true
+    "@oxfmt/linux-arm64-musl":
+      optional: true
+    "@oxfmt/linux-x64-gnu":
+      optional: true
+    "@oxfmt/linux-x64-musl":
+      optional: true
+    "@oxfmt/win32-arm64":
+      optional: true
+    "@oxfmt/win32-x64":
+      optional: true
+  bin:
+    oxfmt: bin/oxfmt
+  checksum: 10c0/5d10057f7f59ba6137759df52c633ad16f92735974c4852d9c785b418fad0076021bfe21a29d7acfe631c6269d88415f4c27bfbb440086f2ce145ec44b7bb5d9
+  languageName: node
+  linkType: hard
+
+"oxlint-tsgolint@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "oxlint-tsgolint@npm:0.11.0"
+  dependencies:
+    "@oxlint-tsgolint/darwin-arm64": "npm:0.11.0"
+    "@oxlint-tsgolint/darwin-x64": "npm:0.11.0"
+    "@oxlint-tsgolint/linux-arm64": "npm:0.11.0"
+    "@oxlint-tsgolint/linux-x64": "npm:0.11.0"
+    "@oxlint-tsgolint/win32-arm64": "npm:0.11.0"
+    "@oxlint-tsgolint/win32-x64": "npm:0.11.0"
+  dependenciesMeta:
+    "@oxlint-tsgolint/darwin-arm64":
+      optional: true
+    "@oxlint-tsgolint/darwin-x64":
+      optional: true
+    "@oxlint-tsgolint/linux-arm64":
+      optional: true
+    "@oxlint-tsgolint/linux-x64":
+      optional: true
+    "@oxlint-tsgolint/win32-arm64":
+      optional: true
+    "@oxlint-tsgolint/win32-x64":
+      optional: true
+  bin:
+    tsgolint: bin/tsgolint.js
+  checksum: 10c0/408f3e9e9bc713da5a74233ee55fdd42a67a7a9247a71c7b20dad21701a6c012c056f37e64a4e1f1d3366fe0cbd5211f0b3464828267aa3f0d68071e3151fc99
+  languageName: node
+  linkType: hard
+
+"oxlint@npm:^1.39.0":
+  version: 1.39.0
+  resolution: "oxlint@npm:1.39.0"
+  dependencies:
+    "@oxlint/darwin-arm64": "npm:1.39.0"
+    "@oxlint/darwin-x64": "npm:1.39.0"
+    "@oxlint/linux-arm64-gnu": "npm:1.39.0"
+    "@oxlint/linux-arm64-musl": "npm:1.39.0"
+    "@oxlint/linux-x64-gnu": "npm:1.39.0"
+    "@oxlint/linux-x64-musl": "npm:1.39.0"
+    "@oxlint/win32-arm64": "npm:1.39.0"
+    "@oxlint/win32-x64": "npm:1.39.0"
+  peerDependencies:
+    oxlint-tsgolint: ">=0.10.0"
+  dependenciesMeta:
+    "@oxlint/darwin-arm64":
+      optional: true
+    "@oxlint/darwin-x64":
+      optional: true
+    "@oxlint/linux-arm64-gnu":
+      optional: true
+    "@oxlint/linux-arm64-musl":
+      optional: true
+    "@oxlint/linux-x64-gnu":
+      optional: true
+    "@oxlint/linux-x64-musl":
+      optional: true
+    "@oxlint/win32-arm64":
+      optional: true
+    "@oxlint/win32-x64":
+      optional: true
+  peerDependenciesMeta:
+    oxlint-tsgolint:
+      optional: true
+  bin:
+    oxlint: bin/oxlint
+  checksum: 10c0/ef1e0d940332c6523228641b222d77bd67eae92185f8d82bda4feb26d0d195a62c73299896ddf87cceafb1e7089479128c0de416db05456b22c71badddfc0660
+  languageName: node
+  linkType: hard
+
 "p-limit@npm:^2.2.0":
   version: 2.3.0
   resolution: "p-limit@npm:2.3.0"
@@ -4681,6 +4932,13 @@ __metadata:
     fdir: "npm:^6.5.0"
     picomatch: "npm:^4.0.3"
   checksum: 10c0/869c31490d0d88eedb8305d178d4c75e7463e820df5a9b9d388291daf93e8b1eb5de1dad1c1e139767e4269fe75f3b10d5009b2cc14db96ff98986920a186844
+  languageName: node
+  linkType: hard
+
+"tinypool@npm:2.0.0":
+  version: 2.0.0
+  resolution: "tinypool@npm:2.0.0"
+  checksum: 10c0/3888cc668cdbb1bc85e1b58587897501254ffc5de52cf4e0d30936869922a4eaf2f085ce10562122df3eb7536cbf3d29ecc2faba37656933649d1d2f5bc9bff7
   languageName: node
   linkType: hard
 
