@@ -30,5 +30,7 @@ Use actual emojis characters instead of shortcodes. For example, use "✨" inste
 Use backticks around file names, package names, and code snippets in commit messages for clarity.
 For example, use `package.json`, `eslint`, `someFunction()`.
 
+To see the full list of gitmoji meanings, refer to the official gitmoji JSON file: https://github.com/carloscuesta/gitmoji/blob/master/packages/gitmojis/src/gitmojis.json
+
 ## Language
 The code is written in TypeScript.
