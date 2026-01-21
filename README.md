@@ -1,10 +1,10 @@
 # eslint-config-gluons
 [![license](https://img.shields.io/github/license/gluons/eslint-config-gluons.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons/blob/master/LICENSE)
-[![npm](https://img.shields.io/npm/v/eslint-config-gluons.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-gluons)
-[![node](https://img.shields.io/node/v/eslint-config-gluons.svg?style=flat-square)](https://nodejs.org/)
-[![ESLint](https://img.shields.io/badge/ESLint%20Config-gluons-463FD4.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons)
-[![Travis branch](https://img.shields.io/travis/gluons/eslint-config-gluons/master.svg?style=flat-square)](https://travis-ci.org/gluons/eslint-config-gluons)
-[![Known Vulnerabilities](https://snyk.io/test/github/gluons/eslint-config-gluons/badge.svg?targetFile=package.json&style=flat-square)](https://snyk.io/test/github/gluons/eslint-config-gluons?targetFile=package.json)
+[![npm](https://img.shields.io/npm/v/eslint-config-gluons?style=flat-square&logo=npm)](https://www.npmjs.com/package/eslint-config-gluons)
+[![Node](https://img.shields.io/node/v/eslint-config-gluons?style=flat-square&logo=nodedotjs)](https://nodejs.org/)
+[![ESLint](https://img.shields.io/badge/ESLint%20Config-gluons-4b32c3?style=flat-square&logo=eslint)
+](https://github.com/gluons/eslint-config-gluons)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/gluons/eslint-config-gluons/lint-test.yml?branch=master&style=flat-square&logo=githubactions)](https://github.com/gluons/eslint-config-gluons/actions/workflows/lint-test.yml)
 
 [gluons](https://github.com/gluons)' personal [ESLint](https://eslint.org/) shareable config
 
