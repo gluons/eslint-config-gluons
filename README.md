@@ -26,19 +26,19 @@ A set of my ❤️ favorite rules.
 [![NPM](https://nodei.co/npm/eslint-config-gluons.png?compact=true)](https://www.npmjs.com/package/eslint-config-gluons)
 
 ```bash
-npm install -D eslint-config-gluons
+npm install -D eslint @eslint/js prettier eslint-config-gluons
 ```
 
 **Via [pnpm](https://pnpm.js.org/):**
 
 ```bash
-pnpm install -D eslint-config-gluons
+pnpm install -D eslint @eslint/js prettier eslint-config-gluons
 ```
 
 **Via [Yarn](https://yarnpkg.com):**
 
 ```bash
-yarn add -D eslint-config-gluons
+yarn add -D eslint @eslint/js prettier eslint-config-gluons
 ```
 
 ---
