@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"module": "esnext",
 		"moduleResolution": "bundler",
-		"target": "es2022",
+		"target": "es2025",
 		"sourceMap": false,
 		"declaration": true,
 		"noUnusedLocals": true,
@@ -10,6 +10,8 @@
 		"strict": true,
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
+		"rootDir": "./src",
+		"types": ["node"],
 		"outDir": "./dist"
 	},
 	"include": ["src"],
