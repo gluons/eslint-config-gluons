@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gluons",
-  "version": "7.0.0-beta.2",
+  "version": "7.0.0-beta.3",
   "description": "Gluons' personal ESLint shareable config.",
   "type": "module",
   "main": "./dist/main.js",
