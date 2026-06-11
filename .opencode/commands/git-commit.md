@@ -5,6 +5,7 @@ agent: plan
 
 Commit staged changes with a message following the Gitmoji convention.
 Always refer to the official Gitmoji JSON source to select the appropriate emoji for the commit message.
+Always use the real emoji character itself, not the emoji shortcode (e.g., use `🐛` instead of `:bug:`).
 
 When referencing file names, code snippets, functions, or other code elements in commit messages, always wrap them in backticks (`` ` ``). Examples:
 - File names: Update `package.json` configuration
