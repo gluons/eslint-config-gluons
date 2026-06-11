@@ -1,51 +1,28 @@
 {
   "name": "eslint-config-gluons-docs",
-  "version": "0.0.0",
-  "description": "A documentation for `eslint-config-gluons`.",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "cross-env NODE_ENV=production vue-cli-service build",
-    "dev": "cross-env NODE_ENV=development vue-cli-service serve",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gluons/eslint-config-gluons.git"
-  },
-  "keywords": [
-    "eslint-config-gluons",
-    "documentation",
-    "docs"
-  ],
-  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gluons/eslint-config-gluons/issues"
-  },
-  "homepage": "https://github.com/gluons/eslint-config-gluons",
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.2",
-    "@vue/cli-plugin-eslint": "^3.9.2",
-    "@vue/cli-service": "^3.9.3",
-    "babel-eslint": "^10.0.2",
-    "browserslist-config-vue": "^1.0.3",
-    "cross-env": "^5.2.0",
-    "eslint": "^6.0.1",
-    "eslint-config-gluons": "^5.0.0",
-    "eslint-plugin-vue": "^5.2.3",
-    "node-sass": "^4.12.0",
-    "open-color": "^1.7.0",
-    "sass-loader": "^7.1.0",
-    "vue-cli-plugin-pug": "^1.0.7",
-    "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.36.1"
-  },
+  "prettier": "@gluons/prettier-config",
   "dependencies": {
-    "buefy": "^0.7.10",
-    "font-awesome": "^4.7.0",
-    "highlight.js": "^9.15.8",
-    "vue": "^2.6.10",
-    "vue-highlight.js": "^3.1.0",
-    "vue-router": "^3.0.7"
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "buefy": "^3.0.8",
+    "vue": "^3.5.34"
+  },
+  "devDependencies": {
+    "@gluons/prettier-config": "^3.1.0",
+    "@types/node": "^24.12.3",
+    "@vitejs/plugin-vue": "^6.0.6",
+    "@vue/tsconfig": "^0.9.1",
+    "prettier": "^3.8.4",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12",
+    "vue-tsc": "^3.2.8"
   }
 }
