@@ -2,6 +2,8 @@
 import { ref } from 'vue';
 import { BTabs, BTabItem } from 'buefy';
 
+import CodeBlock from './CodeBlock.vue';
+
 const packageManagers = ref([
 	{
 		name: 'npm',
@@ -99,7 +101,7 @@ const badgeUrl =
 				:key="pm.name"
 				:label="pm.name"
 			>
-				<pre><code>{{ pm.command }}</code></pre>
+				<CodeBlock :code="pm.command" lang="shell" />
 			</BTabItem>
 		</BTabs>
 
@@ -110,9 +112,12 @@ const badgeUrl =
 				>TypeScript ESLint</a
 			>.
 		</p>
-		<pre><code>npm install -D typescript-eslint
+		<CodeBlock
+			code="npm install -D typescript-eslint
 pnpm install -D typescript-eslint
-yarn add -D typescript-eslint</code></pre>
+yarn add -D typescript-eslint"
+			lang="shell"
+		/>
 
 		<h3>Using with Vue</h3>
 		<p>
@@ -121,9 +126,12 @@ yarn add -D typescript-eslint</code></pre>
 				>eslint-plugin-vue</a
 			>.
 		</p>
-		<pre><code>npm install -D eslint-plugin-vue
+		<CodeBlock
+			code="npm install -D eslint-plugin-vue
 pnpm install -D eslint-plugin-vue
-yarn add -D eslint-plugin-vue</code></pre>
+yarn add -D eslint-plugin-vue"
+			lang="shell"
+		/>
 	</section>
 
 	<section id="usage" class="doc-section">
@@ -134,21 +142,21 @@ yarn add -D eslint-plugin-vue</code></pre>
 		</p>
 
 		<h3>Normal (JavaScript)</h3>
-		<pre><code>{{ normalConfig }}</code></pre>
+		<CodeBlock :code="normalConfig" lang="javascript" />
 
 		<h3>TypeScript</h3>
-		<pre><code>{{ tsConfig }}</code></pre>
+		<CodeBlock :code="tsConfig" lang="typescript" />
 
 		<h3>Vue</h3>
-		<pre><code>{{ vueConfig }}</code></pre>
+		<CodeBlock :code="vueConfig" lang="javascript" />
 
 		<h3>Vue + TypeScript</h3>
-		<pre><code>{{ vueTsConfig }}</code></pre>
+		<CodeBlock :code="vueTsConfig" lang="typescript" />
 	</section>
 
 	<section id="badge" class="doc-section">
 		<h2>Badge</h2>
-		<pre><code>{{ badgeMarkdown }}</code></pre>
+		<CodeBlock :code="badgeMarkdown" lang="markdown" />
 		<div class="badge-preview">
 			<a
 				href="https://github.com/gluons/eslint-config-gluons"
@@ -185,20 +193,6 @@ yarn add -D eslint-plugin-vue</code></pre>
 
 .doc-section p {
 	margin-bottom: 16px;
-}
-
-.doc-section pre {
-	margin: 0 0 16px;
-	padding: 16px;
-	border-radius: 8px;
-	background: var(--code-bg);
-	overflow-x: auto;
-}
-
-.doc-section pre code {
-	padding: 0;
-	background: transparent;
-	white-space: pre;
 }
 
 .doc-section ul {
