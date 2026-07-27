@@ -16,3 +16,5 @@ When referencing file names, code snippets, functions, or other code elements in
 - Properties: Update `user.email` validation
 - Module names: Import `lodash` utilities
 - File paths: Modified `src/validators.ts` file
+
+Do NOT execute `git commit` immediately. Show the user the proposed commit message first and wait for their confirmation before running the commit.
