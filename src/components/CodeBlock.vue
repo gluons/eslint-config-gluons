@@ -34,12 +34,14 @@ watch(() => [props.code, props.lang], highlight, { immediate: true });
 	margin: 0;
 	padding: 16px;
 	border-radius: 8px;
+	tab-size: 4;
 }
 
 .code-block :deep(code) {
 	display: block;
 	padding: 0;
 	background: transparent;
+	tab-size: 4;
 }
 
 .code-block :deep(.line) {
