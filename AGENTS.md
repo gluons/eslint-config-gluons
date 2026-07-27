@@ -17,14 +17,14 @@ This is the documentation website for the [`eslint-config-gluons`](https://githu
 
 ## Commands
 
-| Command | Purpose |
-|---------|---------|
-| `yarn dev` | Start Vite dev server |
-| `yarn build` | Type-check (`vue-tsc -b`) then build (`vite build`) |
-| `yarn preview` | Preview production build locally |
-| `yarn format` | Format all files with Prettier |
-| `yarn add <package>` | Add a dependency |
-| `yarn add -D <package>` | Add a dev dependency |
+| Command                 | Purpose                                             |
+| ----------------------- | --------------------------------------------------- |
+| `yarn dev`              | Start Vite dev server                               |
+| `yarn build`            | Type-check (`vue-tsc -b`) then build (`vite build`) |
+| `yarn preview`          | Preview production build locally                    |
+| `yarn format`           | Format all files with Prettier                      |
+| `yarn add <package>`    | Add a dependency                                    |
+| `yarn add -D <package>` | Add a dev dependency                                |
 
 ## Architecture
 
@@ -59,11 +59,11 @@ This is the documentation website for the [`eslint-config-gluons`](https://githu
 
 The `eslint-config-gluons` package exports four configs:
 
-| Export | Use Case |
-|--------|----------|
-| `eslint-config-gluons` | Plain JS/Node |
-| `eslint-config-gluons/ts` | TypeScript |
-| `eslint-config-gluons/vue` | Vue (JS) |
+| Export                        | Use Case         |
+| ----------------------------- | ---------------- |
+| `eslint-config-gluons`        | Plain JS/Node    |
+| `eslint-config-gluons/ts`     | TypeScript       |
+| `eslint-config-gluons/vue`    | Vue (JS)         |
 | `eslint-config-gluons/vue-ts` | Vue + TypeScript |
 
 The docs site should cover/enumerate all rules from each of these configs.
@@ -71,6 +71,7 @@ The docs site should cover/enumerate all rules from each of these configs.
 ## Documentation Generation
 
 This site documents the rules from the `eslint-config-gluons` package. The rule definitions can be imported/generated from:
+
 - `node_modules/eslint-config-gluons/dist/rules/main.js` — core JS rules
 - `node_modules/eslint-config-gluons/dist/rules/stylistic.js` — stylistic rules
 - `node_modules/eslint-config-gluons/dist/rules/ts.js` — TypeScript rules

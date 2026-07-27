@@ -31,12 +31,12 @@ If no argument is provided, generate all four by default.
 
 Load the appropriate source files from the installed package:
 
-| Category | Source File |
-|----------|-------------|
-| main (core JS) | `node_modules/eslint-config-gluons/dist/rules/main.js` |
-| stylistic | `node_modules/eslint-config-gluons/dist/rules/stylistic.js` |
-| ts (TypeScript) | `node_modules/eslint-config-gluons/dist/rules/ts.js` |
-| vue | `node_modules/eslint-config-gluons/dist/rules/vue.js` |
+| Category        | Source File                                                 |
+| --------------- | ----------------------------------------------------------- |
+| main (core JS)  | `node_modules/eslint-config-gluons/dist/rules/main.js`      |
+| stylistic       | `node_modules/eslint-config-gluons/dist/rules/stylistic.js` |
+| ts (TypeScript) | `node_modules/eslint-config-gluons/dist/rules/ts.js`        |
+| vue             | `node_modules/eslint-config-gluons/dist/rules/vue.js`       |
 
 Extract each rule entry (key-value pairs under the `rules` object). Note the rule name, severity (`'error'`, `'warn'`, `'off'`), and any configuration options.
 
@@ -44,12 +44,12 @@ Extract each rule entry (key-value pairs under the `rules` object). Note the rul
 
 For each rule, look up its description from ESLint's official documentation:
 
-| Rule Source | Docs URL |
-|-------------|----------|
-| Built-in ESLint rules | `https://eslint.org/docs/latest/rules/<rule-name>` |
-| `@stylistic` rules | `https://eslint.style/rules/<rule-name>` |
-| `@typescript-eslint` rules | `https://typescript-eslint.io/rules/<rule-name>` |
-| `eslint-plugin-vue` rules | `https://eslint.vuejs.org/rules/<rule-name>` |
+| Rule Source                | Docs URL                                           |
+| -------------------------- | -------------------------------------------------- |
+| Built-in ESLint rules      | `https://eslint.org/docs/latest/rules/<rule-name>` |
+| `@stylistic` rules         | `https://eslint.style/rules/<rule-name>`           |
+| `@typescript-eslint` rules | `https://typescript-eslint.io/rules/<rule-name>`   |
+| `eslint-plugin-vue` rules  | `https://eslint.vuejs.org/rules/<rule-name>`       |
 
 Fetch the description from the docs page. If the page is unavailable, derive a concise description from the rule name and its configuration.
 
@@ -57,12 +57,12 @@ Fetch the description from the docs page. If the page is unavailable, derive a c
 
 For each category, create (or update) a component in `src/components/`:
 
-| Category | Component | Purpose |
-|----------|-----------|---------|
-| main | `src/components/RulesMain.vue` | Core JS rules |
-| stylistic | `src/components/RulesStylistic.vue` | Stylistic rules |
-| ts | `src/components/RulesTs.vue` | TypeScript rules |
-| vue | `src/components/RulesVue.vue` | Vue rules |
+| Category  | Component                           | Purpose          |
+| --------- | ----------------------------------- | ---------------- |
+| main      | `src/components/RulesMain.vue`      | Core JS rules    |
+| stylistic | `src/components/RulesStylistic.vue` | Stylistic rules  |
+| ts        | `src/components/RulesTs.vue`        | TypeScript rules |
+| vue       | `src/components/RulesVue.vue`       | Vue rules        |
 
 Each component must:
 
@@ -72,10 +72,10 @@ Each component must:
 - Import Buefy components (e.g., `{ BTable, BTag, BMessage, BIcon }` from `'buefy'`)
 - Import Font Awesome icon CSS if needed (`@fortawesome/fontawesome-free/css/all.css`)
 - Present rules in a **Buefy table** (`<BTable>`) with columns:
-  - **Rule** — The rule name (e.g., `'no-console'`, `'@stylistic/indent'`)
-  - **Severity** — A badge/tag showing `error`, `warn`, or `off`
-  - **Config** — A summary of the configuration values
-  - **Description** — A brief explanation fetched from ESLint docs
+    - **Rule** — The rule name (e.g., `'no-console'`, `'@stylistic/indent'`)
+    - **Severity** — A badge/tag showing `error`, `warn`, or `off`
+    - **Config** — A summary of the configuration values
+    - **Description** — A brief explanation fetched from ESLint docs
 
 ### 5. Add Navigation in App.vue
 
