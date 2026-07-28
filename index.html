@@ -5,6 +5,20 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>eslint-config-gluons-docs</title>
+		<script>
+			(function () {
+				var theme = 'light';
+				try {
+					var stored = localStorage.getItem('theme-preference');
+					if (stored === 'light' || stored === 'dark') {
+						theme = stored;
+					} else {
+						theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+					}
+				} catch (e) {}
+				document.documentElement.setAttribute('data-theme', theme);
+			})();
+		</script>
 	</head>
 	<body>
 		<div id="app"></div>
