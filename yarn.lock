@@ -455,6 +455,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@thesvg/vue@npm:^3.2.14":
+  version: 3.2.14
+  resolution: "@thesvg/vue@npm:3.2.14"
+  peerDependencies:
+    vue: ">=3.3"
+  checksum: 10c0/6ed77417bfc6a5ac6aa69c19d9fa2921e4c9e2309f9f708f886bf83938aa4a8ad3541acd9f9e2d19f47da76aebfce7d9eaf92edbc09fe5f6d13b0454b0d7022e
+  languageName: node
+  linkType: hard
+
 "@tybys/wasm-util@npm:^0.10.3":
   version: 0.10.3
   resolution: "@tybys/wasm-util@npm:0.10.3"
@@ -1076,6 +1085,7 @@ __metadata:
     "@eslint/js": "npm:^10.0.1"
     "@fortawesome/fontawesome-free": "npm:^7.3.1"
     "@gluons/prettier-config": "npm:^3.1.0"
+    "@thesvg/vue": "npm:^3.2.14"
     "@types/node": "npm:^24.12.3"
     "@vitejs/plugin-vue": "npm:^6.0.8"
     "@vue/tsconfig": "npm:^0.9.1"
