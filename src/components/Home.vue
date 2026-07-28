@@ -247,6 +247,10 @@ const badgeUrl =
 </template>
 
 <style scoped>
+#center h1 {
+	font-size: 64px;
+}
+
 .doc-section {
 	padding: 32px;
 	text-align: left;
