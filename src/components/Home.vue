@@ -1,8 +1,17 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, type Component } from 'vue';
 import { BTabs, BTabItem } from 'buefy';
 
 import CodeBlock from './CodeBlock.vue';
+import NpmSvg from '@thesvg/vue/npm';
+import YarnSvg from '@thesvg/vue/yarn';
+import PnpmSvg from '@thesvg/vue/pnpm';
+
+const iconMap: Record<string, Component> = {
+	npm: NpmSvg,
+	Yarn: YarnSvg,
+	pnpm: PnpmSvg
+};
 
 const packageManagers = ref([
 	{
@@ -131,6 +140,15 @@ const badgeUrl =
 				:key="pm.name"
 				:label="pm.name"
 			>
+				<template #header>
+					<component
+						:is="iconMap[pm.name]"
+						width="20"
+						height="20"
+						class="tab-header-icon"
+					/>
+					<span>{{ pm.name }}</span>
+				</template>
 				<CodeBlock :code="pm.command" lang="shell" />
 			</BTabItem>
 		</BTabs>
@@ -148,6 +166,15 @@ const badgeUrl =
 				:key="pm.name"
 				:label="pm.name"
 			>
+				<template #header>
+					<component
+						:is="iconMap[pm.name]"
+						width="20"
+						height="20"
+						class="tab-header-icon"
+					/>
+					<span>{{ pm.name }}</span>
+				</template>
 				<CodeBlock :code="pm.command" lang="shell" />
 			</BTabItem>
 		</BTabs>
@@ -165,6 +192,15 @@ const badgeUrl =
 				:key="pm.name"
 				:label="pm.name"
 			>
+				<template #header>
+					<component
+						:is="iconMap[pm.name]"
+						width="20"
+						height="20"
+						class="tab-header-icon"
+					/>
+					<span>{{ pm.name }}</span>
+				</template>
 				<CodeBlock :code="pm.command" lang="shell" />
 			</BTabItem>
 		</BTabs>
@@ -249,6 +285,11 @@ const badgeUrl =
 
 .badge-preview img {
 	display: block;
+}
+
+.tab-header-icon {
+	margin-right: 4px;
+	vertical-align: middle;
 }
 
 a {
