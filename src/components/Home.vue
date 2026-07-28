@@ -11,13 +11,43 @@ const packageManagers = ref([
 			'npm install -D eslint @eslint/js prettier eslint-config-gluons'
 	},
 	{
+		name: 'Yarn',
+		command: 'yarn add -D eslint @eslint/js prettier eslint-config-gluons'
+	},
+	{
 		name: 'pnpm',
 		command:
 			'pnpm install -D eslint @eslint/js prettier eslint-config-gluons'
+	}
+]);
+
+const tsPackages = ref([
+	{
+		name: 'npm',
+		command: 'npm install -D typescript-eslint'
 	},
 	{
 		name: 'Yarn',
-		command: 'yarn add -D eslint @eslint/js prettier eslint-config-gluons'
+		command: 'yarn add -D typescript-eslint'
+	},
+	{
+		name: 'pnpm',
+		command: 'pnpm install -D typescript-eslint'
+	}
+]);
+
+const vuePackages = ref([
+	{
+		name: 'npm',
+		command: 'npm install -D eslint-plugin-vue'
+	},
+	{
+		name: 'Yarn',
+		command: 'yarn add -D eslint-plugin-vue'
+	},
+	{
+		name: 'pnpm',
+		command: 'pnpm install -D eslint-plugin-vue'
 	}
 ]);
 
@@ -112,12 +142,15 @@ const badgeUrl =
 				>TypeScript ESLint</a
 			>.
 		</p>
-		<CodeBlock
-			code="npm install -D typescript-eslint
-pnpm install -D typescript-eslint
-yarn add -D typescript-eslint"
-			lang="shell"
-		/>
+		<BTabs type="is-boxed">
+			<BTabItem
+				v-for="pm in tsPackages"
+				:key="pm.name"
+				:label="pm.name"
+			>
+				<CodeBlock :code="pm.command" lang="shell" />
+			</BTabItem>
+		</BTabs>
 
 		<h3>Using with Vue</h3>
 		<p>
@@ -126,12 +159,15 @@ yarn add -D typescript-eslint"
 				>eslint-plugin-vue</a
 			>.
 		</p>
-		<CodeBlock
-			code="npm install -D eslint-plugin-vue
-pnpm install -D eslint-plugin-vue
-yarn add -D eslint-plugin-vue"
-			lang="shell"
-		/>
+		<BTabs type="is-boxed">
+			<BTabItem
+				v-for="pm in vuePackages"
+				:key="pm.name"
+				:label="pm.name"
+			>
+				<CodeBlock :code="pm.command" lang="shell" />
+			</BTabItem>
+		</BTabs>
 	</section>
 
 	<section id="usage" class="doc-section">
