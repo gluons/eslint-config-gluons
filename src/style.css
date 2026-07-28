@@ -31,6 +31,14 @@
 	}
 }
 
+/* Prevent cross-fading colors during a theme switch */
+html.no-transition *,
+html.no-transition *::before,
+html.no-transition *::after {
+	transition: none !important;
+	animation: none !important;
+}
+
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme="light"]) {
 		--text: #9ca3af;
