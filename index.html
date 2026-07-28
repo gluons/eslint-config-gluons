@@ -7,16 +7,12 @@
 		<title>eslint-config-gluons-docs</title>
 		<script>
 			(function () {
-				var theme = 'light';
 				try {
 					var stored = localStorage.getItem('theme-preference');
 					if (stored === 'light' || stored === 'dark') {
-						theme = stored;
-					} else {
-						theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+						document.documentElement.setAttribute('data-theme', stored);
 					}
 				} catch (e) {}
-				document.documentElement.setAttribute('data-theme', theme);
 			})();
 		</script>
 	</head>
