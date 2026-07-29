@@ -3,6 +3,7 @@ import { BTable, BTableColumn, BTag } from 'buefy';
 
 interface RuleEntry {
 	name: string;
+	url: string;
 	severity: string;
 	config: string;
 	description: string;
@@ -11,12 +12,14 @@ interface RuleEntry {
 const rules: RuleEntry[] = [
 	{
 		name: '@typescript-eslint/explicit-function-return-type',
+		url: 'https://typescript-eslint.io/rules/explicit-function-return-type',
 		severity: 'off',
 		config: '',
 		description: 'Allow functions without explicit return type annotations.'
 	},
 	{
 		name: '@typescript-eslint/member-ordering',
+		url: 'https://typescript-eslint.io/rules/member-ordering',
 		severity: 'warn',
 		config: 'default: private-static → public-static → constructor → private-instance → public-instance',
 		description:
@@ -24,6 +27,7 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: '@typescript-eslint/no-floating-promises',
+		url: 'https://typescript-eslint.io/rules/no-floating-promises',
 		severity: 'error',
 		config: 'ignoreIIFE: true',
 		description:
@@ -31,6 +35,7 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: '@typescript-eslint/no-unused-vars',
+		url: 'https://typescript-eslint.io/rules/no-unused-vars',
 		severity: 'error',
 		config: 'argsIgnorePattern: "^_"',
 		description:
@@ -38,6 +43,7 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: '@typescript-eslint/triple-slash-reference',
+		url: 'https://typescript-eslint.io/rules/triple-slash-reference',
 		severity: 'off',
 		config: '',
 		description: 'Allow triple-slash reference directives.'
@@ -70,7 +76,14 @@ function severityType(severity: string): string {
 		>
 			<BTableColumn field="name" label="Rule" width="380">
 				<template #default="props">
-					<code>{{ props.row.name }}</code>
+					<a
+						:href="props.row.url"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="rule-link"
+					>
+						<code>{{ props.row.name }}</code>
+					</a>
 				</template>
 			</BTableColumn>
 			<BTableColumn field="severity" label="Severity" width="120">
@@ -114,5 +127,19 @@ function severityType(severity: string): string {
 .no-config {
 	color: var(--text);
 	opacity: 0.5;
+}
+
+.rule-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.rule-link:hover {
+	color: var(--accent);
+	text-decoration: underline;
+}
+
+.rule-link:hover code {
+	color: var(--accent);
 }
 </style>

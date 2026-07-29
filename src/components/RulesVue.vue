@@ -3,6 +3,7 @@ import { BTable, BTableColumn, BTag } from 'buefy';
 
 interface RuleEntry {
 	name: string;
+	url: string;
 	severity: string;
 	config: string;
 	description: string;
@@ -11,6 +12,7 @@ interface RuleEntry {
 const rules: RuleEntry[] = [
 	{
 		name: 'vue/html-indent',
+		url: 'https://eslint.vuejs.org/rules/html-indent',
 		severity: 'error',
 		config: 'tab',
 		description:
@@ -18,6 +20,7 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: 'vue/script-indent',
+		url: 'https://eslint.vuejs.org/rules/script-indent',
 		severity: 'error',
 		config: 'tab, switchCase: 1',
 		description:
@@ -25,6 +28,7 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: 'vue/html-closing-bracket-newline',
+		url: 'https://eslint.vuejs.org/rules/html-closing-bracket-newline',
 		severity: 'error',
 		config: 'multiline: always',
 		description:
@@ -57,7 +61,14 @@ function severityType(severity: string): string {
 		>
 			<BTableColumn field="name" label="Rule" width="300">
 				<template #default="props">
-					<code>{{ props.row.name }}</code>
+					<a
+						:href="props.row.url"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="rule-link"
+					>
+						<code>{{ props.row.name }}</code>
+					</a>
 				</template>
 			</BTableColumn>
 			<BTableColumn field="severity" label="Severity" width="120">
@@ -101,5 +112,19 @@ function severityType(severity: string): string {
 .no-config {
 	color: var(--text);
 	opacity: 0.5;
+}
+
+.rule-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.rule-link:hover {
+	color: var(--accent);
+	text-decoration: underline;
+}
+
+.rule-link:hover code {
+	color: var(--accent);
 }
 </style>

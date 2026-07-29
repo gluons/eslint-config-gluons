@@ -3,6 +3,7 @@ import { BTable, BTableColumn, BTag } from 'buefy';
 
 interface RuleEntry {
 	name: string;
+	url: string;
 	severity: string;
 	config: string;
 	description: string;
@@ -11,6 +12,7 @@ interface RuleEntry {
 const rules: RuleEntry[] = [
 	{
 		name: '@stylistic/arrow-parens',
+		url: 'https://eslint.style/rules/arrow-parens',
 		severity: 'error',
 		config: 'as-needed',
 		description:
@@ -18,42 +20,49 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: '@stylistic/arrow-spacing',
+		url: 'https://eslint.style/rules/arrow-spacing',
 		severity: 'error',
 		config: 'before: true, after: true',
 		description: 'Enforce consistent spacing before and after the arrow in arrow functions.'
 	},
 	{
 		name: '@stylistic/brace-style',
+		url: 'https://eslint.style/rules/brace-style',
 		severity: 'error',
 		config: '1tbs',
 		description: 'Require the "one true brace style" for blocks.'
 	},
 	{
 		name: '@stylistic/comma-dangle',
+		url: 'https://eslint.style/rules/comma-dangle',
 		severity: 'error',
 		config: '',
 		description: 'Require trailing commas wherever possible.'
 	},
 	{
 		name: '@stylistic/comma-spacing',
+		url: 'https://eslint.style/rules/comma-spacing',
 		severity: 'error',
 		config: 'before: false, after: true',
 		description: 'Enforce spacing after commas and disallow spacing before them.'
 	},
 	{
 		name: '@stylistic/comma-style',
+		url: 'https://eslint.style/rules/comma-style',
 		severity: 'error',
 		config: 'last',
 		description: 'Require commas at the end of lines.'
 	},
 	{
 		name: '@stylistic/dot-location',
+		url: 'https://eslint.style/rules/dot-location',
 		severity: 'warn',
 		config: 'property',
 		description: 'Warn when dots are on the same line as the property.'
 	},
 	{
 		name: '@stylistic/generator-star-spacing',
+		url: 'https://eslint.style/rules/generator-star-spacing',
 		severity: 'error',
 		config: 'after',
 		description:
@@ -61,12 +70,14 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: '@stylistic/indent',
+		url: 'https://eslint.style/rules/indent',
 		severity: 'error',
 		config: 'tab, SwitchCase: 1',
 		description: 'Enforce tab indentation with one extra indent for `case` clauses.'
 	},
 	{
 		name: '@stylistic/key-spacing',
+		url: 'https://eslint.style/rules/key-spacing',
 		severity: 'error',
 		config: 'beforeColon: false, afterColon: true',
 		description:
@@ -74,12 +85,14 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: '@stylistic/keyword-spacing',
+		url: 'https://eslint.style/rules/keyword-spacing',
 		severity: 'error',
 		config: 'before: true, after: true',
 		description: 'Enforce consistent spacing before and after keywords.'
 	},
 	{
 		name: '@stylistic/no-confusing-arrow',
+		url: 'https://eslint.style/rules/no-confusing-arrow',
 		severity: 'warn',
 		config: 'allowParens: true',
 		description:
@@ -87,12 +100,14 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: '@stylistic/no-trailing-spaces',
+		url: 'https://eslint.style/rules/no-trailing-spaces',
 		severity: 'warn',
 		config: '',
 		description: 'Warn when trailing whitespace is present.'
 	},
 	{
 		name: '@stylistic/quotes',
+		url: 'https://eslint.style/rules/quotes',
 		severity: 'error',
 		config: 'single, avoidEscape: true, allowTemplateLiterals: true',
 		description:
@@ -100,24 +115,28 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: '@stylistic/semi',
+		url: 'https://eslint.style/rules/semi',
 		severity: 'error',
 		config: 'always',
 		description: 'Require semicolons at the end of statements.'
 	},
 	{
 		name: '@stylistic/semi-spacing',
+		url: 'https://eslint.style/rules/semi-spacing',
 		severity: 'error',
 		config: 'before: false, after: true',
 		description: 'Enforce spacing after semicolons, no spacing before.'
 	},
 	{
 		name: '@stylistic/space-before-blocks',
+		url: 'https://eslint.style/rules/space-before-blocks',
 		severity: 'error',
 		config: '',
 		description: 'Require a space before blocks.'
 	},
 	{
 		name: '@stylistic/space-before-function-paren',
+		url: 'https://eslint.style/rules/space-before-function-paren',
 		severity: 'error',
 		config: 'anonymous: always, named: never, asyncArrow: always',
 		description:
@@ -125,12 +144,14 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: '@stylistic/space-infix-ops',
+		url: 'https://eslint.style/rules/space-infix-ops',
 		severity: 'error',
 		config: 'int32Hint: false',
 		description: 'Require spacing around infix operators.'
 	},
 	{
 		name: '@stylistic/wrap-iife',
+		url: 'https://eslint.style/rules/wrap-iife',
 		severity: 'error',
 		config: 'any',
 		description:
@@ -164,7 +185,14 @@ function severityType(severity: string): string {
 		>
 			<BTableColumn field="name" label="Rule" width="320">
 				<template #default="props">
-					<code>{{ props.row.name }}</code>
+					<a
+						:href="props.row.url"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="rule-link"
+					>
+						<code>{{ props.row.name }}</code>
+					</a>
 				</template>
 			</BTableColumn>
 			<BTableColumn field="severity" label="Severity" width="120">
@@ -208,5 +236,19 @@ function severityType(severity: string): string {
 .no-config {
 	color: var(--text);
 	opacity: 0.5;
+}
+
+.rule-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.rule-link:hover {
+	color: var(--accent);
+	text-decoration: underline;
+}
+
+.rule-link:hover code {
+	color: var(--accent);
 }
 </style>

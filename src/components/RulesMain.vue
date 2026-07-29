@@ -3,6 +3,7 @@ import { BTable, BTableColumn, BTag } from 'buefy';
 
 interface RuleEntry {
 	name: string;
+	url: string;
 	severity: string;
 	config: string;
 	description: string;
@@ -11,6 +12,7 @@ interface RuleEntry {
 const rules: RuleEntry[] = [
 	{
 		name: 'arrow-body-style',
+		url: 'https://eslint.org/docs/latest/rules/arrow-body-style',
 		severity: 'error',
 		config: 'as-needed, requireReturnForObjectLiteral: true',
 		description:
@@ -18,12 +20,14 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: 'curly',
+		url: 'https://eslint.org/docs/latest/rules/curly',
 		severity: 'error',
 		config: 'all',
 		description: 'Require curly braces for all control statements.'
 	},
 	{
 		name: 'func-name-matching',
+		url: 'https://eslint.org/docs/latest/rules/func-name-matching',
 		severity: 'warn',
 		config: '',
 		description:
@@ -31,18 +35,21 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: 'no-array-constructor',
+		url: 'https://eslint.org/docs/latest/rules/no-array-constructor',
 		severity: 'error',
 		config: '',
 		description: 'Disallow the `Array` constructor.'
 	},
 	{
 		name: 'no-console',
+		url: 'https://eslint.org/docs/latest/rules/no-console',
 		severity: 'error (production) / off (development)',
 		config: 'Conditional on NODE_ENV',
 		description: 'Disallow `console` calls in production; allow in development.'
 	},
 	{
 		name: 'no-debugger',
+		url: 'https://eslint.org/docs/latest/rules/no-debugger',
 		severity: 'error (production) / off (development)',
 		config: 'Conditional on NODE_ENV',
 		description:
@@ -50,24 +57,28 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: 'no-duplicate-imports',
+		url: 'https://eslint.org/docs/latest/rules/no-duplicate-imports',
 		severity: 'error',
 		config: '',
 		description: 'Disallow duplicate module imports.'
 	},
 	{
 		name: 'no-empty',
+		url: 'https://eslint.org/docs/latest/rules/no-empty',
 		severity: 'error',
 		config: 'allowEmptyCatch: true',
 		description: 'Disallow empty block statements, except for empty catch blocks.'
 	},
 	{
 		name: 'no-object-constructor',
+		url: 'https://eslint.org/docs/latest/rules/no-object-constructor',
 		severity: 'error',
 		config: '',
 		description: 'Disallow the `Object` constructor.'
 	},
 	{
 		name: 'no-unused-vars',
+		url: 'https://eslint.org/docs/latest/rules/no-unused-vars',
 		severity: 'error',
 		config: 'argsIgnorePattern: "^_"',
 		description:
@@ -75,6 +86,7 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: 'no-useless-concat',
+		url: 'https://eslint.org/docs/latest/rules/no-useless-concat',
 		severity: 'warn',
 		config: '',
 		description:
@@ -82,18 +94,21 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: 'no-useless-escape',
+		url: 'https://eslint.org/docs/latest/rules/no-useless-escape',
 		severity: 'warn',
 		config: '',
 		description: 'Warn when an escape sequence is unnecessary.'
 	},
 	{
 		name: 'no-var',
+		url: 'https://eslint.org/docs/latest/rules/no-var',
 		severity: 'error',
 		config: '',
 		description: 'Require `let` or `const` instead of `var`.'
 	},
 	{
 		name: 'object-shorthand',
+		url: 'https://eslint.org/docs/latest/rules/object-shorthand',
 		severity: 'error',
 		config: 'always, avoidQuotes: true',
 		description:
@@ -101,6 +116,7 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: 'prefer-spread',
+		url: 'https://eslint.org/docs/latest/rules/prefer-spread',
 		severity: 'warn',
 		config: '',
 		description:
@@ -108,12 +124,14 @@ const rules: RuleEntry[] = [
 	},
 	{
 		name: 'prefer-template',
+		url: 'https://eslint.org/docs/latest/rules/prefer-template',
 		severity: 'error',
 		config: '',
 		description: 'Require template literals instead of string concatenation.'
 	},
 	{
 		name: 'yoda',
+		url: 'https://eslint.org/docs/latest/rules/yoda',
 		severity: 'error',
 		config: 'never, exceptRange: true',
 		description:
@@ -150,7 +168,14 @@ function displaySeverity(severity: string): string {
 		>
 			<BTableColumn field="name" label="Rule" width="280">
 				<template #default="props">
-					<code>{{ props.row.name }}</code>
+					<a
+						:href="props.row.url"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="rule-link"
+					>
+						<code>{{ props.row.name }}</code>
+					</a>
 				</template>
 			</BTableColumn>
 			<BTableColumn field="severity" label="Severity" width="200">
@@ -195,5 +220,19 @@ function displaySeverity(severity: string): string {
 .no-config {
 	color: var(--text);
 	opacity: 0.5;
+}
+
+.rule-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.rule-link:hover {
+	color: var(--accent);
+	text-decoration: underline;
+}
+
+.rule-link:hover code {
+	color: var(--accent);
 }
 </style>
