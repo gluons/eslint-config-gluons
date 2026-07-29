@@ -62,6 +62,6 @@ export function useTheme() {
 
 	return {
 		preference,
-		setTheme,
+		setTheme
 	};
 }

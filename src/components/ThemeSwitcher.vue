@@ -15,11 +15,11 @@ interface ThemeOption {
 const options: ThemeOption[] = [
 	{ key: 'system', icon: 'fa-desktop', label: 'System' },
 	{ key: 'light', icon: 'fa-sun', label: 'Light' },
-	{ key: 'dark', icon: 'fa-moon', label: 'Dark' },
+	{ key: 'dark', icon: 'fa-moon', label: 'Dark' }
 ];
 
-const current = computed(() =>
-	options.find((opt) => opt.key === preference.value) ?? options[0]
+const current = computed(
+	() => options.find(opt => opt.key === preference.value) ?? options[0]
 );
 
 function onSelect(value: ThemePreference): void {

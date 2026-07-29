@@ -161,11 +161,7 @@ const badgeUrl =
 			>.
 		</p>
 		<BTabs type="is-boxed">
-			<BTabItem
-				v-for="pm in tsPackages"
-				:key="pm.name"
-				:label="pm.name"
-			>
+			<BTabItem v-for="pm in tsPackages" :key="pm.name" :label="pm.name">
 				<template #header>
 					<component
 						:is="iconMap[pm.name]"
@@ -187,11 +183,7 @@ const badgeUrl =
 			>.
 		</p>
 		<BTabs type="is-boxed">
-			<BTabItem
-				v-for="pm in vuePackages"
-				:key="pm.name"
-				:label="pm.name"
-			>
+			<BTabItem v-for="pm in vuePackages" :key="pm.name" :label="pm.name">
 				<template #header>
 					<component
 						:is="iconMap[pm.name]"
