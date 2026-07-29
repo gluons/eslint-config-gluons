@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import './style.css';
+import './styles/style.css';
 import './styles/rules-shared.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'buefy/dist/css/buefy.css';

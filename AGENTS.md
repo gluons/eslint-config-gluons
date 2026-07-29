@@ -31,7 +31,7 @@ This is the documentation website for the [`eslint-config-gluons`](https://githu
 - **`src/main.ts`** — Vue app entry point (mounts `App`)
 - **`src/App.vue`** — Root component
 - **`src/components/`** — Vue single-file components
-- **`src/style.css`** — Global styles (CSS custom properties, light/dark mode via `prefers-color-scheme`)
+- **`src/styles/style.css`** — Global styles (CSS custom properties, light/dark mode via `prefers-color-scheme`)
 - **`src/assets/`** — Static images/icons
 - **`public/`** — Static files served at root (`favicon.svg`, `icons.svg`)
 - **`node_modules/eslint-config-gluons/dist/`** — The installed ESLint config package whose rules are documented
