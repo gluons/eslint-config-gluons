@@ -184,7 +184,7 @@ const badgeUrl =
 		<h3>Using with Vue</h3>
 		<p>
 			Install
-			<a href="https://github.com/vuejs/eslint-plugin-vue" target="_blank"
+			<a href="https://eslint.vuejs.org/" target="_blank"
 				>eslint-plugin-vue</a
 			>.
 		</p>
