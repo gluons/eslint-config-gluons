@@ -2,7 +2,7 @@
 import { ref, type Component } from 'vue';
 import { BTabs, BTabItem } from 'buefy';
 
-import CodeBlock from './CodeBlock.vue';
+import CodeBlock from '../components/CodeBlock.vue';
 import NpmSvg from '@thesvg/vue/npm';
 import YarnSvg from '@thesvg/vue/yarn';
 import PnpmSvg from '@thesvg/vue/pnpm';

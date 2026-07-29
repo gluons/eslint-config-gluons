@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { BDropdown, BDropdownItem } from 'buefy';
-import Home from './components/Home.vue';
+import Home from './pages/Home.vue';
 import ThemeSwitcher from './components/ThemeSwitcher.vue';
-import RulesMain from './components/RulesMain.vue';
-import RulesStylistic from './components/RulesStylistic.vue';
-import RulesTs from './components/RulesTs.vue';
-import RulesVue from './components/RulesVue.vue';
+import RulesMain from './pages/RulesMain.vue';
+import RulesStylistic from './pages/RulesStylistic.vue';
+import RulesTs from './pages/RulesTs.vue';
+import RulesVue from './pages/RulesVue.vue';
 
 const activeTab = ref(0);
 
