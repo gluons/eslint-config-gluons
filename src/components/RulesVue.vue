@@ -127,4 +127,9 @@ function severityType(severity: string): string {
 .rule-link:hover code {
 	color: var(--accent);
 }
+
+.tag.is-light {
+	background: hsl(0, 0%, 96%);
+	color: hsl(0, 0%, 29%);
+}
 </style>
