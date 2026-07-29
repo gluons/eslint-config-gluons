@@ -123,7 +123,10 @@ const badgeUrl =
 	</section>
 
 	<section id="installation" class="doc-section">
-		<h2>Installation</h2>
+		<h2 id="installation">
+			<a class="anchor" href="#installation" aria-hidden="true" tabindex="-1">#</a>
+			Installation
+		</h2>
 		<p>
 			Install
 			<a
@@ -199,7 +202,10 @@ const badgeUrl =
 	</section>
 
 	<section id="usage" class="doc-section">
-		<h2>Usage</h2>
+		<h2 id="usage">
+			<a class="anchor" href="#usage" aria-hidden="true" tabindex="-1">#</a>
+			Usage
+		</h2>
 		<p>
 			Create an <code>eslint.config.js</code> file and extend the config
 			that matches your project type.
@@ -219,7 +225,10 @@ const badgeUrl =
 	</section>
 
 	<section id="badge" class="doc-section">
-		<h2>Badge</h2>
+		<h2 id="badge">
+			<a class="anchor" href="#badge" aria-hidden="true" tabindex="-1">#</a>
+			Badge
+		</h2>
 		<CodeBlock :code="badgeMarkdown" lang="markdown" />
 		<div class="badge-preview">
 			<a
@@ -254,6 +263,7 @@ const badgeUrl =
 }
 
 .doc-section h2 {
+	position: relative;
 	margin-bottom: 16px;
 }
 
@@ -298,6 +308,27 @@ a {
 }
 
 a:hover {
+	text-decoration: underline;
+}
+
+.anchor {
+	position: absolute;
+	right: 100%;
+	padding-right: 4px;
+	color: var(--accent);
+	opacity: 0;
+	transition: opacity 0.2s;
+	text-decoration: none;
+	font-size: 0.85em;
+	font-weight: normal;
+}
+
+.doc-section h2:hover .anchor {
+	opacity: 1;
+}
+
+.anchor:hover {
+	opacity: 1 !important;
 	text-decoration: underline;
 }
 </style>
