@@ -110,11 +110,8 @@ const badgeUrl =
 		<div>
 			<h1>eslint-config-gluons</h1>
 			<p>
-				<a
-					href="https://github.com/gluons/eslint-config-gluons"
-					target="_blank"
-					>gluons</a
-				>' personal
+				<a href="https://github.com/gluons" target="_blank">gluons</a>'
+				personal
 				<a href="https://eslint.org/" target="_blank">ESLint</a>
 				shareable config.
 			</p>
@@ -124,13 +121,19 @@ const badgeUrl =
 
 	<section id="installation" class="doc-section">
 		<h2 id="installation">
-			<a class="anchor" href="#installation" aria-hidden="true" tabindex="-1">#</a>
+			<a
+				class="anchor"
+				href="#installation"
+				aria-hidden="true"
+				tabindex="-1"
+				>#</a
+			>
 			Installation
 		</h2>
 		<p>
 			Install
 			<a
-				href="https://www.npmjs.com/package/eslint-config-gluons"
+				href="https://github.com/gluons/eslint-config-gluons"
 				target="_blank"
 				>eslint-config-gluons</a
 			>
@@ -203,7 +206,9 @@ const badgeUrl =
 
 	<section id="usage" class="doc-section">
 		<h2 id="usage">
-			<a class="anchor" href="#usage" aria-hidden="true" tabindex="-1">#</a>
+			<a class="anchor" href="#usage" aria-hidden="true" tabindex="-1"
+				>#</a
+			>
 			Usage
 		</h2>
 		<p>
@@ -226,7 +231,9 @@ const badgeUrl =
 
 	<section id="badge" class="doc-section">
 		<h2 id="badge">
-			<a class="anchor" href="#badge" aria-hidden="true" tabindex="-1">#</a>
+			<a class="anchor" href="#badge" aria-hidden="true" tabindex="-1"
+				>#</a
+			>
 			Badge
 		</h2>
 		<CodeBlock :code="badgeMarkdown" lang="markdown" />
