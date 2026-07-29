@@ -169,6 +169,7 @@ function selectRule(index: number) {
 	color: var(--text);
 	cursor: pointer;
 	transition: background 0.15s, color 0.15s;
+	text-align: left;
 }
 
 .nav-dropdown :deep(.dropdown-item:hover) {
