@@ -68,6 +68,36 @@ The `eslint-config-gluons` package exports four configs:
 
 The docs site should cover/enumerate all rules from each of these configs.
 
+## Home Page
+
+The home page lives in [`src/components/Home.vue`](src/components/Home.vue) and is rendered by [`src/App.vue`](src/App.vue). It documents installation and usage of the `eslint-config-gluons` package.
+
+### Content Source
+
+Installation and usage content is derived from the upstream README:
+<https://github.com/gluons/eslint-config-gluons/blob/upgrade/eslint-v9/README.md>
+
+When the upstream README changes, update the matching sections in `Home.vue`.
+
+### Sections
+
+| Section      | Purpose                                                                               |
+| ------------ | ------------------------------------------------------------------------------------- |
+| Hero         | Package title and short description                                                   |
+| Installation | Base install command with npm/pnpm/Yarn tabs, plus TypeScript and Vue add-on installs |
+| Usage        | `eslint.config.js` examples for JS, TS, Vue, and Vue+TS configs                       |
+| Badge        | Markdown copy-paste snippet and live preview of the shields.io badge                  |
+
+### Conventions
+
+- Use `BTabs`/`BTabItem` from Buefy for package-manager install commands.
+- Code examples are stored as template literals in `<script setup>` and rendered inside `<pre><code>` blocks.
+- Keep the copy-paste code block and the live preview separate:
+    - `badgeMarkdown` — Markdown snippet shown in the code block.
+    - `badgeUrl` — shields.io image URL used by the live `<img>` preview.
+- Render the badge preview with a real `<a>` + `<img>` element (not `v-html`) so the image loads predictably.
+- Add explicit `width`/`height` on the badge `<img>` to reserve layout space.
+
 ## Documentation Generation
 
 This site documents the rules from the `eslint-config-gluons` package. The rule definitions can be imported/generated from:
