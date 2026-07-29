@@ -23,7 +23,8 @@ const rules: RuleEntry[] = [
 		url: 'https://eslint.style/rules/arrow-spacing',
 		severity: 'error',
 		config: 'before: true, after: true',
-		description: 'Enforce consistent spacing before and after the arrow in arrow functions.'
+		description:
+			'Enforce consistent spacing before and after the arrow in arrow functions.'
 	},
 	{
 		name: '@stylistic/brace-style',
@@ -44,7 +45,8 @@ const rules: RuleEntry[] = [
 		url: 'https://eslint.style/rules/comma-spacing',
 		severity: 'error',
 		config: 'before: false, after: true',
-		description: 'Enforce spacing after commas and disallow spacing before them.'
+		description:
+			'Enforce spacing after commas and disallow spacing before them.'
 	},
 	{
 		name: '@stylistic/comma-style',
@@ -73,7 +75,8 @@ const rules: RuleEntry[] = [
 		url: 'https://eslint.style/rules/indent',
 		severity: 'error',
 		config: 'tab, SwitchCase: 1',
-		description: 'Enforce tab indentation with one extra indent for `case` clauses.'
+		description:
+			'Enforce tab indentation with one extra indent for `case` clauses.'
 	},
 	{
 		name: '@stylistic/key-spacing',
@@ -175,14 +178,15 @@ function severityType(severity: string): string {
 		<h2>Stylistic Rules</h2>
 		<p class="rules-intro">
 			Code style and formatting rules from the
-			<code>@stylistic</code> ESLint plugin.
+			<a
+				href="https://eslint.style/"
+				target="_blank"
+				rel="noopener noreferrer"
+				><code>@stylistic</code></a
+			>
+			ESLint plugin.
 		</p>
-		<BTable
-			:data="rules"
-			striped
-			hoverable
-			narrowed
-		>
+		<BTable :data="rules" striped hoverable narrowed>
 			<BTableColumn field="name" label="Rule" width="320">
 				<template #default="props">
 					<a
@@ -197,9 +201,7 @@ function severityType(severity: string): string {
 			</BTableColumn>
 			<BTableColumn field="severity" label="Severity" width="120">
 				<template #default="props">
-					<BTag
-						:type="severityType(props.row.severity)"
-					>
+					<BTag :type="severityType(props.row.severity)">
 						{{ props.row.severity }}
 					</BTag>
 				</template>

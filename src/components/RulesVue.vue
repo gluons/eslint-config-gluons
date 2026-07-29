@@ -51,14 +51,16 @@ function severityType(severity: string): string {
 	<section class="rules-section">
 		<h2>Vue Rules</h2>
 		<p class="rules-intro">
-			Vue-specific rules from the <code>eslint-plugin-vue</code> plugin.
+			Vue-specific rules from the
+			<a
+				href="https://eslint.vuejs.org/"
+				target="_blank"
+				rel="noopener noreferrer"
+				><code>eslint-plugin-vue</code></a
+			>
+			plugin.
 		</p>
-		<BTable
-			:data="rules"
-			striped
-			hoverable
-			narrowed
-		>
+		<BTable :data="rules" striped hoverable narrowed>
 			<BTableColumn field="name" label="Rule" width="300">
 				<template #default="props">
 					<a
@@ -73,9 +75,7 @@ function severityType(severity: string): string {
 			</BTableColumn>
 			<BTableColumn field="severity" label="Severity" width="120">
 				<template #default="props">
-					<BTag
-						:type="severityType(props.row.severity)"
-					>
+					<BTag :type="severityType(props.row.severity)">
 						{{ props.row.severity }}
 					</BTag>
 				</template>

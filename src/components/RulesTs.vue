@@ -66,14 +66,15 @@ function severityType(severity: string): string {
 		<h2>TypeScript Rules</h2>
 		<p class="rules-intro">
 			TypeScript-specific rules from the
-			<code>typescript-eslint</code> plugin.
+			<a
+				href="https://typescript-eslint.io/"
+				target="_blank"
+				rel="noopener noreferrer"
+				><code>typescript-eslint</code></a
+			>
+			plugin.
 		</p>
-		<BTable
-			:data="rules"
-			striped
-			hoverable
-			narrowed
-		>
+		<BTable :data="rules" striped hoverable narrowed>
 			<BTableColumn field="name" label="Rule" width="380">
 				<template #default="props">
 					<a
@@ -88,9 +89,7 @@ function severityType(severity: string): string {
 			</BTableColumn>
 			<BTableColumn field="severity" label="Severity" width="120">
 				<template #default="props">
-					<BTag
-						:type="severityType(props.row.severity)"
-					>
+					<BTag :type="severityType(props.row.severity)">
 						{{ props.row.severity }}
 					</BTag>
 				</template>

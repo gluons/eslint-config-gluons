@@ -45,7 +45,8 @@ const rules: RuleEntry[] = [
 		url: 'https://eslint.org/docs/latest/rules/no-console',
 		severity: 'error (production) / off (development)',
 		config: 'Conditional on NODE_ENV',
-		description: 'Disallow `console` calls in production; allow in development.'
+		description:
+			'Disallow `console` calls in production; allow in development.'
 	},
 	{
 		name: 'no-debugger',
@@ -67,7 +68,8 @@ const rules: RuleEntry[] = [
 		url: 'https://eslint.org/docs/latest/rules/no-empty',
 		severity: 'error',
 		config: 'allowEmptyCatch: true',
-		description: 'Disallow empty block statements, except for empty catch blocks.'
+		description:
+			'Disallow empty block statements, except for empty catch blocks.'
 	},
 	{
 		name: 'no-object-constructor',
@@ -127,7 +129,8 @@ const rules: RuleEntry[] = [
 		url: 'https://eslint.org/docs/latest/rules/prefer-template',
 		severity: 'error',
 		config: '',
-		description: 'Require template literals instead of string concatenation.'
+		description:
+			'Require template literals instead of string concatenation.'
 	},
 	{
 		name: 'yoda',
@@ -150,7 +153,11 @@ function severityType(severity: string): string {
 }
 
 function displaySeverity(severity: string): string {
-	return severity.startsWith('error') ? 'error' : severity === 'warn' ? 'warn' : 'off';
+	return severity.startsWith('error')
+		? 'error'
+		: severity === 'warn'
+			? 'warn'
+			: 'off';
 }
 </script>
 
@@ -158,14 +165,15 @@ function displaySeverity(severity: string): string {
 	<section class="rules-section">
 		<h2>Core JavaScript Rules</h2>
 		<p class="rules-intro">
-			Base JavaScript and Node.js rules from <code>eslint-config-gluons</code>.
+			Base JavaScript and Node.js rules from
+			<a
+				href="https://github.com/gluons/eslint-config-gluons"
+				target="_blank"
+				rel="noopener noreferrer"
+				><code>eslint-config-gluons</code></a
+			>.
 		</p>
-		<BTable
-			:data="rules"
-			striped
-			hoverable
-			narrowed
-		>
+		<BTable :data="rules" striped hoverable narrowed>
 			<BTableColumn field="name" label="Rule" width="280">
 				<template #default="props">
 					<a
