@@ -18,3 +18,5 @@ When referencing file names, code snippets, functions, or other code elements in
 - File paths: Modified `src/validators.ts` file
 
 Do NOT execute `git commit` immediately. Show the user the proposed commit message first and wait for their confirmation before running the commit.
+
+After committing, do NOT push the changes to the remote. Only commit locally.
