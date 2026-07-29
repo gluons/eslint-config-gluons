@@ -245,7 +245,17 @@ function displaySeverity(severity: string): string {
 }
 
 .tag.is-light {
-	background: hsl(0, 0%, 96%);
+	background: hsl(0, 0%, 85%);
 	color: hsl(0, 0%, 29%);
+}
+
+@media (prefers-color-scheme: dark) {
+	.tag.is-light {
+		background: hsl(0, 0%, 91%);
+	}
+}
+
+[data-theme='dark'] .tag.is-light {
+	background: hsl(0, 0%, 91%);
 }
 </style>
