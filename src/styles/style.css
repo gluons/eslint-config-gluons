@@ -249,6 +249,37 @@ code {
 	}
 }
 
+/* ── Buefy Navbar theme ── */
+.navbar {
+	background: var(--bg) !important;
+	border-bottom: 1px solid var(--border);
+}
+
+.navbar-item,
+.navbar-link {
+	color: var(--text) !important;
+	font-size: 14px;
+}
+
+.navbar-item:hover,
+.navbar-link:hover,
+.navbar-item.is-active,
+.navbar-link.is-active {
+	color: var(--accent) !important;
+	background: var(--accent-bg) !important;
+}
+
+.navbar-dropdown {
+	background: var(--bg) !important;
+	border-top: 1px solid var(--border) !important;
+	border-radius: 0 0 8px 8px;
+	box-shadow: var(--shadow);
+}
+
+.navbar-divider {
+	border-top-color: var(--border);
+}
+
 #next-steps ul {
 	list-style: none;
 	padding: 0;
