@@ -49,6 +49,7 @@ watch(() => [props.code, props.lang], highlight, { immediate: true });
 				:class="['fas', copied ? 'fa-check' : 'fa-copy']"
 			/>
 		</button>
+		<!-- eslint-disable-next-line vue/no-v-html -->
 		<div class="code-content" v-html="highlighted" />
 	</div>
 </template>
