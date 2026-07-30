@@ -53,16 +53,16 @@ For each rule, look up its description from ESLint's official documentation:
 
 Fetch the description from the docs page. If the page is unavailable, derive a concise description from the rule name and its configuration.
 
-### 4. Create Vue Component
+### 4. Create Vue Page Component
 
-For each category, create (or update) a component in `src/components/`:
+For each category, create (or update) a component in `src/pages/`:
 
-| Category  | Component                           | Purpose          |
-| --------- | ----------------------------------- | ---------------- |
-| main      | `src/components/RulesMain.vue`      | Core JS rules    |
-| stylistic | `src/components/RulesStylistic.vue` | Stylistic rules  |
-| ts        | `src/components/RulesTs.vue`        | TypeScript rules |
-| vue       | `src/components/RulesVue.vue`       | Vue rules        |
+| Category  | Component                       | Purpose          |
+| --------- | ------------------------------- | ---------------- |
+| main      | `src/pages/RulesMain.vue`      | Core JS rules    |
+| stylistic | `src/pages/RulesStylistic.vue` | Stylistic rules  |
+| ts        | `src/pages/RulesTs.vue`        | TypeScript rules |
+| vue       | `src/pages/RulesVue.vue`       | Vue rules        |
 
 Each component must:
 
@@ -77,9 +77,31 @@ Each component must:
     - **Config** — A summary of the configuration values
     - **Description** — A brief explanation fetched from ESLint docs
 
-### 5. Add Navigation in App.vue
+### 5. Register Route and Add Navbar Item
 
-Update `src/App.vue` to include **Buefy tabs (`<BTabs>`)** at the top for switching between rule categories. Each tab corresponds to one rule component. Import and display the rule components conditionally based on the active tab.
+**Register the route** in `src/router.ts` — add an entry to the `routes` array with the path, name, and imported component:
+
+```ts
+{
+	path: '/rules/<category>',
+	name: 'rules-<category>',
+	component: Rules<Category>
+}
+```
+
+**Add a navbar item** in `src/App.vue` inside the `<b-navbar-dropdown>` (Rules dropdown):
+
+```vue
+<b-navbar-item
+	tag="router-link"
+	to="/rules/<category>"
+	:active="route.name === 'rules-<category>'"
+>
+	<Category>
+</b-navbar-item>
+```
+
+No manual imports are needed in `App.vue` — Vue Router handles component resolution via the route definition.
 
 ### 6. Run Dev Server
 
@@ -95,9 +117,10 @@ Run `yarn dev` to verify the output renders correctly in the browser.
 
 ## Reference
 
-- [AGENTS.md](../../../AGENTS.md) — Project conventions (tabs, single quotes, semicolons)
+- [AGENTS.md](../../../AGENTS.md) — Project conventions, routing table, and navbar setup
+- [Vue Router](https://router.vuejs.org/) — SPA routing
+- [Buefy Navbar](https://buefy.org/documentation/navbar) — Navigation bar with dropdowns
 - [Buefy Table](https://buefy.org/documentation/table) — Component for displaying rules
 - [Buefy Tag](https://buefy.org/documentation/tag) — Severity badges
-- [Buefy Tabs](https://buefy.org/documentation/tabs) — Navigation between rule categories
 - [Buefy Message](https://buefy.org/documentation/message) — Info boxes for rule descriptions
 - [eslint-config-gluons package](../../../node_modules/eslint-config-gluons/) — Rule definitions
