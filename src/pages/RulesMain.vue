@@ -189,8 +189,8 @@ function displaySeverity(severity: string): string {
 			<BTableColumn field="severity" label="Severity" width="200">
 				<template #default="props">
 					<BTag
-						:type="severityType(props.row.severity)"
 						:key="props.row.name"
+						:type="severityType(props.row.severity)"
 					>
 						{{ displaySeverity(props.row.severity) }}
 					</BTag>
