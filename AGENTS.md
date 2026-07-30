@@ -24,6 +24,8 @@ This is the documentation website for the [`eslint-config-gluons`](https://githu
 | `yarn build`            | Type-check (`vue-tsc -b`) then build (`vite build`) |
 | `yarn preview`          | Preview production build locally                    |
 | `yarn format`           | Format all files with Prettier                      |
+| `yarn lint`             | Lint all source files with ESLint                   |
+| `yarn lint:fix`         | Auto-fix lint errors with ESLint                    |
 | `yarn add <package>`    | Add a dependency                                    |
 | `yarn add -D <package>` | Add a dev dependency                                |
 
