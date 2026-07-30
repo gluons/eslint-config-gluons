@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './pages/Home.vue';
+import HomePage from './pages/HomePage.vue';
 import RulesMain from './pages/RulesMain.vue';
 import RulesStylistic from './pages/RulesStylistic.vue';
 import RulesTs from './pages/RulesTs.vue';
@@ -9,7 +9,7 @@ const routes = [
 	{
 		path: '/',
 		name: 'home',
-		component: Home
+		component: HomePage
 	},
 	{
 		path: '/rules/main',
