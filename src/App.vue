@@ -35,11 +35,7 @@ const isRuleActive = computed(() => {
 		</template>
 
 		<template #start>
-			<b-navbar-item
-				tag="router-link"
-				to="/"
-				:active="isHome"
-			>
+			<b-navbar-item tag="router-link" to="/" :active="isHome">
 				Home
 			</b-navbar-item>
 			<b-navbar-dropdown
