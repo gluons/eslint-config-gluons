@@ -11,6 +11,7 @@ This is the documentation website for the [`eslint-config-gluons`](https://githu
 - **Build tool:** Vite
 - **Language:** TypeScript
 - **UI library:** [Buefy v3](https://buefy.org/) (Bulma-based Vue 3 components)
+- **Routing:** [vue-router v4](https://router.vuejs.org/) (hash-free `createWebHistory`)
 - **Icons:** Font Awesome Free (`@fortawesome/fontawesome-free`)
 - **Formatter:** Prettier (config: `@gluons/prettier-config`)
 - **Style:** Tabs for indentation, single quotes, semicolons required
@@ -35,6 +36,47 @@ This is the documentation website for the [`eslint-config-gluons`](https://githu
 - **`src/assets/`** — Static images/icons
 - **`public/`** — Static files served at root (`favicon.svg`, `icons.svg`)
 - **`node_modules/eslint-config-gluons/dist/`** — The installed ESLint config package whose rules are documented
+
+## Routing & Navigation
+
+### Routes (`src/router.ts`)
+
+| Path               | Name            | Component      |
+| ------------------ | --------------- | -------------- |
+| `/`                | `home`          | `Home`         |
+| `/rules/main`      | `rules-main`    | `RulesMain`    |
+| `/rules/stylistic` | `rules-stylistic`| `RulesStylistic`|
+| `/rules/typescript`| `rules-ts`      | `RulesTs`      |
+| `/rules/vue`       | `rules-vue`     | `RulesVue`     |
+
+Router is created with `createWebHistory()` (no `#` hash) and registered in `main.ts` via `app.use(router)`.
+
+### Navbar (`src/App.vue`)
+
+Navigation uses Buefy's built-in navbar components instead of custom HTML:
+
+- **`BNavbar`** — Main navbar wrapper.
+- **`#brand` slot** — Logo text wrapped in `BNavbarItem` with `tag="router-link" to="/"`.
+- **`#start` slot** — Left-side nav links:
+  - `BNavbarItem` for Home (`tag="router-link" to="/"`, `:active="isHome"`).
+  - `BNavbarDropdown` for Rules (`hoverable`, `:label="currentRuleLabel"`).
+    - Children are `BNavbarItem` with `tag="router-link"` and `:active` bound to `route.name`.
+- **`#end` slot** — `ThemeSwitcher` inside `BNavbarItem tag="div"`.
+
+### Active State Highlighting
+
+- **`BNavbarItem`** — uses the native `:active` prop (adds `is-active` class).
+- **`BNavbarDropdown`** — cannot use `:active` (it controls dropdown open/close in Bulma). Instead, use `:class="{ 'nav-dropdown-active': isRuleActive }"` with scoped CSS:
+  ```css
+  :deep(.navbar-item.nav-dropdown-active > .navbar-link) {
+    color: var(--accent) !important;
+    background: var(--accent-bg) !important;
+  }
+  ```
+
+### Theme Integration
+
+Global CSS in `src/styles/style.css` overrides Buefy's navbar colors with CSS custom properties for light/dark mode support (`.navbar`, `.navbar-item`, `.navbar-link`, `.navbar-dropdown`).
 
 ## Key Conventions
 
