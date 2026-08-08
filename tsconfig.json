@@ -1,8 +1,18 @@
 {
-	"extends": "tsconfig-gluons",
 	"compilerOptions": {
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"target": "es2025",
 		"sourceMap": false,
-		"outDir": "."
+		"declaration": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"rootDir": "./src",
+		"types": ["node"],
+		"outDir": "./dist"
 	},
 	"include": ["src"],
 	"exclude": []

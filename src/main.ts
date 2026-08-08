@@ -1,12 +1,7 @@
 import { defineConfig } from 'eslint/config';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import mainRules from './rules/main.js';
-import tsRules from './rules/ts.js';
 
-const configs = defineConfig(
-	mainRules,
-	tsRules,
-	eslintPluginPrettierRecommended
-);
+const config = defineConfig([mainRules, eslintPluginPrettierRecommended]);
 
-export default configs;
+export default config;

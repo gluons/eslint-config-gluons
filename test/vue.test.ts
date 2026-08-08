@@ -1,18 +1,47 @@
 import { ESLint } from 'eslint';
-import { resolve } from 'path';
-import vueConfig from '../vue';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const vueFixturePath = resolve(__dirname, '../fixtures/app.vue');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-const cli = new ESLint({
-	baseConfig: vueConfig,
-	useEslintrc: false,
-	ignore: false
-});
+describe('Vue ESLint Config', () => {
+	let eslint: ESLint;
 
-test('Vue rules', async () => {
-	const results = await cli.lintFiles([vueFixturePath]);
+	beforeAll(async () => {
+		const { default: config } = await import('../src/vue.js');
+		eslint = new ESLint({
+			overrideConfigFile: true,
+			baseConfig: config
+		});
+	});
 
-	expect(results[0].errorCount).toBe(0);
-	expect(results[0].warningCount).toBe(0);
+	describe('Vue files', () => {
+		it('should validate valid Vue file', async () => {
+			const filePath = resolve(__dirname, 'fixtures/valid-vue.vue');
+			const results = await eslint.lintFiles([filePath]);
+
+			expect(results).toHaveLength(1);
+			expect(results[0].errorCount).toBe(0);
+		});
+	});
+
+	describe('JavaScript files with Vue config', () => {
+		it('should validate valid JavaScript file', async () => {
+			const filePath = resolve(__dirname, 'fixtures/valid-js.js');
+			const results = await eslint.lintFiles([filePath]);
+
+			expect(results).toHaveLength(1);
+			expect(results[0].errorCount).toBe(0);
+		});
+	});
+
+	describe('Config structure', () => {
+		it('should export a valid ESLint config array', async () => {
+			const { default: config } = await import('../src/vue.js');
+			expect(config).toBeDefined();
+			expect(Array.isArray(config)).toBe(true);
+			expect(config.length).toBeGreaterThan(0);
+		});
+	});
 });

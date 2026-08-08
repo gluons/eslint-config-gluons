@@ -1,27 +1,33 @@
-import { Linter } from 'eslint';
-import { resolve } from 'path';
+import { defineConfig } from 'eslint/config';
+import pluginVue from 'eslint-plugin-vue';
+import globals from 'globals';
 
-type Config = Linter.Config;
-
-const config: Config = {
-	plugins: ['vue'],
-	extends: [resolve(__dirname, './esnext'), 'plugin:vue/recommended'],
-	rules: {
-		'vue/html-indent': ['error', 'tab'],
-		'vue/script-indent': [
-			'error',
-			'tab',
-			{
-				switchCase: 1
+const configs = defineConfig([
+	pluginVue.configs['flat/recommended'],
+	{
+		languageOptions: {
+			sourceType: 'module',
+			globals: {
+				...globals.browser
 			}
-		],
-		'vue/html-closing-bracket-newline': [
-			'error',
-			{
-				multiline: 'always'
-			}
-		]
+		},
+		rules: {
+			'vue/html-indent': ['error', 'tab'],
+			'vue/script-indent': [
+				'error',
+				'tab',
+				{
+					switchCase: 1
+				}
+			],
+			'vue/html-closing-bracket-newline': [
+				'error',
+				{
+					multiline: 'always'
+				}
+			]
+		}
 	}
-};
+]);
 
-export = config;
+export default configs;

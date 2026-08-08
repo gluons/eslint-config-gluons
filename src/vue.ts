@@ -1,17 +1,12 @@
-import { Linter } from 'eslint';
-import { resolve } from 'path';
+import { defineConfig } from 'eslint/config';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import mainRules from './rules/main.js';
+import vueRules from './rules/vue.js';
 
-type Config = Linter.Config;
+const config = defineConfig([
+	mainRules,
+	vueRules,
+	eslintPluginPrettierRecommended
+]);
 
-/**
- *  Vue
- */
-const config: Config = {
-	extends: [
-		resolve(__dirname, './rules/vue'),
-		'plugin:prettier/recommended',
-		'prettier/vue'
-	]
-};
-
-export = config;
+export default config;
