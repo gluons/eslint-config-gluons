@@ -13,6 +13,9 @@ const iconMap: Record<string, Component> = {
 	pnpm: PnpmSvg
 };
 
+// Shared active tab index so all package manager tab groups stay in sync.
+const activePackageManager = ref(0);
+
 const packageManagers = ref([
 	{
 		name: 'npm',
@@ -140,7 +143,7 @@ const badgeUrl =
 			along with its peer dependencies.
 		</p>
 
-		<BTabs type="is-boxed">
+		<BTabs v-model="activePackageManager" type="is-boxed">
 			<BTabItem
 				v-for="pm in packageManagers"
 				:key="pm.name"
@@ -166,7 +169,7 @@ const badgeUrl =
 				>TypeScript ESLint</a
 			>.
 		</p>
-		<BTabs type="is-boxed">
+		<BTabs v-model="activePackageManager" type="is-boxed">
 			<BTabItem v-for="pm in tsPackages" :key="pm.name" :label="pm.name">
 				<template #header>
 					<component
@@ -188,7 +191,7 @@ const badgeUrl =
 				>eslint-plugin-vue</a
 			>.
 		</p>
-		<BTabs type="is-boxed">
+		<BTabs v-model="activePackageManager" type="is-boxed">
 			<BTabItem v-for="pm in vuePackages" :key="pm.name" :label="pm.name">
 				<template #header>
 					<component
