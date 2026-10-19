@@ -15,23 +15,23 @@
   "dependencies": {
     "@eslint/js": "^10.0.1",
     "@fortawesome/fontawesome-free": "^7.3.1",
-    "@thesvg/vue": "^3.2.14",
-    "buefy": "^3.0.8",
-    "eslint": "^10.8.0",
+    "@thesvg/vue": "^3.4.0",
+    "buefy": "^3.1.0",
+    "eslint": "^10.13.0",
     "eslint-config-gluons": "^7.0.0-beta.3",
-    "shiki": "^4.3.1",
-    "vue": "^3.5.40",
+    "shiki": "^4.5.0",
+    "vue": "^3.5.44",
     "vue-router": "4"
   },
   "devDependencies": {
-    "@gluons/prettier-config": "^3.1.0",
-    "@types/node": "^24.12.3",
-    "@vitejs/plugin-vue": "^6.0.8",
+    "@gluons/prettier-config": "^3.1.1",
+    "@types/node": "^24.19.2",
+    "@vitejs/plugin-vue": "^6.0.10",
     "@vue/tsconfig": "^0.9.1",
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.10",
     "typescript": "~6.0.3",
-    "vite": "^8.1.5",
-    "vue-tsc": "^3.3.8"
+    "vite": "^8.3.4",
+    "vue-tsc": "^3.3.13"
   },
   "packageManager": "yarn@4.18.1"
 }
