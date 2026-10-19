@@ -11,7 +11,7 @@ This is the documentation website for the [`eslint-config-gluons`](https://githu
 - **Build tool:** Vite
 - **Language:** TypeScript
 - **UI library:** [Buefy v3](https://buefy.org/) (Bulma-based Vue 3 components)
-- **Routing:** [vue-router v4](https://router.vuejs.org/) (hash-free `createWebHistory`)
+- **Routing:** [vue-router v5](https://router.vuejs.org/) (hash-free `createWebHistory`)
 - **Icons:** Font Awesome Free (`@fortawesome/fontawesome-free`)
 - **Formatter:** Prettier (config: `@gluons/prettier-config`)
 - **Style:** Tabs for indentation, single quotes, semicolons required
